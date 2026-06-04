@@ -421,7 +421,7 @@ textarea.fctrl{resize:vertical;min-height:70px}
           <div class="link-name">ローチケ</div>
           <div class="link-desc">ローソンチケット</div>
         </a>
-        <a class="link-btn" href="https://t.pia.jp/pia/search/searchMain.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://t.pia.jp/pia/search/searchTop.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8&searchType=event" target="_blank" rel="noopener">
           <div class="link-icon">🎟️</div>
           <div class="link-name">ぴあ</div>
           <div class="link-desc">チケットぴあ</div>
@@ -437,12 +437,12 @@ textarea.fctrl{resize:vertical;min-height:70px}
     <div class="card">
       <div class="sec-title">📰 ニュース・情報</div>
       <div class="link-grid">
-        <a class="link-btn" href="https://natalie.mu/music/tag/%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://natalie.mu/music/search?q=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
           <div class="link-icon">🎵</div>
           <div class="link-name">音楽ナタリー</div>
           <div class="link-desc">音楽情報</div>
         </a>
-        <a class="link-btn" href="https://natalie.mu/stage/tag/%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://natalie.mu/stage/search?q=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
           <div class="link-icon">🎭</div>
           <div class="link-name">ステージナタリー</div>
           <div class="link-desc">舞台情報</div>
@@ -1183,7 +1183,7 @@ function renderEventDetailHTML(ev){
     {name:'FC一般',   url:'https://takano-akira.net/signin',    cls:'fc'},
     {name:'e+',       url:'https://eplus.jp/sf/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8',  cls:'eplus'},
     {name:'ローチケ', url:'https://l-tike.com/search/?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8', cls:'lawson'},
-    {name:'ぴあ',     url:'https://t.pia.jp/pia/search/searchMain.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8', cls:'other'},
+    {name:'ぴあ',     url:'https://t.pia.jp/pia/search/searchTop.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8&searchType=event', cls:'other'},
   ];
   const existingTickets=tickets.filter(t=>t.name&&ev.title&&(t.name.includes(ev.title.slice(0,10))||ev.title.includes(t.name.slice(0,10))));
 
@@ -1284,12 +1284,12 @@ function setTicketView(v,el){
 const ALL_ROUTES = [
   {name:'FC先行',   priority:1, url:'https://takano-akira.net/signin',    note:'最高確率。FC会員限定'},
   {name:'FC一般',   priority:2, url:'https://takano-akira.net/signin',    note:'FC会員向け一般発売'},
-  {name:'amex特典', priority:3, url:'https://www.americanexpress.com/ja-jp/benefits/entertainment/', note:'アメックス会員特典'},
+  {name:'amex特典', priority:3, url:'https://www.americanexpress.com/ja-jp/benefits/', note:'アメックス会員特典'},
   {name:'クレカ特典',priority:4, url:'',  note:'各クレジットカード特典先行'},
-  {name:'avex特典', priority:5, url:'https://avex.com/',  note:'avexメルマガ特典'},
+  {name:'avex特典', priority:5, url:'https://avex.com/jp/ja/artist/takano-akira/',  note:'avexメルマガ特典'},
   {name:'e+',       priority:6, url:'https://eplus.jp/sf/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8', note:'イープラス'},
   {name:'ローチケ', priority:7, url:'https://l-tike.com/search/?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8', note:'ローソンチケット'},
-  {name:'チケぴ',   priority:8, url:'https://t.pia.jp/pia/search/searchMain.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8', note:'チケットぴあ'},
+  {name:'チケぴ',   priority:8, url:'https://t.pia.jp/pia/search/searchTop.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8&searchType=event', note:'チケットぴあ'},
   {name:'一般',     priority:9, url:'', note:'一般発売'},
   {name:'その他',   priority:10,url:'', note:''},
 ];
