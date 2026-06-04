@@ -411,20 +411,20 @@ textarea.fctrl{resize:vertical;min-height:70px}
     <div class="card">
       <div class="sec-title">🎫 チケット購入</div>
       <div class="link-grid">
-        <a class="link-btn" href="https://eplus.jp/sf/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://eplus.jp/sf/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8&genre=1" target="_blank" rel="noopener">
           <div class="link-icon">🎟️</div>
           <div class="link-name">e+</div>
-          <div class="link-desc">イープラス</div>
+          <div class="link-desc">高野洸で検索済み</div>
         </a>
-        <a class="link-btn" href="https://l-tike.com/search/?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://l-tike.com/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
           <div class="link-icon">🎟️</div>
           <div class="link-name">ローチケ</div>
-          <div class="link-desc">ローソンチケット</div>
+          <div class="link-desc">高野洸で検索済み</div>
         </a>
-        <a class="link-btn" href="https://t.pia.jp/pia/search/searchTop.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8&searchType=event" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://t.pia.jp/" target="_blank" rel="noopener">
           <div class="link-icon">🎟️</div>
           <div class="link-name">ぴあ</div>
-          <div class="link-desc">チケットぴあ</div>
+          <div class="link-desc">サイトで「高野洸」検索</div>
         </a>
         <a class="link-btn" href="https://takano-akira.net/signin" target="_blank" rel="noopener">
           <div class="link-icon">⭐</div>
@@ -437,22 +437,22 @@ textarea.fctrl{resize:vertical;min-height:70px}
     <div class="card">
       <div class="sec-title">📰 ニュース・情報</div>
       <div class="link-grid">
-        <a class="link-btn" href="https://natalie.mu/music/search?q=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://natalie.mu/music/artist/92459" target="_blank" rel="noopener">
           <div class="link-icon">🎵</div>
           <div class="link-name">音楽ナタリー</div>
-          <div class="link-desc">音楽情報</div>
+          <div class="link-desc">高野洸アーティストページ</div>
         </a>
-        <a class="link-btn" href="https://natalie.mu/stage/search?q=%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://natalie.mu/stage/author/151097" target="_blank" rel="noopener">
           <div class="link-icon">🎭</div>
           <div class="link-name">ステージナタリー</div>
-          <div class="link-desc">舞台情報</div>
+          <div class="link-desc">高野洸掲載記事</div>
         </a>
         <a class="link-btn" href="https://prtimes.jp/main/html/searchrlp/key/%E9%AB%98%E9%87%8E%E6%B4%B8" target="_blank" rel="noopener">
           <div class="link-icon">📋</div>
           <div class="link-name">PR TIMES</div>
           <div class="link-desc">プレスリリース</div>
         </a>
-        <a class="link-btn" href="https://news.google.com/search?q=%E9%AB%98%E9%87%8E%E6%B4%B8&hl=ja" target="_blank" rel="noopener">
+        <a class="link-btn" href="https://news.google.com/search?q=%E9%AB%98%E9%87%8E%E6%B4%B8&hl=ja&gl=JP" target="_blank" rel="noopener">
           <div class="link-icon">🗞️</div>
           <div class="link-name">Googleニュース</div>
           <div class="link-desc">最新ニュース</div>
@@ -747,79 +747,258 @@ function showMsg(txt,type='info'){
 }
 
 // ========== 同期 ==========
+// ========== プロキシ設定 ==========
+const PROXIES = [
+  url => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`,
+  url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+];
+
+async function proxyFetch(url, timeout=12000){
+  for(const makeProxy of PROXIES){
+    try{
+      const r = await fetch(makeProxy(url), {cache:'no-store', signal:AbortSignal.timeout(timeout)});
+      if(!r.ok) continue;
+      const raw = await r.json().catch(async ()=>({ contents: await r.text() }));
+      const text = raw?.contents || (typeof raw==='string' ? raw : '');
+      if(text && text.length > 100) return text;
+    }catch(e){ /* 次のプロキシを試す */ }
+  }
+  return null;
+}
+
+async function directFetch(url, timeout=10000){
+  try{
+    const r = await fetch(url, {cache:'no-store', signal:AbortSignal.timeout(timeout)});
+    if(r.ok) return await r.text();
+  }catch(e){}
+  return null;
+}
+
+// ========== ソース別スクレイパー ==========
+async function scrapeSrc_official(){
+  const evs=[];
+  for(let page=1; page<=3; page++){
+    const url = 'https://takano-akira.net/contents/schedule' + (page>1?`/page/${page}`:'');
+    const html = await proxyFetch(url, 10000);
+    if(!html) break;
+    evs.push(...parseHTML(html, '公式サイト'));
+    await sleep(500);
+  }
+  return evs;
+}
+
+async function scrapeSrc_googleNews(){
+  const queries = [
+    '%E9%AB%98%E9%87%8E%E6%B4%B8',
+    '%E9%AB%98%E9%87%8E%E6%B4%B8+%E3%83%A9%E3%82%A4%E3%83%96',
+    '%E9%AB%98%E9%87%8E%E6%B4%B8+%E3%82%A2%E3%83%B3%E3%83%90%E3%82%B5%E3%83%80%E3%83%BC',
+  ];
+  const evs=[];
+  for(const q of queries){
+    const xml = await directFetch(`https://news.google.com/rss/search?q=${q}&hl=ja&gl=JP&ceid=JP:ja`)
+               || await proxyFetch(`https://news.google.com/rss/search?q=${q}&hl=ja&gl=JP&ceid=JP:ja`);
+    if(xml) evs.push(...parseRSS(xml, 'Google ニュース'));
+    await sleep(300);
+  }
+  return evs;
+}
+
+async function scrapeSrc_natalie(){
+  const evs=[];
+  const feeds = [
+    {url:'https://natalie.mu/music/feed/news', name:'音楽ナタリー'},
+    {url:'https://natalie.mu/stage/feed/news',  name:'ステージナタリー'},
+  ];
+  for(const {url,name} of feeds){
+    const xml = await directFetch(url) || await proxyFetch(url);
+    if(xml){
+      const filtered = parseRSS(xml, name).filter(e=>e.title.includes('高野洸'));
+      evs.push(...filtered);
+    }
+    await sleep(300);
+  }
+  return evs;
+}
+
+async function scrapeSrc_twitter(){
+  const accounts = ['AKIRAT_official', 'akira_t_staff'];
+  const evs=[];
+  // RSSHub インスタンス
+  const RSSHUB = ['https://rsshub.app', 'https://rsshub.rssforever.com'];
+  // Nitter インスタンス
+  const NITTER = ['https://nitter.privacydev.net', 'https://nitter.poast.org', 'https://nitter.net'];
+
+  for(const acc of accounts){
+    let xml = null;
+    // RSSHub を試す
+    for(const base of RSSHUB){
+      xml = await directFetch(`${base}/twitter/user/${acc}`, 8000)
+           || await proxyFetch(`${base}/twitter/user/${acc}`, 8000);
+      if(xml && xml.includes('<item>')) break;
+      xml = null;
+    }
+    // Nitter を試す
+    if(!xml){
+      for(const base of NITTER){
+        xml = await directFetch(`${base}/${acc}/rss`, 6000)
+             || await proxyFetch(`${base}/${acc}/rss`, 6000);
+        if(xml && xml.includes('<item>')) break;
+        xml = null;
+      }
+    }
+    if(xml){
+      const all = parseRSS(xml, `Twitter @${acc}`);
+      const filtered = all.filter(e=>isScheduleTweet(e.title));
+      evs.push(...filtered);
+    }
+    await sleep(500);
+  }
+  return evs;
+}
+
+function isScheduleTweet(text){
+  const kw = ['ライブ','live','LIVE','公演','出演','舞台','ミュージカル','ツアー','TV','テレビ',
+               'ラジオ','配信','リリース','発売','映画','アンバサダー','コラボ','キャンペーン',
+               'CM','イベント','トークショー','サイン','ファンミ','グッズ','チケット','先行'];
+  return kw.some(k=>text.includes(k));
+}
+
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+// ========== RSS パーサー ==========
+function parseRSS(xml, sourceName){
+  if(!xml) return [];
+  const evs=[];
+  try{
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xml, 'application/xml');
+    const items = doc.querySelectorAll('item');
+    items.forEach(item=>{
+      const title = item.querySelector('title')?.textContent?.trim()||'';
+      const link  = item.querySelector('link')?.textContent?.trim()||'';
+      const pubDate = item.querySelector('pubDate')?.textContent||'';
+      const desc  = item.querySelector('description')?.textContent||'';
+      if(!title) return;
+      const combined = title+' '+desc.replace(/<[^>]+>/g,'');
+      const date = parsePubDate(pubDate);
+      const cat  = detectCategory(combined);
+      const extId = `${date}_${title.slice(0,30)}`;
+      evs.push({
+        id: UID(), date, category: cat,
+        title: title.length>120 ? title.slice(0,120)+'…' : title,
+        venue:'', url: link, memo: `取得元: ${sourceName}`,
+        source:'fetched', externalId: extId
+      });
+    });
+  }catch(e){ console.warn('[parseRSS]', e); }
+  return evs;
+}
+
+function parsePubDate(str){
+  if(!str) return todayStr();
+  try{
+    // RFC 2822 形式
+    const d = new Date(str);
+    if(!isNaN(d)) return d.toISOString().slice(0,10);
+  }catch(e){}
+  return todayStr();
+}
+
+function detectCategory(text){
+  const t = text.toUpperCase();
+  if(/ライブ|LIVE|ツアー|TOUR|コンサート/.test(t)) return 'LIVE';
+  if(/舞台|ミュージカル|STAGE|刀ミュ|スタミュ|キングダム/.test(t)) return 'STAGE';
+  if(/TV|テレビ|放送|出演/.test(t)) return 'TV';
+  if(/ラジオ|RADIO/.test(t)) return 'RADIO';
+  if(/発売|リリース|シングル|アルバム/.test(t)) return 'RELEASE';
+  if(/映画|CINEMA|上映/.test(t)) return 'CINEMA';
+  if(/雑誌|MAGAZINE|掲載|表紙/.test(t)) return 'MAGAZINE';
+  if(/アンバサダー|コラボ|キャンペーン|CM|イベント|トークショー|サイン|ファンミ/.test(t)) return 'EVENT';
+  return 'OTHER';
+}
+
+function parseHTML(html, sourceName=''){
+  if(!html) return [];
+  const result=[], seen=new Set();
+  const re=/(\d{4})\s+(\d{2})\.(\d{2})\s+(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(LIVE|TV|RADIO|STAGE|EVENT|RELEASE|WEB|MAGAZINE|CINEMA|BOOK|NEWS)\s*([^\n\r<]{3,})/gi;
+  let m;
+  while((m=re.exec(html))!==null){
+    const date=`${m[1]}-${m[2]}-${m[3]}`,cat=m[4].toUpperCase();
+    const title=m[5].trim().replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+    if(!title||title.length<3) continue;
+    const key=`${date}_${title.slice(0,25)}`;
+    if(seen.has(key)) continue; seen.add(key);
+    result.push({id:UID(),date,category:cat,title,venue:'',url:'',
+      memo: sourceName?`取得元: ${sourceName}`:'',
+      source:'fetched',externalId:key});
+  }
+  return result;
+}
+
+// ========== メイン同期関数 ==========
 async function syncData(){
   const btn=document.getElementById('btn-sync'),icon=document.getElementById('sync-icon');
   btn.disabled=true; icon.className='spinning'; icon.textContent='⟳';
-  showMsg('情報を取得中...','info');
 
-  let ok=false, source='', addedCount=0;
+  const results = {}; // ソース名 → 追加件数
+  let totalAdded = 0;
 
-  // ── Step1: GitHub Pages の data.json を取得
-  try{
-    const url='./data.json?nocache='+Date.now();
-    const r=await fetch(url,{cache:'no-store',headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(12000)});
-    if(r.ok){
-      const d=await r.json();
-      if(Array.isArray(d.events)){
-        addedCount=mergeEvents(d.events);
-        save();
-        const ts=d.lastUpdated||'';
-        if(ts){
-          document.getElementById('last-sync').textContent=`自動更新: ${ts}`;
-          document.getElementById('sync-info-footer').textContent=`自動更新: ${ts}`;
-          localStorage.setItem(KEYS.lastSync, ts);
-        }
-        source='data.json';
-        ok=true;
-      }
-    }
-  }catch(e){ console.warn('[sync] data.json:', e.message); }
+  const sources = [
+    { name:'data.json（自動更新分）', fn: syncDataJson },
+    { name:'公式サイト',             fn: scrapeSrc_official },
+    { name:'Google News',            fn: scrapeSrc_googleNews },
+    { name:'ナタリー',               fn: scrapeSrc_natalie },
+    { name:'Twitter',                fn: scrapeSrc_twitter },
+  ];
 
-  // ── Step2: allorigins プロキシ経由で公式サイトを直接取得
-  if(!ok || addedCount===0){
-    const proxies=[
-      'https://api.allorigins.win/get?url=',
-      'https://corsproxy.io/?',
-    ];
-    for(const proxy of proxies){
-      try{
-        const r=await fetch(proxy+encodeURIComponent('https://takano-akira.net/contents/schedule'),
-          {signal:AbortSignal.timeout(12000)});
-        if(!r.ok) continue;
-        const raw=await r.json().catch(()=>null);
-        const html=raw?.contents || (typeof raw==='string'?raw:'');
-        const parsed=parseHTML(html);
-        if(parsed.length>0){
-          const n=mergeEvents(parsed);
-          addedCount+=n;
-          save();
-          source='公式サイト';
-          ok=true;
-          break;
-        }
-      }catch(e){ console.warn('[sync] proxy:', e.message); }
-    }
-  }
-
-  // ── Step3: ページ2も取得
-  if(ok && source==='公式サイト'){
+  for(const src of sources){
+    showMsg(`📡 ${src.name} を取得中...`, 'info');
     try{
-      const r=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent('https://takano-akira.net/contents/schedule/page/2'),
-        {signal:AbortSignal.timeout(8000)});
-      if(r.ok){const raw=await r.json();const n=mergeEvents(parseHTML(raw?.contents||''));addedCount+=n;save();}
-    }catch(e){}
+      const evs = await src.fn();
+      const added = mergeEvents(evs);
+      results[src.name] = added;
+      totalAdded += added;
+      if(added > 0){ save(); renderAll(); }
+    }catch(e){
+      console.warn(`[sync] ${src.name}:`, e);
+      results[src.name] = 0;
+    }
   }
 
-  renderAll();
-  if(ok){
-    const msg=addedCount>0
-      ? `✅ ${addedCount}件の新着情報を取得しました（合計${events.length}件）[${source}]`
-      : `✅ 最新情報です（${events.length}件）[${source}]`;
-    showMsg(msg,'ok');
-  } else {
-    showMsg('⚠️ 取得に失敗しました。ネット接続を確認して再度お試しください。','err');
-  }
+  save(); renderAll();
+
+  // 結果サマリー
+  const now = new Date().toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'}).replace(/\//g,'-');
+  document.getElementById('last-sync').textContent = `最終更新: ${now}`;
+  document.getElementById('sync-info-footer').textContent = `最終更新: ${now}`;
+  localStorage.setItem(KEYS.lastSync, now);
+
+  const srcSummary = Object.entries(results)
+    .filter(([,n])=>n>0).map(([k,n])=>`${k}:+${n}`).join(' / ');
+
+  showMsg(
+    totalAdded > 0
+      ? `✅ ${totalAdded}件の新着情報を取得（${events.length}件）\n${srcSummary}`
+      : `✅ 最新情報です（${events.length}件）`,
+    'ok'
+  );
+
   btn.disabled=false; icon.className=''; icon.textContent='🔄';
+}
+
+// data.json の読み込み（GitHub Actionsが毎朝更新するもの）
+async function syncDataJson(){
+  const url='./data.json?nocache='+Date.now();
+  try{
+    const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(10000)});
+    if(!r.ok) return [];
+    const d=await r.json();
+    if(d.lastUpdated){
+      document.getElementById('last-sync').textContent=`自動更新: ${d.lastUpdated}`;
+      localStorage.setItem(KEYS.lastSync,d.lastUpdated);
+    }
+    return Array.isArray(d.events) ? d.events : [];
+  }catch(e){ return []; }
 }
 
 function mergeEvents(newEvs){
@@ -834,20 +1013,7 @@ function mergeEvents(newEvs){
   return fresh.length;
 }
 
-function parseHTML(html){
-  if(!html)return[];
-  const result=[],seen=new Set();
-  const re=/(\d{4})\s+(\d{2})\.(\d{2})\s+(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(LIVE|TV|RADIO|STAGE|EVENT|RELEASE|WEB|MAGAZINE|CINEMA|BOOK|NEWS)\s*([^\n\r<]+)/gi;
-  let m;
-  while((m=re.exec(html))!==null){
-    const date=`${m[1]}-${m[2]}-${m[3]}`,cat=m[4].toUpperCase(),title=m[5].trim().replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
-    if(!title||title.length<3)continue;
-    const key=`${date}_${title.slice(0,25)}`;
-    if(seen.has(key))continue; seen.add(key);
-    result.push({id:UID(),date,category:cat,title,venue:'',url:'',memo:'',source:'fetched',externalId:key});
-  }
-  return result;
-}
+// parseHTML は上部で定義済み（sourceName引数付きバージョンを使用）
 
 // ========== ホーム ==========
 function renderHome(){
