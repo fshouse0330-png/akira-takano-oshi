@@ -193,7 +193,9 @@ body{font-family:-apple-system,'Helvetica Neue','Hiragino Kaku Gothic ProN',sans
 /* ========== モーダル ========== */
 .mwrap{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:flex-end}
 .mwrap.open{display:flex}
-.msheet{background:#fff;border-radius:20px 20px 0 0;padding:20px 20px calc(20px + var(--safe-b));width:100%;max-height:92vh;overflow-y:auto;-webkit-overflow-scrolling:touch;position:relative}
+.msheet{background:#fff;border-radius:20px 20px 0 0;width:100%;max-height:92vh;display:flex;flex-direction:column;position:relative}
+.msheet-body{padding:20px 20px 0;overflow-y:auto;-webkit-overflow-scrolling:touch;flex:1}
+.msheet-foot{padding:12px 20px calc(12px + var(--safe-b));background:#fff;border-top:1px solid var(--border);flex-shrink:0}
 .mhandle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px}
 .mtop{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .mtitle{font-size:1.05rem;font-weight:800}
@@ -202,7 +204,10 @@ body{font-family:-apple-system,'Helvetica Neue','Hiragino Kaku Gothic ProN',sans
 .fctrl{width:100%;padding:11px 13px;border:2px solid var(--border);border-radius:10px;font-size:.9rem;font-family:inherit;color:var(--text);background:#fff;margin-bottom:12px}
 .fctrl:focus{outline:none;border-color:var(--primary)}
 textarea.fctrl{resize:vertical;min-height:70px}
-.frow2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+/* フォーム2列レイアウト — 入力が重ならないよう align-items:start */
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.frow2 > div{display:flex;flex-direction:column}
+.frow2 .fctrl{margin-bottom:0}
 .cpills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .cpill{padding:7px 13px;border-radius:16px;border:2px solid var(--border);font-size:.78rem;font-weight:700;cursor:pointer;color:var(--sub);background:#fff}
 .cpill.on{background:var(--primary);border-color:var(--primary);color:#fff}
@@ -506,91 +511,99 @@ textarea.fctrl{resize:vertical;min-height:70px}
 <!-- チケット追加モーダル -->
 <div class="mwrap" id="ticket-modal" onclick="closeModal(event)">
   <div class="msheet">
-    <div class="mhandle"></div>
-    <div class="mtop">
-      <div class="mtitle" id="modal-title">🎫 チケット応募を追加</div>
-      <button class="mbtn-close" onclick="document.getElementById('ticket-modal').classList.remove('open')">×</button>
-    </div>
-    <label class="flbl">イベント名 *</label>
-    <input type="text" class="fctrl" id="t-name" placeholder="AKIRA TAKANO LIVE TOUR 2026">
-    <div class="frow2">
-      <div><label class="flbl">公演日</label><input type="date" class="fctrl" id="t-date"></div>
-      <div><label class="flbl">会場</label><input type="text" class="fctrl" id="t-venue" placeholder="武道館"></div>
-    </div>
-    <label class="flbl">応募種別（複数可）</label>
-    <div class="cpills" id="t-sites">
-      <div class="cpill" onclick="togglePill(this)" data-val="FC先行">FC先行</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="FC一般">FC一般</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="一般">一般</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="e+">e+</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="ローチケ">ローチケ</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="チケぴ">チケぴ</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="amex特典">amex特典</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="クレカ特典">クレカ特典</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="avex特典">avex特典</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="その他">その他</div>
-    </div>
-    <div class="frow2">
-      <div><label class="flbl">応募締切</label><input type="date" class="fctrl" id="t-deadline"></div>
-      <div><label class="flbl">当落発表日</label><input type="date" class="fctrl" id="t-result-date"></div>
-    </div>
-    <div class="frow2">
-      <div><label class="flbl">当落結果</label>
-        <select class="fctrl" id="t-result">
-          <option value="applied">応募済み</option><option value="pending-ticket">結果待ち</option>
-          <option value="win">当選 🎉</option><option value="lose">落選 😔</option>
-        </select>
+    <div class="msheet-body">
+      <div class="mhandle"></div>
+      <div class="mtop">
+        <div class="mtitle" id="modal-title">🎫 チケット応募を追加</div>
+        <button class="mbtn-close" onclick="document.getElementById('ticket-modal').classList.remove('open')">×</button>
       </div>
-      <div><label class="flbl">チケット代</label><input type="text" class="fctrl" id="t-price" placeholder="8,800円"></div>
+      <label class="flbl">イベント名 *</label>
+      <input type="text" class="fctrl" id="t-name" placeholder="AKIRA TAKANO LIVE TOUR 2026">
+      <div class="frow2" style="margin-bottom:12px;">
+        <div><label class="flbl">公演日</label><input type="date" class="fctrl" id="t-date"></div>
+        <div><label class="flbl">会場</label><input type="text" class="fctrl" id="t-venue" placeholder="武道館"></div>
+      </div>
+      <label class="flbl">応募種別（複数可）</label>
+      <div class="cpills" id="t-sites">
+        <div class="cpill" onclick="togglePill(this)" data-val="FC先行">FC先行</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="FC一般">FC一般</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="一般">一般</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="e+">e+</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="ローチケ">ローチケ</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="チケぴ">チケぴ</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="amex特典">amex特典</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="クレカ特典">クレカ特典</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="avex特典">avex特典</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="その他">その他</div>
+      </div>
+      <div class="frow2" style="margin-bottom:12px;">
+        <div><label class="flbl">応募締切</label><input type="date" class="fctrl" id="t-deadline"></div>
+        <div><label class="flbl">当落発表日</label><input type="date" class="fctrl" id="t-result-date"></div>
+      </div>
+      <div class="frow2" style="margin-bottom:12px;">
+        <div><label class="flbl">当落結果</label>
+          <select class="fctrl" id="t-result">
+            <option value="applied">応募済み</option><option value="pending-ticket">結果待ち</option>
+            <option value="win">当選 🎉</option><option value="lose">落選 😔</option>
+          </select>
+        </div>
+        <div><label class="flbl">チケット代</label><input type="text" class="fctrl" id="t-price" placeholder="8,800円"></div>
+      </div>
+      <div class="frow2" style="margin-bottom:12px;">
+        <div><label class="flbl">座席・種別</label><input type="text" class="fctrl" id="t-seat" placeholder="S席"></div>
+        <div><label class="flbl">応募URL</label><input type="url" class="fctrl" id="t-url" placeholder="https://..."></div>
+      </div>
+      <label class="flbl">メモ</label>
+      <textarea class="fctrl" id="t-memo" placeholder="座席番号・整理番号・同行者など"></textarea>
+      <input type="hidden" id="t-id">
     </div>
-    <div class="frow2">
-      <div><label class="flbl">座席・種別</label><input type="text" class="fctrl" id="t-seat" placeholder="S席"></div>
-      <div><label class="flbl">応募URL</label><input type="url" class="fctrl" id="t-url" placeholder="https://..."></div>
+    <div class="msheet-foot">
+      <button class="btn-save" onclick="saveTicket()">✅ 保存する</button>
     </div>
-    <label class="flbl">メモ</label>
-    <textarea class="fctrl" id="t-memo" placeholder="座席番号・整理番号・同行者など"></textarea>
-    <input type="hidden" id="t-id">
-    <button class="btn-save" onclick="saveTicket()">✅ 保存</button>
   </div>
 </div>
 
 <!-- コラボモーダル -->
 <div class="mwrap" id="collab-modal" onclick="closeModal(event)">
   <div class="msheet">
-    <div class="mhandle"></div>
-    <div class="mtop">
-      <div class="mtitle" id="collab-modal-title">🤝 コラボ・アンバサダーを登録</div>
-      <button class="mbtn-close" onclick="document.getElementById('collab-modal').classList.remove('open')">×</button>
+    <div class="msheet-body">
+      <div class="mhandle"></div>
+      <div class="mtop">
+        <div class="mtitle" id="collab-modal-title">🤝 コラボ・アンバサダーを登録</div>
+        <button class="mbtn-close" onclick="document.getElementById('collab-modal').classList.remove('open')">×</button>
+      </div>
+      <label class="flbl">キャンペーン名 *</label>
+      <input type="text" class="fctrl" id="c-name" placeholder="例: cocone×高野洸コラボ">
+      <label class="flbl">ブランド・企業名</label>
+      <input type="text" class="fctrl" id="c-brand" placeholder="例: cocone / BASE FOOD">
+      <label class="flbl">種別</label>
+      <div class="cpills" id="c-types">
+        <div class="cpill" onclick="togglePill(this)" data-val="アンバサダー">アンバサダー</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="コラボ">コラボ</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="CM">CM</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="キャンペーン">キャンペーン</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="グッズ">グッズ</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="サイン会">サイン会</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="ファンミ">ファンミ</div>
+        <div class="cpill" onclick="togglePill(this)" data-val="その他">その他</div>
+      </div>
+      <div class="frow2" style="margin-bottom:12px;">
+        <div><label class="flbl">開始日</label><input type="date" class="fctrl" id="c-start"></div>
+        <div><label class="flbl">終了日</label><input type="date" class="fctrl" id="c-end"></div>
+      </div>
+      <label class="flbl">公式サイトURL</label>
+      <input type="url" class="fctrl" id="c-url" placeholder="https://...">
+      <label class="flbl">Twitter投稿URL</label>
+      <input type="url" class="fctrl" id="c-tweet" placeholder="https://x.com/...">
+      <label class="flbl">特典・内容</label>
+      <textarea class="fctrl" id="c-detail" placeholder="例: 限定グッズ購入でサイン入りチェキプレゼント"></textarea>
+      <label class="flbl">メモ</label>
+      <textarea class="fctrl" id="c-memo"></textarea>
+      <input type="hidden" id="c-id">
     </div>
-    <label class="flbl">キャンペーン名 *</label>
-    <input type="text" class="fctrl" id="c-name" placeholder="例: cocone×高野洸コラボ">
-    <label class="flbl">ブランド・企業名</label>
-    <input type="text" class="fctrl" id="c-brand" placeholder="例: cocone / BASE FOOD">
-    <label class="flbl">種別</label>
-    <div class="cpills" id="c-types">
-      <div class="cpill" onclick="togglePill(this)" data-val="アンバサダー">アンバサダー</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="コラボ">コラボ</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="CM">CM</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="キャンペーン">キャンペーン</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="グッズ">グッズ</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="サイン会">サイン会</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="ファンミ">ファンミ</div>
-      <div class="cpill" onclick="togglePill(this)" data-val="その他">その他</div>
+    <div class="msheet-foot">
+      <button class="btn-save" onclick="saveCollab()">✅ 保存する</button>
     </div>
-    <div class="frow2">
-      <div><label class="flbl">開始日</label><input type="date" class="fctrl" id="c-start"></div>
-      <div><label class="flbl">終了日</label><input type="date" class="fctrl" id="c-end"></div>
-    </div>
-    <label class="flbl">公式サイトURL</label>
-    <input type="url" class="fctrl" id="c-url" placeholder="https://...">
-    <label class="flbl">Twitter投稿URL</label>
-    <input type="url" class="fctrl" id="c-tweet" placeholder="https://x.com/...">
-    <label class="flbl">特典・内容</label>
-    <textarea class="fctrl" id="c-detail" placeholder="例: 限定グッズ購入でサイン入りチェキプレゼント"></textarea>
-    <label class="flbl">メモ</label>
-    <textarea class="fctrl" id="c-memo"></textarea>
-    <input type="hidden" id="c-id">
-    <button class="btn-save" onclick="saveCollab()">✅ 保存</button>
   </div>
 </div>
 
@@ -685,8 +698,17 @@ async function syncData(){
 }
 
 function mergeEvents(newEvs){
-  const ids=new Set(events.map(e=>e.externalId||e.id).filter(Boolean));
-  newEvs.forEach(e=>{const k=e.externalId||e.id;if(!ids.has(k)){events.push(e);ids.add(k);}});
+  // 手動追加イベントは保持、取得データは最新版で全入れ替え
+  const manualEvents = events.filter(e => e.source === 'manual');
+  const manualIds = new Set(manualEvents.map(e => e.externalId || e.id).filter(Boolean));
+
+  // 新しい取得データから手動データと重複するものを除外
+  const freshFetched = newEvs.filter(e => {
+    const k = e.externalId || e.id;
+    return !manualIds.has(k);
+  });
+
+  events = [...manualEvents, ...freshFetched];
 }
 
 function parseHTML(html){
@@ -715,9 +737,18 @@ function renderHome(){
   const wonTickets=tickets.filter(t=>t.result==='win').length;
   const pendingTickets=tickets.filter(t=>t.result==='applied'||t.result==='pending-ticket').length;
   document.getElementById('stats-row').innerHTML=`
-    <div class="sbox"><div class="snum">${upcoming.length}</div><div class="slbl">今後の予定</div></div>
-    <div class="sbox"><div class="snum" style="color:var(--live)">${liveStage.length}</div><div class="slbl">LIVE/STAGE</div></div>
-    <div class="sbox"><div class="snum" style="color:var(--win)">${wonTickets}</div><div class="slbl">当選チケット</div></div>`;
+    <div class="sbox" onclick="switchTab('sch',document.getElementById('nav-sch'))" style="cursor:pointer;transition:transform .15s" onmousedown="this.style.transform='scale(.96)'" onmouseup="this.style.transform=''">
+      <div class="snum">${upcoming.length}</div><div class="slbl">今後の予定</div>
+      <div style="font-size:.6rem;color:var(--primary);margin-top:3px;font-weight:700">→ 一覧</div>
+    </div>
+    <div class="sbox" onclick="switchTab('sch',document.getElementById('nav-sch'));filterSch('LIVE',document.querySelector('#sch-filters .fchip:nth-child(2)'))" style="cursor:pointer;transition:transform .15s" onmousedown="this.style.transform='scale(.96)'" onmouseup="this.style.transform=''">
+      <div class="snum" style="color:var(--live)">${liveStage.length}</div><div class="slbl">LIVE/STAGE</div>
+      <div style="font-size:.6rem;color:var(--live);margin-top:3px;font-weight:700">→ 絞り込み</div>
+    </div>
+    <div class="sbox" onclick="switchTab('ticket',document.getElementById('nav-ticket'));filterTickets('win',document.querySelector('#ticket-list-view .fchip:nth-child(4)'))" style="cursor:pointer;transition:transform .15s" onmousedown="this.style.transform='scale(.96)'" onmouseup="this.style.transform=''">
+      <div class="snum" style="color:var(--win)">${wonTickets}</div><div class="slbl">当選チケット</div>
+      <div style="font-size:.6rem;color:var(--win);margin-top:3px;font-weight:700">→ 確認</div>
+    </div>`;
 
   // 要アクション（チケット締切7日以内）
   const actions=tickets.filter(t=>{const d=daysTo(t.deadline);return d!==null&&d>=0&&d<=7&&(t.result==='applied'||t.result==='pending-ticket')})
