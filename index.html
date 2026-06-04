@@ -30,6 +30,7 @@
   --magazine: #c0392b;
   --cinema: #d35400;
   --book: #8e6914;
+  --collab: #c0392b;
   --win: #27ae60;
   --lose: #e74c3c;
   --warn: #f39c12;
@@ -570,6 +571,7 @@ textarea.form-ctrl { resize: vertical; min-height: 70px; }
         <span style="display:flex;align-items:center;gap:4px;font-size:0.72rem;"><span class="cal-dot" style="background:var(--tv)"></span>TV</span>
         <span style="display:flex;align-items:center;gap:4px;font-size:0.72rem;"><span class="cal-dot" style="background:var(--event)"></span>EVENT</span>
         <span style="display:flex;align-items:center;gap:4px;font-size:0.72rem;"><span class="cal-dot" style="background:var(--release)"></span>RELEASE</span>
+        <span style="display:flex;align-items:center;gap:4px;font-size:0.72rem;"><span class="cal-dot" style="background:var(--collab)"></span>コラボ期間</span>
       </div>
     </div>
   </div>
@@ -605,6 +607,28 @@ textarea.form-ctrl { resize: vertical; min-height: 70px; }
     </div>
     <div id="ticket-list">
       <div class="empty"><div class="icon">🎫</div><p>チケット応募を記録して<br>当落・締切を管理しましょう</p></div>
+    </div>
+  </div>
+
+  <!-- ========== コラボ・アンバサダー ========== -->
+  <div class="panel" id="panel-collab">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
+      <button class="btn-sync" onclick="openCollabModal()">＋ コラボを登録</button>
+    </div>
+
+    <!-- 開催中 -->
+    <div id="collab-active"></div>
+
+    <!-- フィルター -->
+    <div class="filter-scroll" style="margin-bottom:10px;">
+      <div class="filter-chip active" onclick="filterCollabs('all',this)">すべて</div>
+      <div class="filter-chip" onclick="filterCollabs('active',this)">🟢 開催中</div>
+      <div class="filter-chip" onclick="filterCollabs('upcoming',this)">🔜 近日開始</div>
+      <div class="filter-chip" onclick="filterCollabs('ended',this)">⬜ 終了</div>
+    </div>
+
+    <div id="collab-list">
+      <div class="empty"><div class="icon">🤝</div><p>コラボ・アンバサダー情報を<br>登録しましょう</p></div>
     </div>
   </div>
 
@@ -671,9 +695,66 @@ textarea.form-ctrl { resize: vertical; min-height: 70px; }
     <div>チケット</div>
     <div class="nav-badge" id="nb-ticket" style="display:none">0</div>
   </div>
+  <div class="nav-item" onclick="switchTab('collab',this)" id="nav-collab">
+    <div class="nav-icon">🤝</div>
+    <div>コラボ</div>
+    <div class="nav-badge" id="nb-collab" style="display:none">0</div>
+  </div>
   <div class="nav-item" onclick="switchTab('settings',this)" id="nav-settings">
     <div class="nav-icon">⚙️</div>
-    <div>設定・追加</div>
+    <div>設定</div>
+  </div>
+</div>
+
+<!-- コラボ登録モーダル -->
+<div class="modal-wrap" id="collab-modal" onclick="closeModal(event)">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="collab-modal-title">🤝 コラボ・アンバサダーを登録</div>
+
+    <label class="form-lbl">キャンペーン名 *</label>
+    <input type="text" class="form-ctrl" id="c-name" placeholder="例: cocone×高野洸コラボ">
+
+    <label class="form-lbl">ブランド・企業名</label>
+    <input type="text" class="form-ctrl" id="c-brand" placeholder="例: cocone / BASE FOOD">
+
+    <label class="form-lbl">種別</label>
+    <div class="check-group" id="c-types" style="margin-bottom:12px;">
+      <div class="check-pill" onclick="togglePill(this)" data-val="アンバサダー">アンバサダー</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="コラボ">コラボ</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="CM">CM</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="キャンペーン">キャンペーン</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="グッズ">グッズ</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="サイン会">サイン会</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="ファンミ">ファンミ</div>
+      <div class="check-pill" onclick="togglePill(this)" data-val="その他">その他</div>
+    </div>
+
+    <div class="form-row2">
+      <div>
+        <label class="form-lbl">開始日</label>
+        <input type="date" class="form-ctrl" id="c-start">
+      </div>
+      <div>
+        <label class="form-lbl">終了日</label>
+        <input type="date" class="form-ctrl" id="c-end">
+      </div>
+    </div>
+
+    <label class="form-lbl">公式サイトURL</label>
+    <input type="url" class="form-ctrl" id="c-url" placeholder="https://...">
+
+    <label class="form-lbl">Twitter投稿URL</label>
+    <input type="url" class="form-ctrl" id="c-tweet" placeholder="https://x.com/...">
+
+    <label class="form-lbl">特典・内容</label>
+    <textarea class="form-ctrl" id="c-detail" placeholder="例: 限定グッズ購入でサイン入りチェキプレゼント&#10;応募期間: ○月○日〜○月○日"></textarea>
+
+    <label class="form-lbl">メモ</label>
+    <textarea class="form-ctrl" id="c-memo" placeholder="応募状況・当落・メモなど"></textarea>
+
+    <input type="hidden" id="c-id">
+    <button class="btn-save" onclick="saveCollab()">✅ 保存</button>
   </div>
 </div>
 
@@ -757,12 +838,100 @@ textarea.form-ctrl { resize: vertical; min-height: 70px; }
 </div>
 
 <script>
+// ========== バージョン管理 ==========
+const APP_VERSION = 3; // バージョンアップ時はここを増やす
+
+// ストレージキー（絶対に変更しない）
+const KEYS = {
+  events:  'at_events',
+  tickets: 'at_tickets',
+  collabs: 'at_collabs',
+  version: 'at_data_version',
+  lastBackup: 'at_last_backup',
+};
+
+// ========== マイグレーション ==========
+function migrateData() {
+  const savedVer = parseInt(localStorage.getItem(KEYS.version) || '1');
+  if (savedVer >= APP_VERSION) return; // 最新版なら何もしない
+
+  console.log(`[Migration] v${savedVer} → v${APP_VERSION}`);
+
+  // v1 → v2: collabsキーが存在しない場合は空配列で初期化
+  if (savedVer < 2) {
+    if (!localStorage.getItem(KEYS.collabs)) {
+      localStorage.setItem(KEYS.collabs, '[]');
+    }
+  }
+
+  // v2 → v3: eventsにsourceフィールドがない場合は'manual'で補完
+  if (savedVer < 3) {
+    try {
+      const evs = JSON.parse(localStorage.getItem(KEYS.events) || '[]');
+      const migrated = evs.map(e => ({
+        source: 'manual', // デフォルト
+        ...e,             // 既存フィールドで上書き
+        id: e.id || uid_safe(),
+      }));
+      localStorage.setItem(KEYS.events, JSON.stringify(migrated));
+    } catch(e) { console.warn('Migration v3 events:', e); }
+
+    // ticketsにresultフィールドがない場合は'applied'で補完
+    try {
+      const tks = JSON.parse(localStorage.getItem(KEYS.tickets) || '[]');
+      const migrated = tks.map(t => ({
+        result: 'applied',
+        sites: [],
+        ...t,
+        id: t.id || uid_safe(),
+      }));
+      localStorage.setItem(KEYS.tickets, JSON.stringify(migrated));
+    } catch(e) { console.warn('Migration v3 tickets:', e); }
+
+    // collabsにtypesフィールドがない場合は[]で補完
+    try {
+      const cols = JSON.parse(localStorage.getItem(KEYS.collabs) || '[]');
+      const migrated = cols.map(c => ({
+        types: [],
+        ...c,
+        id: c.id || uid_safe(),
+      }));
+      localStorage.setItem(KEYS.collabs, JSON.stringify(migrated));
+    } catch(e) { console.warn('Migration v3 collabs:', e); }
+  }
+
+  // バージョンを更新
+  localStorage.setItem(KEYS.version, String(APP_VERSION));
+  console.log(`[Migration] 完了`);
+}
+
+function uid_safe() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+}
+
+// マイグレーション実行（データ読み込み前に必ず実行）
+migrateData();
+
 // ========== ストア ==========
-let events   = JSON.parse(localStorage.getItem('at_events')  || '[]');
-let tickets  = JSON.parse(localStorage.getItem('at_tickets') || '[]');
-let calDate  = new Date();
-let schFilter = 'all';
-let ticketFilter = 'all';
+let events      = safeLoad(KEYS.events,  []);
+let tickets     = safeLoad(KEYS.tickets, []);
+let collabs     = safeLoad(KEYS.collabs, []);
+let calDate     = new Date();
+let schFilter   = 'all';
+let ticketFilter   = 'all';
+let collabFilter   = 'all';
+
+function safeLoad(key, defaultVal) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return defaultVal;
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : defaultVal;
+  } catch(e) {
+    console.warn(`[safeLoad] ${key} の読み込みに失敗:`, e);
+    return defaultVal;
+  }
+}
 
 const CAT_COLOR = {
   LIVE:'#e74c3c', TV:'#8e44ad', STAGE:'#27ae60', EVENT:'#e67e22',
@@ -773,9 +942,31 @@ const DOW = ['日','月','火','水','木','金','土'];
 const MON = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 
 function save() {
-  localStorage.setItem('at_events',  JSON.stringify(events));
-  localStorage.setItem('at_tickets', JSON.stringify(tickets));
+  try {
+    localStorage.setItem(KEYS.events,   JSON.stringify(events));
+    localStorage.setItem(KEYS.tickets,  JSON.stringify(tickets));
+    localStorage.setItem(KEYS.collabs,  JSON.stringify(collabs));
+    localStorage.setItem(KEYS.version,  String(APP_VERSION));
+  } catch(e) {
+    // ストレージ容量不足の場合
+    showMsg('⚠️ 保存容量が不足しています。古いデータをエクスポートして削除してください。', 'err');
+  }
 }
+
+// ========== バックアップリマインダー ==========
+function checkBackupReminder() {
+  const last = localStorage.getItem(KEYS.lastBackup);
+  const now  = Date.now();
+  const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+  if (!last || (now - parseInt(last)) > THIRTY_DAYS) {
+    setTimeout(() => {
+      const msg = document.getElementById('status-msg');
+      msg.innerHTML = '💾 データのバックアップをお勧めします → <button onclick="exportData();localStorage.setItem(\'at_last_backup\',Date.now())" style="background:var(--primary);color:white;border:none;padding:4px 10px;border-radius:6px;cursor:pointer;font-weight:700;">今すぐエクスポート</button>';
+      msg.className = 'status-msg show info';
+    }, 2000);
+  }
+}
+
 function uid() { return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
 function daysTo(s) {
   if (!s) return null;
@@ -790,7 +981,7 @@ function fmtDate(s) {
 
 // ========== タブ ==========
 function switchTab(name, el) {
-  ['cal','sch','ticket','settings'].forEach(n => {
+  ['cal','sch','ticket','collab','settings'].forEach(n => {
     document.getElementById('panel-'+n).classList.toggle('active', n===name);
     document.getElementById('nav-'+n).classList.toggle('active', n===name);
   });
@@ -917,6 +1108,23 @@ function renderCal() {
 
   const first = new Date(y,mo,1).getDay();
   const last  = new Date(y,mo+1,0).getDate();
+
+  // コラボ期間をカレンダーに追加
+  collabs.forEach(c => {
+    if(!c.start) return;
+    const s  = new Date(c.start+'T00:00:00');
+    const e2 = c.end ? new Date(c.end+'T00:00:00') : s;
+    for(let d=1; d<=last; d++){
+      const cur = new Date(y,mo,d);
+      if(cur >= s && cur <= e2){
+        (byDay[d]=byDay[d]||[]).push({
+          id:c.id, category:'EVENT', title:'🤝'+c.name,
+          _isCollab:true, url:c.url||'',
+          date:`${y}-${String(mo+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`
+        });
+      }
+    }
+  });
 
   for (let i=0;i<first;i++) {
     const c = document.createElement('div');
@@ -1203,9 +1411,153 @@ function renderStats() {
      <div class="stat-box"><div class="stat-num" style="color:var(--win)">${won}</div><div class="stat-lbl">当選チケット</div></div>`;
 }
 
+// ========== コラボ機能 ==========
+function openCollabModal(prefill) {
+  document.getElementById('collab-modal-title').textContent = '🤝 コラボ・アンバサダーを登録';
+  document.getElementById('c-id').value = '';
+  ['c-name','c-brand','c-start','c-end','c-url','c-tweet','c-detail','c-memo'].forEach(id=>{
+    document.getElementById(id).value='';
+  });
+  document.querySelectorAll('#c-types .check-pill').forEach(p=>p.classList.remove('on'));
+  if(prefill){
+    if(prefill.name) document.getElementById('c-name').value=prefill.name;
+  }
+  document.getElementById('collab-modal').classList.add('open');
+}
+
+function saveCollab() {
+  const name = document.getElementById('c-name').value.trim();
+  if(!name){alert('キャンペーン名を入力してください');return;}
+  const id    = document.getElementById('c-id').value || uid();
+  const types = [...document.querySelectorAll('#c-types .check-pill.on')].map(p=>p.dataset.val);
+  const c = {
+    id, name,
+    brand:  document.getElementById('c-brand').value.trim(),
+    types,
+    start:  document.getElementById('c-start').value,
+    end:    document.getElementById('c-end').value,
+    url:    document.getElementById('c-url').value.trim(),
+    tweet:  document.getElementById('c-tweet').value.trim(),
+    detail: document.getElementById('c-detail').value.trim(),
+    memo:   document.getElementById('c-memo').value.trim(),
+  };
+  const idx = collabs.findIndex(x=>x.id===id);
+  if(idx>=0) collabs[idx]=c; else collabs.push(c);
+  save();
+  document.getElementById('collab-modal').classList.remove('open');
+  renderCollabs();
+  renderCal();
+  showMsg('✅ コラボ情報を保存しました','ok');
+}
+
+function editCollab(id) {
+  const c = collabs.find(x=>x.id===id);
+  if(!c) return;
+  document.getElementById('collab-modal-title').textContent = '✏️ コラボ情報を編集';
+  document.getElementById('c-id').value    = c.id;
+  document.getElementById('c-name').value  = c.name||'';
+  document.getElementById('c-brand').value = c.brand||'';
+  document.getElementById('c-start').value = c.start||'';
+  document.getElementById('c-end').value   = c.end||'';
+  document.getElementById('c-url').value   = c.url||'';
+  document.getElementById('c-tweet').value = c.tweet||'';
+  document.getElementById('c-detail').value= c.detail||'';
+  document.getElementById('c-memo').value  = c.memo||'';
+  document.querySelectorAll('#c-types .check-pill').forEach(p=>{
+    p.classList.toggle('on',(c.types||[]).includes(p.dataset.val));
+  });
+  document.getElementById('collab-modal').classList.add('open');
+}
+
+function delCollab(id) {
+  if(!confirm('削除しますか？')) return;
+  collabs = collabs.filter(c=>c.id!==id);
+  save(); renderCollabs(); renderCal();
+}
+
+function collabStatus(c) {
+  const today = TODAY();
+  if(c.end && c.end < today) return 'ended';
+  if(c.start && c.start > today) return 'upcoming';
+  return 'active';
+}
+
+function TODAY() {
+  return new Date().toISOString().slice(0,10);
+}
+
+function renderCollabs() {
+  const list = document.getElementById('collab-list');
+  const activeDiv = document.getElementById('collab-active');
+
+  const nb = document.getElementById('nb-collab');
+  nb.textContent = collabs.length;
+  nb.style.display = collabs.length ? 'block' : 'none';
+
+  // 開催中バナー
+  const activeCols = collabs.filter(c=>collabStatus(c)==='active');
+  activeDiv.innerHTML = activeCols.length ? `
+    <div class="card" style="border-left:4px solid var(--collab);padding:14px 16px;margin-bottom:12px;">
+      <div style="font-size:0.75rem;font-weight:800;color:var(--collab);margin-bottom:8px;">🟢 現在開催中 (${activeCols.length}件)</div>
+      ${activeCols.map(c=>`
+        <div style="margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--border);">
+          <div style="font-weight:700;font-size:0.9rem;">${c.name}</div>
+          ${c.brand?`<div style="font-size:0.75rem;color:var(--sub);">${c.brand}</div>`:''}
+          ${c.end?`<div style="font-size:0.72rem;color:var(--warn);margin-top:2px;">📅 ${fmtDate(c.end)} 終了</div>`:''}
+          <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
+            ${c.url?`<button class="btn-t" onclick="window.open('${c.url}','_blank')">🔗 特設サイト</button>`:''}
+            ${c.tweet?`<button class="btn-t" onclick="window.open('${c.tweet}','_blank')">🐦 ツイート</button>`:''}
+          </div>
+        </div>`).join('')}
+    </div>` : '';
+
+  let filtered = [...collabs].sort((a,b)=>(b.start||'').localeCompare(a.start||''));
+  if(collabFilter==='active')   filtered=filtered.filter(c=>collabStatus(c)==='active');
+  if(collabFilter==='upcoming') filtered=filtered.filter(c=>collabStatus(c)==='upcoming');
+  if(collabFilter==='ended')    filtered=filtered.filter(c=>collabStatus(c)==='ended');
+
+  if(!filtered.length){
+    list.innerHTML=`<div class="empty"><div class="icon">🤝</div><p>該当するコラボ情報がありません</p></div>`;
+    return;
+  }
+
+  const statusLabel = {active:'🟢 開催中', upcoming:'🔜 近日開始', ended:'⬜ 終了'};
+  const statusColor = {active:'var(--win)', upcoming:'var(--warn)', ended:'var(--sub)'};
+
+  list.innerHTML = filtered.map(c=>{
+    const st = collabStatus(c);
+    const typeTags = (c.types||[]).map(t=>`<span class="site-tag credit">${t}</span>`).join('');
+    return `<div class="ticket-card" style="border-top-color:var(--collab);">
+      <span class="ticket-badge" style="background:#fdecea;color:var(--collab);">${statusLabel[st]}</span>
+      <div class="ticket-name">${c.name}</div>
+      ${c.brand?`<div style="font-size:0.78rem;color:var(--sub);margin-bottom:6px;">🏢 ${c.brand}</div>`:''}
+      <div class="site-tags">${typeTags}</div>
+      <div class="ticket-grid2">
+        <div><div class="t-info-label">開始日</div><div class="t-info-value">${fmtDate(c.start)}</div></div>
+        <div><div class="t-info-label">終了日</div><div class="t-info-value">${fmtDate(c.end)}</div></div>
+      </div>
+      ${c.detail?`<div style="font-size:0.8rem;color:var(--text);background:#fff8f0;padding:8px 10px;border-radius:8px;margin:8px 0;line-height:1.5;">${c.detail.replace(/\n/g,'<br>')}</div>`:''}
+      ${c.memo?`<div style="font-size:0.78rem;color:var(--sub);background:#fafafa;padding:7px 9px;border-radius:8px;">📝${c.memo}</div>`:''}
+      <div class="ticket-actions">
+        ${c.url?`<button class="btn-t" onclick="window.open('${c.url}','_blank')">🔗 特設サイト</button>`:''}
+        ${c.tweet?`<button class="btn-t" onclick="window.open('${c.tweet}','_blank')">🐦 ツイート</button>`:''}
+        <button class="btn-t" onclick="editCollab('${c.id}')">✏️ 編集</button>
+        <button class="btn-t red" onclick="delCollab('${c.id}')">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterCollabs(f, el) {
+  document.querySelectorAll('#panel-collab .filter-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  collabFilter=f;
+  renderCollabs();
+}
+
 // ========== データ管理 ==========
 function exportData() {
-  const blob = new Blob([JSON.stringify({events,tickets,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});
+  const blob = new Blob([JSON.stringify({events,tickets,collabs,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = `akira_oshi_${new Date().toISOString().slice(0,10)}.json`;
@@ -1217,9 +1569,11 @@ function importData(e) {
   r.onload=ev=>{
     try {
       const d=JSON.parse(ev.target.result);
-      if(d.events){events=d.events;} if(d.tickets){tickets=d.tickets;}
+      if(d.events)  events  = d.events;
+      if(d.tickets) tickets = d.tickets;
+      if(d.collabs) collabs = d.collabs;
       save(); renderAll();
-      showMsg(`✅ インポートしました (${events.length}件のイベント)`, 'ok');
+      showMsg(`✅ インポートしました (イベント${events.length}件 / チケット${tickets.length}件 / コラボ${collabs.length}件)`, 'ok');
     } catch(err){ showMsg('❌ ファイルの読み込みに失敗しました','err'); }
   };
   r.readAsText(f);
@@ -1233,7 +1587,7 @@ function clearFetched() {
 }
 function clearAll() {
   if(!confirm('⚠️ 全データを削除しますか？この操作は取り消せません。')) return;
-  events=[]; tickets=[];
+  events=[]; tickets=[]; collabs=[];
   save(); renderAll();
   showMsg('🗑️ 全データを削除しました');
 }
@@ -1250,6 +1604,7 @@ function renderAll() {
   renderCal();
   renderSch();
   renderTickets();
+  renderCollabs();
   renderStats();
 }
 
@@ -1263,6 +1618,7 @@ if (saved) {
   document.getElementById('last-sync').textContent = '「更新」ボタンで最新情報を取得';
 }
 renderAll();
+checkBackupReminder();
 
 // PWA: Service Worker（オフライン対応）
 if ('serviceWorker' in navigator) {
