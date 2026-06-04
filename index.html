@@ -297,6 +297,9 @@ textarea.fctrl{resize:vertical;min-height:70px}
         <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--event);width:8px;height:8px;border-radius:50%;display:inline-block"></span>EVENT</span>
         <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--release);width:8px;height:8px;border-radius:50%;display:inline-block"></span>RELEASE</span>
         <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--collab);width:8px;height:8px;border-radius:50%;display:inline-block"></span>コラボ</span>
+        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:#e74c3c;width:8px;height:8px;border-radius:50%;display:inline-block"></span>⏰締切</span>
+        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:#8e44ad;width:8px;height:8px;border-radius:50%;display:inline-block"></span>🔔発表</span>
+        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:#27ae60;width:8px;height:8px;border-radius:50%;display:inline-block"></span>🎉公演</span>
       </div>
     </div>
   </div>
@@ -833,6 +836,41 @@ function renderCal(){
     if(d.getFullYear()===y&&d.getMonth()===mo){const k=d.getDate();(byDay[k]=byDay[k]||[]).push(e);}
   });
   const last=new Date(y,mo+1,0).getDate();
+
+  // チケット情報をカレンダーに追加
+  tickets.forEach(t=>{
+    // 応募締切
+    if(t.deadline){
+      const d=new Date(t.deadline+'T00:00:00');
+      if(d.getFullYear()===y&&d.getMonth()===mo&&(t.result==='applied'||t.result==='pending-ticket')){
+        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
+          id:'dl_'+t.id, category:'_deadline', title:`⏰締切: ${t.name}`,
+          _ticketColor:'#e74c3c', _isTicketEvent:true, _ticketId:t.id
+        });
+      }
+    }
+    // 当落発表日
+    if(t.resultDate){
+      const d=new Date(t.resultDate+'T00:00:00');
+      if(d.getFullYear()===y&&d.getMonth()===mo){
+        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
+          id:'rd_'+t.id, category:'_result', title:`🔔発表: ${t.name}`,
+          _ticketColor:'#8e44ad', _isTicketEvent:true, _ticketId:t.id
+        });
+      }
+    }
+    // 公演日（当選チケットのみ）
+    if(t.date&&t.result==='win'){
+      const d=new Date(t.date+'T00:00:00');
+      if(d.getFullYear()===y&&d.getMonth()===mo){
+        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
+          id:'ev_'+t.id, category:'_concert', title:`🎉公演: ${t.name}`,
+          _ticketColor:'#27ae60', _isTicketEvent:true, _ticketId:t.id
+        });
+      }
+    }
+  });
+
   collabs.forEach(c=>{
     if(!c.start)return;
     const s=new Date(c.start+'T00:00:00'),e2=c.end?new Date(c.end+'T00:00:00'):s;
@@ -854,7 +892,7 @@ function renderCal(){
       const row=document.createElement('div');row.className='cal-dots';
       dots.slice(0,5).forEach(e=>{
         const dot=document.createElement('div');dot.className='cal-dot';
-        dot.style.cssText=`width:5px;height:5px;border-radius:50%;background:${e._collabColor||CC[e.category]||CC.OTHER}`;
+        dot.style.cssText=`width:5px;height:5px;border-radius:50%;background:${e._ticketColor||e._collabColor||CC[e.category]||CC.OTHER}`;
         row.appendChild(dot);
       });
       cell.appendChild(row);
@@ -1006,37 +1044,131 @@ function setTicketView(v,el){
   if(v==='strategy')renderStrategy();
 }
 
+// ルート定義（優先順・リンク付き）
+const ALL_ROUTES = [
+  {name:'FC先行',   priority:1, url:'https://takano-akira.net/signin',    note:'最高確率。FC会員限定'},
+  {name:'FC一般',   priority:2, url:'https://takano-akira.net/signin',    note:'FC会員向け一般発売'},
+  {name:'amex特典', priority:3, url:'https://www.americanexpress.com/ja-jp/benefits/entertainment/', note:'アメックス会員特典。高確率'},
+  {name:'クレカ特典',priority:4, url:'',  note:'各クレジットカード特典先行'},
+  {name:'avex特典', priority:5, url:'https://avex.com/',  note:'avexファンクラブ・メルマガ特典'},
+  {name:'e+',       priority:6, url:'https://eplus.jp/sf/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8', note:'イープラス'},
+  {name:'ローチケ', priority:7, url:'https://l-tike.com/search/?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8', note:'ローソンチケット'},
+  {name:'チケぴ',   priority:8, url:'https://t.pia.jp/pia/search/searchMain.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8', note:'チケットぴあ'},
+  {name:'一般',     priority:9, url:'', note:'一般発売。最後の手段'},
+  {name:'その他',   priority:10,url:'', note:''},
+];
+
+function strategyAdvice(name, appliedSites, allTickets){
+  const tips=[];
+  const won = allTickets.filter(t=>t.name===name&&t.result==='win');
+  if(won.length>0) return [{icon:'🎉',text:'当選済みです！おめでとうございます',color:'var(--win)'}];
+
+  const applied = new Set(appliedSites);
+  const lost    = new Set(allTickets.filter(t=>t.name===name&&t.result==='lose').flatMap(t=>t.sites||[]));
+
+  // FC未申込み
+  if(!applied.has('FC先行')&&!lost.has('FC先行'))tips.push({icon:'⭐',text:'FC先行がまだ未応募です。最優先で応募しましょう',color:'var(--accent)'});
+  // クレカ特典未使用
+  const creditRoutes=['amex特典','クレカ特典','avex特典'];
+  const unusedCredit=creditRoutes.filter(r=>!applied.has(r)&&!lost.has(r));
+  if(unusedCredit.length>0)tips.push({icon:'💳',text:`${unusedCredit.join('/')}が未応募です。一般より高確率な先行を活用しましょう`,color:'#856404'});
+  // 複数落選
+  if(lost.size>=2)tips.push({icon:'💡',text:`${lost.size}ルートで落選。残りルートを急いで応募しましょう`,color:'var(--lose)'});
+  // 全FC落選→一般提案
+  if(lost.has('FC先行')&&lost.has('FC一般')&&!applied.has('e+')&&!applied.has('ローチケ'))
+    tips.push({icon:'🎯',text:'FC系が落選。e+・ローチケの一般発売も忘れずチェック',color:'var(--primary)'});
+  // 何も応募していない
+  if(applied.size===0)tips.push({icon:'🚀',text:'まだ未応募です。FC先行から始めましょう',color:'var(--primary)'});
+
+  return tips.length>0 ? tips : [{icon:'✅',text:'バランスよく応募中です',color:'var(--stage)'}];
+}
+
 function renderStrategy(){
   const content=document.getElementById('strategy-content');
-  const ROUTES=['FC先行','FC一般','一般','e+','ローチケ','チケぴ','amex特典','クレカ特典','avex特典'];
-  const ROUTE_URLS={'e+':'https://eplus.jp/sf/search?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8','ローチケ':'https://l-tike.com/search/?keyword=%E9%AB%98%E9%87%8E%E6%B4%B8','チケぴ':'https://t.pia.jp/pia/search/searchMain.do?kwd=%E9%AB%98%E9%87%8E%E6%B4%B8','FC先行':'https://takano-akira.net/signin','FC一般':'https://takano-akira.net/signin'};
 
-  // イベント別にチケットをグルーピング
+  // イベント別グルーピング
   const grouped={};
   tickets.forEach(t=>{
     const key=t.name||'その他';
-    (grouped[key]=grouped[key]||[]).push(t);
+    if(!grouped[key]) grouped[key]={tickets:[]};
+    grouped[key].tickets.push(t);
   });
 
-  if(Object.keys(grouped).length===0){content.innerHTML=`<div class="empty"><div class="icon">🗺️</div><p>チケット応募を追加すると<br>戦略マップが表示されます</p></div>`;return;}
+  if(Object.keys(grouped).length===0){
+    content.innerHTML=`<div class="empty"><div class="icon">🗺️</div><p>チケット応募を追加すると<br>戦略マップが表示されます</p></div>`;
+    return;
+  }
 
   const rl={applied:'応募済み','pending-ticket':'結果待ち',win:'当選 🎉',lose:'落選 😔'};
   const rcls={applied:'rs-applied','pending-ticket':'rs-pending',win:'rs-win',lose:'rs-lose'};
 
-  content.innerHTML=Object.entries(grouped).map(([name,tList])=>`
-    <div class="strategy-card">
+  content.innerHTML=Object.entries(grouped).map(([name,{tickets:tList}],gi)=>{
+    // 応募済みのルート→チケットのマップ
+    const routeMap={};
+    tList.forEach(t=>(t.sites||[]).forEach(s=>{
+      if(!routeMap[s]||routeMap[s].result==='lose') routeMap[s]=t; // 最良結果を優先
+    }));
+    const appliedSites=Object.keys(routeMap);
+
+    // AIっぽいアドバイス
+    const advice=strategyAdvice(name,appliedSites,tList);
+
+    // 全ルートの状態を表示
+    const routeRows=ALL_ROUTES.map(r=>{
+      const t=routeMap[r.name];
+      const status=t?t.result:'none';
+      const statusLabel={none:'未応募',applied:'応募済み','pending-ticket':'結果待ち',win:'当選 🎉',lose:'落選'};
+      const statusCls={none:'rs-none',applied:'rs-applied','pending-ticket':'rs-pending',win:'rs-win',lose:'rs-lose'};
+      const days=t&&t.deadline?daysTo(t.deadline):null;
+      const urgency=days!==null&&days>=0&&days<=3?'style="color:var(--lose);font-weight:800"':'';
+      return`<div class="route-row">
+        <div style="min-width:80px;">
+          <div class="route-name">${r.name}</div>
+          ${r.note?`<div style="font-size:.62rem;color:var(--sub)">${r.note}</div>`:''}
+        </div>
+        <div class="route-deadline" ${urgency}>${t&&t.deadline?`締切: ${fmtDate(t.deadline)}`:''}</div>
+        <span class="route-status ${statusCls[status]}">${statusLabel[status]}</span>
+        <div style="display:flex;gap:4px;flex-shrink:0;">
+          ${r.url?`<a href="${r.url}" target="_blank" rel="noopener" style="padding:4px 8px;background:#e8f0fe;color:var(--primary);border-radius:6px;font-size:.72rem;text-decoration:none;font-weight:700;">🔗</a>`:''}
+          ${status==='none'?`<button style="padding:4px 8px;background:var(--accent);color:#fff;border:none;border-radius:6px;font-size:.72rem;font-weight:700;cursor:pointer;" data-evname="${escAttr(name)}" data-site="${escAttr(r.name)}" onclick="addRouteFromStrategy(this)">＋</button>`:''}
+          ${status!=='none'&&status!=='win'?`<button style="padding:4px 8px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.72rem;cursor:pointer;" data-id="${t.id}" onclick="editTicket(this.dataset.id)">✏️</button>`:''}
+        </div>
+      </div>`;
+    }).join('');
+
+    return`<div class="strategy-card">
       <div class="strategy-event">🎫 ${name}</div>
-      ${tList.flatMap(t=>(t.sites||['未設定']).map(site=>{
-        const url=ROUTE_URLS[site]||'';
-        return`<div class="route-row">
-          <div class="route-name">${site}</div>
-          <div class="route-deadline">${t.deadline?`締切: ${fmtDate(t.deadline)}`:'締切未設定'}</div>
-          <span class="route-status ${rcls[t.result]||'rs-applied'}">${rl[t.result]||'応募済み'}</span>
-          ${url?`<a href="${url}" target="_blank" rel="noopener" class="route-link">›</a>`:''}
-        </div>`;
-      })).join('')}
-      <button class="btn-t" style="margin-top:10px;width:100%" onclick="openTicketModal({name:'${name.replace(/'/g,"\\'")}'"})">＋ 別ルートを追加</button>
-    </div>`).join('');
+
+      <!-- AIアドバイス -->
+      <div style="margin-bottom:12px;">
+        ${advice.map(a=>`<div style="background:#fafafa;border-left:3px solid ${a.color};padding:7px 10px;border-radius:0 8px 8px 0;margin-bottom:6px;font-size:.8rem;display:flex;align-items:center;gap:8px;"><span>${a.icon}</span><span style="color:${a.color};font-weight:700;">${a.text}</span></div>`).join('')}
+      </div>
+
+      <!-- 全ルート一覧 -->
+      <div style="background:var(--bg);border-radius:10px;overflow:hidden;margin-bottom:10px;">
+        ${routeRows}
+      </div>
+
+      <!-- 手動でルート追加 -->
+      <button class="btn-t" style="width:100%;background:#e8f0fe;color:var(--primary);border-color:var(--primary);" data-evname="${escAttr(name)}" onclick="addRouteFromStrategyFull(this)">＋ カスタムルートを追加・記録</button>
+    </div>`;
+  }).join('');
+}
+
+function escAttr(s){return(s||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+function addRouteFromStrategy(btn){
+  const name=btn.dataset.evname, site=btn.dataset.site;
+  const route=ALL_ROUTES.find(r=>r.name===site);
+  openTicketModal({name, site, url: route?route.url:''});
+}
+
+function addRouteFromStrategyFull(btn){
+  openTicketModal({name: btn.dataset.evname});
+}
+
+function openTicketModalFromStrategy(name){
+  openTicketModal({name});
 }
 
 function renderTickets(){
@@ -1141,7 +1273,18 @@ function openTicketModal(prefill){
   ['t-name','t-date','t-venue','t-deadline','t-result-date','t-price','t-seat','t-url','t-memo'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('t-result').value='applied';
   document.querySelectorAll('#t-sites .cpill').forEach(p=>p.classList.remove('on'));
-  if(prefill){if(prefill.name)document.getElementById('t-name').value=prefill.name;if(prefill.date)document.getElementById('t-date').value=prefill.date;if(prefill.venue)document.getElementById('t-venue').value=prefill.venue;}
+  if(prefill){
+    if(prefill.name) document.getElementById('t-name').value=prefill.name;
+    if(prefill.date) document.getElementById('t-date').value=prefill.date;
+    if(prefill.venue) document.getElementById('t-venue').value=prefill.venue;
+    if(prefill.url) document.getElementById('t-url').value=prefill.url;
+    // 特定ルートを事前選択
+    if(prefill.site){
+      document.querySelectorAll('#t-sites .cpill').forEach(p=>{
+        if(p.dataset.val===prefill.site) p.classList.add('on');
+      });
+    }
+  }
   document.getElementById('ticket-modal').classList.add('open');
 }
 function addTicketFromEvent(eid){
