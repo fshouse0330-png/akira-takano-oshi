@@ -103,18 +103,30 @@ body{font-family:-apple-system,'Helvetica Neue','Hiragino Kaku Gothic ProN',sans
 .cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .cal-month{font-size:1.1rem;font-weight:700}
 .cal-arr{background:var(--bg);border:none;width:36px;height:36px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:700}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.cal-dow{text-align:center;font-size:.65rem;font-weight:700;color:var(--sub);padding:4px 0 6px}
+/* ── カレンダー ── */
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--border);border-radius:10px;overflow:hidden}
+.cal-dow{text-align:center;font-size:.64rem;font-weight:700;color:var(--sub);padding:6px 0 5px;background:#f8fafc}
 .cal-dow.sun{color:#e74c3c}.cal-dow.sat{color:#2980b9}
-.cal-cell{aspect-ratio:1;border-radius:8px;padding:3px 2px 2px;cursor:pointer;position:relative;overflow:hidden}
-.cal-cell:active{background:#f0f5ff}
-.cal-cell.empty{cursor:default}
+.cal-cell{min-height:64px;padding:4px 3px 3px;cursor:pointer;background:#fff;display:flex;flex-direction:column;align-items:stretch;overflow:hidden;transition:background .12s}
+.cal-cell:active,.cal-cell:hover{background:#f0f6ff}
+.cal-cell.empty{background:#fafbfc;cursor:default}
+.cal-cell.today{background:#eff6ff}
 .cal-cell.today .cal-num{background:var(--primary);color:#fff;border-radius:50%}
-.cal-num{font-size:.73rem;font-weight:700;width:20px;height:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 1px}
+.cal-cell.has-concert{background:linear-gradient(135deg,#fffde7,#fff9c4)}
+.cal-num{font-size:.72rem;font-weight:800;width:20px;height:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;flex-shrink:0}
 .cal-cell.sun .cal-num{color:#e74c3c}.cal-cell.sat .cal-num{color:#2980b9}
 .cal-cell.other-month .cal-num{color:#ccc}
-.cal-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;padding:0 1px}
-.cal-dot{width:5px;height:5px;border-radius:50%}
+.cal-chip{font-size:.56rem;font-weight:700;padding:1px 3px;border-radius:3px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:1px;line-height:1.5}
+.cal-more{font-size:.55rem;color:var(--sub);text-align:center;margin-top:1px}
+/* 次のイベントカウントダウン */
+.cal-next{background:linear-gradient(135deg,var(--primary),#2a6496);color:#fff;border-radius:12px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:14px}
+.cal-next-days{font-size:2.2rem;font-weight:900;line-height:1;min-width:48px;text-align:center}
+.cal-next-label{font-size:.68rem;opacity:.8;margin-bottom:3px}
+.cal-next-title{font-size:.92rem;font-weight:700;line-height:1.3}
+.cal-next-sub{font-size:.72rem;opacity:.8;margin-top:2px}
+/* 今月のアクション */
+.cal-action-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;margin-bottom:6px;cursor:pointer}
+.cal-action-row:active{opacity:.75}
 
 /* ========== スケジュール ========== */
 .fscroll{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -201,7 +213,8 @@ body{font-family:-apple-system,'Helvetica Neue','Hiragino Kaku Gothic ProN',sans
 .mtitle{font-size:1.05rem;font-weight:800}
 .mbtn-close{background:var(--bg);border:none;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;flex-shrink:0}
 .flbl{font-size:.72rem;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;display:block}
-.fctrl{width:100%;padding:11px 13px;border:2px solid var(--border);border-radius:10px;font-size:.9rem;font-family:inherit;color:var(--text);background:#fff;margin-bottom:12px}
+/* font-size:16px でiOSの自動ズームを防止 */
+.fctrl{width:100%;padding:11px 13px;border:2px solid var(--border);border-radius:10px;font-size:16px;font-family:inherit;color:var(--text);background:#fff;margin-bottom:12px;-webkit-appearance:none;touch-action:manipulation}
 .fctrl:focus{outline:none;border-color:var(--primary)}
 textarea.fctrl{resize:vertical;min-height:70px}
 /* フォーム2列レイアウト — 入力が重ならないよう align-items:start */
@@ -276,7 +289,11 @@ textarea.fctrl{resize:vertical;min-height:70px}
 
   <!-- ========== カレンダー ========== -->
   <div class="panel" id="panel-cal">
-    <div class="card">
+    <!-- 次のイベントカウントダウン -->
+    <div id="cal-countdown"></div>
+
+    <!-- カレンダー本体 -->
+    <div class="card" style="padding:14px 10px;">
       <div class="cal-nav">
         <button class="cal-arr" onclick="changeMonth(-1)">‹</button>
         <div class="cal-month" id="cal-label"></div>
@@ -288,19 +305,19 @@ textarea.fctrl{resize:vertical;min-height:70px}
         <div class="cal-dow sat">土</div>
       </div>
     </div>
-    <div class="card" style="padding:12px 14px;">
-      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
-        <span style="font-size:.7rem;font-weight:700;color:var(--sub)">凡例:</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--live);width:8px;height:8px;border-radius:50%;display:inline-block"></span>LIVE</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--stage);width:8px;height:8px;border-radius:50%;display:inline-block"></span>STAGE</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--tv);width:8px;height:8px;border-radius:50%;display:inline-block"></span>TV</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--event);width:8px;height:8px;border-radius:50%;display:inline-block"></span>EVENT</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--release);width:8px;height:8px;border-radius:50%;display:inline-block"></span>RELEASE</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:var(--collab);width:8px;height:8px;border-radius:50%;display:inline-block"></span>コラボ</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:#e74c3c;width:8px;height:8px;border-radius:50%;display:inline-block"></span>⏰締切</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:#8e44ad;width:8px;height:8px;border-radius:50%;display:inline-block"></span>🔔発表</span>
-        <span style="display:flex;align-items:center;gap:3px;font-size:.7rem"><span class="cal-dot" style="background:#27ae60;width:8px;height:8px;border-radius:50%;display:inline-block"></span>🎉公演</span>
-      </div>
+
+    <!-- 今月のアクション -->
+    <div class="card" id="cal-monthly-actions"></div>
+
+    <!-- 凡例 -->
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:6px 4px 2px;">
+      <span style="font-size:.65rem;font-weight:700;color:var(--sub)">凡例:</span>
+      <span style="display:flex;align-items:center;gap:3px;font-size:.65rem;background:#fff;padding:2px 7px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.07)"><span style="width:7px;height:7px;border-radius:2px;background:var(--live);display:inline-block"></span>LIVE</span>
+      <span style="display:flex;align-items:center;gap:3px;font-size:.65rem;background:#fff;padding:2px 7px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.07)"><span style="width:7px;height:7px;border-radius:2px;background:var(--stage);display:inline-block"></span>STAGE</span>
+      <span style="display:flex;align-items:center;gap:3px;font-size:.65rem;background:#fff;padding:2px 7px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.07)"><span style="width:7px;height:7px;border-radius:2px;background:var(--tv);display:inline-block"></span>TV</span>
+      <span style="display:flex;align-items:center;gap:3px;font-size:.65rem;background:#fff;padding:2px 7px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.07)"><span style="width:7px;height:7px;border-radius:2px;background:#e74c3c;display:inline-block"></span>⏰締切</span>
+      <span style="display:flex;align-items:center;gap:3px;font-size:.65rem;background:#fff;padding:2px 7px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.07)"><span style="width:7px;height:7px;border-radius:2px;background:#8e44ad;display:inline-block"></span>🔔発表</span>
+      <span style="display:flex;align-items:center;gap:3px;font-size:.65rem;background:#fff;padding:2px 7px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.07)"><span style="width:7px;height:7px;border-radius:2px;background:#27ae60;display:inline-block"></span>🎉公演</span>
     </div>
   </div>
 
@@ -683,35 +700,88 @@ function showMsg(txt,type='info'){
 async function syncData(){
   const btn=document.getElementById('btn-sync'),icon=document.getElementById('sync-icon');
   btn.disabled=true; icon.className='spinning'; icon.textContent='⟳';
-  showMsg('スケジュールを取得中...','info');
-  let ok=false;
+  showMsg('情報を取得中...','info');
+
+  let ok=false, source='', addedCount=0;
+
+  // ── Step1: GitHub Pages の data.json を取得
   try{
-    const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
-    if(r.ok){const d=await r.json();if(d.events&&d.events.length>0){mergeEvents(d.events);save();if(d.lastUpdated){const s=`最終更新: ${d.lastUpdated}`;document.getElementById('last-sync').textContent=s;document.getElementById('sync-info-footer').textContent=s;localStorage.setItem(KEYS.lastSync,d.lastUpdated);}ok=true;}}
-  }catch(e){}
-  if(!ok){
+    const url='./data.json?nocache='+Date.now();
+    const r=await fetch(url,{cache:'no-store',headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(12000)});
+    if(r.ok){
+      const d=await r.json();
+      if(Array.isArray(d.events)){
+        addedCount=mergeEvents(d.events);
+        save();
+        const ts=d.lastUpdated||'';
+        if(ts){
+          document.getElementById('last-sync').textContent=`自動更新: ${ts}`;
+          document.getElementById('sync-info-footer').textContent=`自動更新: ${ts}`;
+          localStorage.setItem(KEYS.lastSync, ts);
+        }
+        source='data.json';
+        ok=true;
+      }
+    }
+  }catch(e){ console.warn('[sync] data.json:', e.message); }
+
+  // ── Step2: allorigins プロキシ経由で公式サイトを直接取得
+  if(!ok || addedCount===0){
+    const proxies=[
+      'https://api.allorigins.win/get?url=',
+      'https://corsproxy.io/?',
+    ];
+    for(const proxy of proxies){
+      try{
+        const r=await fetch(proxy+encodeURIComponent('https://takano-akira.net/contents/schedule'),
+          {signal:AbortSignal.timeout(12000)});
+        if(!r.ok) continue;
+        const raw=await r.json().catch(()=>null);
+        const html=raw?.contents || (typeof raw==='string'?raw:'');
+        const parsed=parseHTML(html);
+        if(parsed.length>0){
+          const n=mergeEvents(parsed);
+          addedCount+=n;
+          save();
+          source='公式サイト';
+          ok=true;
+          break;
+        }
+      }catch(e){ console.warn('[sync] proxy:', e.message); }
+    }
+  }
+
+  // ── Step3: ページ2も取得
+  if(ok && source==='公式サイト'){
     try{
-      const r=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent('https://takano-akira.net/contents/schedule'),{signal:AbortSignal.timeout(12000)});
-      if(r.ok){const d=await r.json();const p=parseHTML(d.contents||'');if(p.length>0){mergeEvents(p);save();ok=true;}}
+      const r=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent('https://takano-akira.net/contents/schedule/page/2'),
+        {signal:AbortSignal.timeout(8000)});
+      if(r.ok){const raw=await r.json();const n=mergeEvents(parseHTML(raw?.contents||''));addedCount+=n;save();}
     }catch(e){}
   }
+
   renderAll();
-  showMsg(ok?`✅ 更新しました（${events.length}件）`:'⚠️ 取得できませんでした。後ほどお試しください。',ok?'ok':'err');
+  if(ok){
+    const msg=addedCount>0
+      ? `✅ ${addedCount}件の新着情報を取得しました（合計${events.length}件）[${source}]`
+      : `✅ 最新情報です（${events.length}件）[${source}]`;
+    showMsg(msg,'ok');
+  } else {
+    showMsg('⚠️ 取得に失敗しました。ネット接続を確認して再度お試しください。','err');
+  }
   btn.disabled=false; icon.className=''; icon.textContent='🔄';
 }
 
 function mergeEvents(newEvs){
-  // 手動追加イベントは保持、取得データは最新版で全入れ替え
-  const manualEvents = events.filter(e => e.source === 'manual');
-  const manualIds = new Set(manualEvents.map(e => e.externalId || e.id).filter(Boolean));
-
-  // 新しい取得データから手動データと重複するものを除外
-  const freshFetched = newEvs.filter(e => {
-    const k = e.externalId || e.id;
-    return !manualIds.has(k);
-  });
-
-  events = [...manualEvents, ...freshFetched];
+  if(!Array.isArray(newEvs)||newEvs.length===0) return 0;
+  const manualEvents = events.filter(e=>e.source==='manual');
+  const existIds = new Set(events.map(e=>e.externalId||e.id).filter(Boolean));
+  const fresh = newEvs.filter(e=>{ const k=e.externalId||e.id; return k&&!existIds.has(k); });
+  // 手動イベントは保持し、取得イベントをマージ（全入れ替えではなく追加）
+  events = [...manualEvents, ...newEvs.filter(e=>e.source!=='manual'), ...fresh.filter(e=>e.source==='manual')];
+  // 重複除去
+  const seen=new Set(); events=events.filter(e=>{ const k=e.externalId||e.id; if(seen.has(k))return false; seen.add(k); return true; });
+  return fresh.length;
 }
 
 function parseHTML(html){
@@ -823,84 +893,192 @@ function renderTimelineItem(ev){
 }
 
 // ========== カレンダー ==========
+function buildCalendarData(y, mo){
+  const byDay = {};
+  const last = new Date(y, mo+1, 0).getDate();
+
+  // イベント
+  events.forEach(e=>{
+    if(!e.date)return;
+    const d=new Date(e.date+'T00:00:00');
+    if(d.getFullYear()===y&&d.getMonth()===mo){
+      const k=d.getDate();
+      (byDay[k]=byDay[k]||[]).push({...e, _color: CC[e.category]||CC.OTHER, _label: e.category, _sort:5});
+    }
+  });
+
+  // チケット情報
+  tickets.forEach(t=>{
+    if(t.deadline){
+      const d=new Date(t.deadline+'T00:00:00');
+      if(d.getFullYear()===y&&d.getMonth()===mo&&(t.result==='applied'||t.result==='pending-ticket')){
+        const days=daysTo(t.deadline);
+        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
+          id:'dl_'+t.id, _color:'#e74c3c', _label:'⏰締切',
+          title:t.name, _isTicket:true, _ticketId:t.id, _sort:1,
+          _urgent: days!==null&&days<=3
+        });
+      }
+    }
+    if(t.resultDate){
+      const d=new Date(t.resultDate+'T00:00:00');
+      if(d.getFullYear()===y&&d.getMonth()===mo){
+        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
+          id:'rd_'+t.id, _color:'#8e44ad', _label:'🔔発表',
+          title:t.name, _isTicket:true, _ticketId:t.id, _sort:2
+        });
+      }
+    }
+    if(t.date&&t.result==='win'){
+      const d=new Date(t.date+'T00:00:00');
+      if(d.getFullYear()===y&&d.getMonth()===mo){
+        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
+          id:'ev_'+t.id, _color:'#27ae60', _label:'🎉公演',
+          title:t.name, _isTicket:true, _ticketId:t.id, _sort:0, _isConcert:true
+        });
+      }
+    }
+  });
+
+  // コラボ期間
+  collabs.forEach(c=>{
+    if(!c.start)return;
+    const s=new Date(c.start+'T00:00:00'),e2=c.end?new Date(c.end+'T00:00:00'):s;
+    for(let d=1;d<=last;d++){
+      const cur=new Date(y,mo,d);
+      if(cur>=s&&cur<=e2)(byDay[d]=byDay[d]||[]).push({
+        id:c.id, _color:'#c0392b', _label:'🤝コラボ',
+        title:c.name, _isCollab:true, _sort:6
+      });
+    }
+  });
+
+  // 各日を優先度順にソート
+  Object.keys(byDay).forEach(k=>byDay[k].sort((a,b)=>(a._sort||5)-(b._sort||5)));
+  return byDay;
+}
+
 function renderCal(){
   const y=calDate.getFullYear(),mo=calDate.getMonth();
   document.getElementById('cal-label').textContent=`${y}年 ${MON[mo]}`;
   const grid=document.getElementById('cal-grid');
   while(grid.children.length>7)grid.removeChild(grid.lastChild);
   const today=new Date();today.setHours(0,0,0,0);
-  const byDay={};
-  events.forEach(e=>{
-    if(!e.date)return;
-    const d=new Date(e.date+'T00:00:00');
-    if(d.getFullYear()===y&&d.getMonth()===mo){const k=d.getDate();(byDay[k]=byDay[k]||[]).push(e);}
-  });
+  const byDay=buildCalendarData(y,mo);
   const last=new Date(y,mo+1,0).getDate();
-
-  // チケット情報をカレンダーに追加
-  tickets.forEach(t=>{
-    // 応募締切
-    if(t.deadline){
-      const d=new Date(t.deadline+'T00:00:00');
-      if(d.getFullYear()===y&&d.getMonth()===mo&&(t.result==='applied'||t.result==='pending-ticket')){
-        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
-          id:'dl_'+t.id, category:'_deadline', title:`⏰締切: ${t.name}`,
-          _ticketColor:'#e74c3c', _isTicketEvent:true, _ticketId:t.id
-        });
-      }
-    }
-    // 当落発表日
-    if(t.resultDate){
-      const d=new Date(t.resultDate+'T00:00:00');
-      if(d.getFullYear()===y&&d.getMonth()===mo){
-        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
-          id:'rd_'+t.id, category:'_result', title:`🔔発表: ${t.name}`,
-          _ticketColor:'#8e44ad', _isTicketEvent:true, _ticketId:t.id
-        });
-      }
-    }
-    // 公演日（当選チケットのみ）
-    if(t.date&&t.result==='win'){
-      const d=new Date(t.date+'T00:00:00');
-      if(d.getFullYear()===y&&d.getMonth()===mo){
-        (byDay[d.getDate()]=byDay[d.getDate()]||[]).push({
-          id:'ev_'+t.id, category:'_concert', title:`🎉公演: ${t.name}`,
-          _ticketColor:'#27ae60', _isTicketEvent:true, _ticketId:t.id
-        });
-      }
-    }
-  });
-
-  collabs.forEach(c=>{
-    if(!c.start)return;
-    const s=new Date(c.start+'T00:00:00'),e2=c.end?new Date(c.end+'T00:00:00'):s;
-    for(let d=1;d<=last;d++){
-      const cur=new Date(y,mo,d);
-      if(cur>=s&&cur<=e2)(byDay[d]=byDay[d]||[]).push({id:c.id,category:'EVENT',title:'🤝'+c.name,_isCollab:true,_collabColor:'#c0392b'});
-    }
-  });
   const first=new Date(y,mo,1).getDay();
+
   for(let i=0;i<first;i++){const c=document.createElement('div');c.className='cal-cell empty';grid.appendChild(c);}
+
   for(let d=1;d<=last;d++){
     const cell=document.createElement('div');
     const dow=new Date(y,mo,d).getDay();
     const isToday=new Date(y,mo,d).getTime()===today.getTime();
-    cell.className='cal-cell'+(dow===0?' sun':dow===6?' sat':'')+(isToday?' today':'');
-    const num=document.createElement('div');num.className='cal-num';num.textContent=d;cell.appendChild(num);
-    const dots=byDay[d]||[];
-    if(dots.length){
-      const row=document.createElement('div');row.className='cal-dots';
-      dots.slice(0,5).forEach(e=>{
-        const dot=document.createElement('div');dot.className='cal-dot';
-        dot.style.cssText=`width:5px;height:5px;border-radius:50%;background:${e._ticketColor||e._collabColor||CC[e.category]||CC.OTHER}`;
-        row.appendChild(dot);
-      });
-      cell.appendChild(row);
-      cell.onclick=()=>showDayDetail(y,mo,d,dots);
+    const dayEvs=byDay[d]||[];
+    const hasConcert=dayEvs.some(e=>e._isConcert);
+    const hasUrgent=dayEvs.some(e=>e._urgent);
+
+    cell.className='cal-cell'
+      +(dow===0?' sun':dow===6?' sat':'')
+      +(isToday?' today':'')
+      +(hasConcert?' has-concert':'');
+    if(hasUrgent) cell.style.outline='2px solid #e74c3c';
+
+    // 日付
+    const num=document.createElement('div');
+    num.className='cal-num';
+    num.textContent=d;
+    cell.appendChild(num);
+
+    // イベントチップ（最大2件）
+    const show=dayEvs.slice(0,2);
+    show.forEach(ev=>{
+      const chip=document.createElement('div');
+      chip.className='cal-chip';
+      chip.style.background=ev._urgent?'#c0392b':ev._color;
+      chip.textContent=ev._label+' '+ev.title;
+      chip.title=ev.title;
+      cell.appendChild(chip);
+    });
+
+    // +N件
+    if(dayEvs.length>2){
+      const more=document.createElement('div');
+      more.className='cal-more';
+      more.textContent=`+${dayEvs.length-2}`;
+      cell.appendChild(more);
     }
+
+    if(dayEvs.length>0) cell.onclick=()=>showDayDetail(y,mo,d,dayEvs);
     grid.appendChild(cell);
   }
+
+  // カウントダウン
+  renderCalCountdown();
+  // 今月のアクション
+  renderMonthlyActions(y,mo,byDay);
 }
+
+function renderCalCountdown(){
+  const el=document.getElementById('cal-countdown');
+  if(!el)return;
+  const today=todayStr();
+  // 次のLIVE/STAGE
+  const next=events.filter(e=>e.date>=today&&(e.category==='LIVE'||e.category==='STAGE'))
+    .sort((a,b)=>a.date.localeCompare(b.date))[0];
+  if(!next){el.innerHTML='';return;}
+  const days=daysTo(next.date);
+  const col=CC[next.category]||CC.OTHER;
+  el.innerHTML=`<div class="cal-next" style="background:linear-gradient(135deg,${col},${col}99)">
+    <div>
+      <div class="cal-next-days">${days===0?'今日':`${days}`}</div>
+      <div style="font-size:.58rem;opacity:.8;text-align:center">${days===0?'':'日後'}</div>
+    </div>
+    <div style="flex:1">
+      <div class="cal-next-label">次の${next.category}</div>
+      <div class="cal-next-title">${next.title}</div>
+      <div class="cal-next-sub">${fmtDate(next.date)}${next.venue?' 📍'+next.venue:''}</div>
+    </div>
+    <div style="font-size:2rem">${next.category==='LIVE'?'🎵':'🎭'}</div>
+  </div>`;
+}
+
+function renderMonthlyActions(y,mo,byDay){
+  const el=document.getElementById('cal-monthly-actions');
+  if(!el)return;
+  const items=[];
+
+  // 今月の締切
+  Object.entries(byDay).forEach(([day,evs])=>{
+    evs.forEach(ev=>{
+      if(ev._label==='⏰締切') items.push({type:'deadline',day:parseInt(day),ev,color:'#e74c3c',icon:'⏰'});
+      if(ev._label==='🔔発表') items.push({type:'result',day:parseInt(day),ev,color:'#8e44ad',icon:'🔔'});
+      if(ev._isConcert) items.push({type:'concert',day:parseInt(day),ev,color:'#27ae60',icon:'🎉'});
+      if(ev._label&&['LIVE','STAGE'].includes(ev._label)) items.push({type:'event',day:parseInt(day),ev,color:CC[ev.category]||CC.OTHER,icon:ev.category==='LIVE'?'🎵':'🎭'});
+    });
+  });
+
+  items.sort((a,b)=>a.day-b.day);
+  if(!items.length){el.innerHTML='';return;}
+
+  el.innerHTML=`<div class="sec-title" style="margin-bottom:10px">📌 ${y}年${MON[mo]}のスケジュール</div>`
+    +items.slice(0,8).map(({day,ev,color,icon,type})=>{
+      const date=new Date(y,mo,day);
+      const dayDiff=daysTo(`${y}-${String(mo+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`);
+      const urgLabel=dayDiff===0?'今日！':dayDiff===1?'明日':dayDiff!==null&&dayDiff>0?`あと${dayDiff}日`:'';
+      const typeLabel={deadline:'締切',result:'当落発表',concert:'当選公演',event:'イベント'}[type];
+      return`<div class="cal-action-row" style="background:${color}15;border-left:3px solid ${color}" onclick="${type==='deadline'||type==='result'?`switchTab('ticket',document.getElementById('nav-ticket'))`:`showEventDetail(events.find(e=>e.id==='${ev.id}'))`}">
+        <div style="font-size:1.3rem">${icon}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:.72rem;font-weight:700;color:${color}">${typeLabel} — ${MON[mo].replace('月','')}/${day}(${DOW[date.getDay()]})</div>
+          <div style="font-size:.85rem;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${ev.title}</div>
+        </div>
+        ${urgLabel?`<div style="font-size:.7rem;font-weight:800;color:${color};white-space:nowrap;background:${color}22;padding:2px 7px;border-radius:8px">${urgLabel}</div>`:''}
+        <div style="color:var(--sub)">›</div>
+      </div>`;
+    }).join('');
+}
+
 function changeMonth(d){calDate.setMonth(calDate.getMonth()+d);renderCal();}
 
 function showDayDetail(y,mo,day,evs){
