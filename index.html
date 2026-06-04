@@ -685,13 +685,59 @@ function fmtDate(s){if(!s)return'—';const d=new Date(s+'T00:00:00');return`${d
 function todayStr(){return new Date().toISOString().slice(0,10)}
 
 // ========== タブ ==========
-function switchTab(name,el){
-  ['home','cal','sch','ticket','links','collab','settings'].forEach(n=>{
-    document.getElementById('panel-'+n).classList.toggle('active',n===name);
-    document.getElementById('nav-'+n)?.classList.toggle('active',n===name);
-  });
-  document.getElementById('fab').classList.toggle('show',name==='ticket');
-  document.getElementById('scroll').scrollTop=0;
+function switchTab(name){
+  try{
+    ['home','cal','sch','ticket','links','collab','settings'].forEach(n=>{
+      document.getElementById('panel-'+n)?.classList.toggle('active',n===name);
+      document.getElementById('nav-'+n)?.classList.toggle('active',n===name);
+    });
+    document.getElementById('fab')?.classList.toggle('show',name==='ticket');
+    const scroll=document.getElementById('scroll');
+    if(scroll) scroll.scrollTop=0;
+    // モーダルをすべて閉じる
+    document.querySelectorAll('.mwrap.open').forEach(m=>m.classList.remove('open'));
+  }catch(e){ console.error('[switchTab]',e); }
+}
+
+// ========== 安全なナビゲーションヘルパー ==========
+// onclickには必ずこれらのシンプルな関数を使う
+function goToSch(cat){
+  try{
+    switchTab('sch');
+    if(cat&&cat!=='all'){
+      schFilter=cat;
+      document.querySelectorAll('#sch-filters .fchip').forEach(c=>{
+        c.classList.toggle('active', c.textContent.includes(cat)||(cat==='all'&&c.textContent==='すべて'));
+      });
+      renderSch();
+    }
+  }catch(e){ console.error('[goToSch]',e); }
+}
+
+function goToTicketFilter(f){
+  try{
+    switchTab('ticket');
+    if(f){
+      ticketFilter=f;
+      document.querySelectorAll('#ticket-list-view .fchip').forEach(c=>c.classList.remove('active'));
+      const map={'win':'当選','all':'すべて','applied':'応募中','lose':'落選','pending-ticket':'結果待ち'};
+      document.querySelectorAll('#ticket-list-view .fchip').forEach(c=>{
+        if(c.textContent.includes(map[f]||(f==='all'?'すべて':f))) c.classList.add('active');
+      });
+      renderTickets();
+    }
+  }catch(e){ console.error('[goToTicketFilter]',e); }
+}
+
+function showEventById(id){
+  try{
+    const ev=events.find(e=>e.id===id);
+    if(ev) showEventDetail(ev);
+  }catch(e){ console.error('[showEventById]',e); }
+}
+
+function closeAllModals(){
+  document.querySelectorAll('.mwrap').forEach(m=>m.classList.remove('open'));
 }
 
 function showMsg(txt,type='info'){
@@ -814,15 +860,15 @@ function renderHome(){
   const wonTickets=tickets.filter(t=>t.result==='win').length;
   const pendingTickets=tickets.filter(t=>t.result==='applied'||t.result==='pending-ticket').length;
   document.getElementById('stats-row').innerHTML=`
-    <div class="sbox" onclick="switchTab('sch',document.getElementById('nav-sch'))" style="cursor:pointer;transition:transform .15s" onmousedown="this.style.transform='scale(.96)'" onmouseup="this.style.transform=''">
+    <div class="sbox" onclick="goToSch('all')" style="cursor:pointer;">
       <div class="snum">${upcoming.length}</div><div class="slbl">今後の予定</div>
       <div style="font-size:.6rem;color:var(--primary);margin-top:3px;font-weight:700">→ 一覧</div>
     </div>
-    <div class="sbox" onclick="switchTab('sch',document.getElementById('nav-sch'));filterSch('LIVE',document.querySelector('#sch-filters .fchip:nth-child(2)'))" style="cursor:pointer;transition:transform .15s" onmousedown="this.style.transform='scale(.96)'" onmouseup="this.style.transform=''">
+    <div class="sbox" onclick="goToSch('LIVE')" style="cursor:pointer;">
       <div class="snum" style="color:var(--live)">${liveStage.length}</div><div class="slbl">LIVE/STAGE</div>
       <div style="font-size:.6rem;color:var(--live);margin-top:3px;font-weight:700">→ 絞り込み</div>
     </div>
-    <div class="sbox" onclick="switchTab('ticket',document.getElementById('nav-ticket'));filterTickets('win',document.querySelector('#ticket-list-view .fchip:nth-child(4)'))" style="cursor:pointer;transition:transform .15s" onmousedown="this.style.transform='scale(.96)'" onmouseup="this.style.transform=''">
+    <div class="sbox" onclick="goToTicketFilter('win')" style="cursor:pointer;">
       <div class="snum" style="color:var(--win)">${wonTickets}</div><div class="slbl">当選チケット</div>
       <div style="font-size:.6rem;color:var(--win);margin-top:3px;font-weight:700">→ 確認</div>
     </div>`;
@@ -876,7 +922,7 @@ function renderTimelineItem(ev){
   const col=CC[ev.category]||CC.OTHER;
   const needsTicket=['LIVE','STAGE','EVENT'].includes(ev.category);
   const hasTicket=tickets.some(t=>t.name&&ev.title&&(t.name.includes(ev.title.slice(0,10))||ev.title.includes(t.name.slice(0,10))));
-  return`<div class="timeline-item" onclick="showEventDetail(events.find(e=>e.id==='${ev.id}'))">
+  return`<div class="timeline-item" onclick="showEventById('${ev.id}')">
     <div class="tl-date">
       <div class="tl-day">${d.getDate()}</div>
       <div class="tl-ym">${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}</div>
@@ -1071,7 +1117,8 @@ function renderMonthlyActions(y,mo,byDay){
       const dayDiff=daysTo(`${y}-${String(mo+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`);
       const urgLabel=dayDiff===0?'今日！':dayDiff===1?'明日':dayDiff!==null&&dayDiff>0?`あと${dayDiff}日`:'';
       const typeLabel={deadline:'締切',result:'当落発表',concert:'当選公演',event:'イベント'}[type];
-      return`<div class="cal-action-row" style="background:${color}15;border-left:3px solid ${color}" onclick="${type==='deadline'||type==='result'?`switchTab('ticket',document.getElementById('nav-ticket'))`:`showEventDetail(events.find(e=>e.id==='${ev.id}'))`}">
+      const clickFn=(type==='deadline'||type==='result')?`goToTicketFilter('all')`:`showEventById('${ev.id}')`;
+      return`<div class="cal-action-row" style="background:${color}15;border-left:3px solid ${color}" onclick="${clickFn}">
         <div style="font-size:1.3rem">${icon}</div>
         <div style="flex:1;min-width:0">
           <div style="font-size:.72rem;font-weight:700;color:${color}">${typeLabel} — ${MON[mo].replace('月','')}/${day}(${DOW[date.getDay()]})</div>
@@ -1195,7 +1242,7 @@ function renderSch(){
     const col=CC[ev.category]||CC.OTHER;
     const d=new Date((ev.date||'2000-01-01')+'T00:00:00');
     const src=ev.memo&&ev.memo.includes('取得元:')?ev.memo.replace('取得元: ',''):'';
-    return`<div class="sch-item" style="border-left-color:${col}" onclick="showEventDetail(events.find(e=>e.id==='${ev.id}'))">
+    return`<div class="sch-item" style="border-left-color:${col}" onclick="showEventById('${ev.id}')">
       <div class="sch-dt">
         <div class="sch-day">${d.getDate()}</div>
         <div class="sch-ym">${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}</div>
@@ -1214,7 +1261,14 @@ function renderSch(){
     </div>`;
   }).join('');
 }
-function filterSch(cat,el){document.querySelectorAll('#sch-filters .fchip').forEach(c=>c.classList.remove('active'));el.classList.add('active');schFilter=cat;renderSch();}
+function filterSch(cat,el){
+  try{
+    schFilter=cat||'all';
+    document.querySelectorAll('#sch-filters .fchip').forEach(c=>c.classList.remove('active'));
+    if(el) el.classList.add('active');
+    renderSch();
+  }catch(e){ console.error('[filterSch]',e); }
+}
 
 // ========== チケット ==========
 function setTicketView(v,el){
@@ -1405,7 +1459,14 @@ function renderTickets(){
     </div>`;
   }).join('');
 }
-function filterTickets(f,el){document.querySelectorAll('#ticket-list-view .fchip').forEach(c=>c.classList.remove('active'));el.classList.add('active');ticketFilter=f;renderTickets();}
+function filterTickets(f,el){
+  try{
+    ticketFilter=f||'all';
+    document.querySelectorAll('#ticket-list-view .fchip').forEach(c=>c.classList.remove('active'));
+    if(el) el.classList.add('active');
+    renderTickets();
+  }catch(e){ console.error('[filterTickets]',e); }
+}
 
 // ========== リンク集（コラボサイト更新） ==========
 function renderLinks(){
@@ -1587,6 +1648,28 @@ if(!lb||(Date.now()-parseInt(lb))>30*24*60*60*1000){
 }
 
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+
+// ========== グローバルエラーハンドラ ==========
+// JSエラーで操作不能になるのを防ぐ
+window.addEventListener('error', e=>{
+  console.error('[Global]', e.message, e.filename, e.lineno);
+  // モーダルが開きっぱなしなら閉じる
+  document.querySelectorAll('.mwrap.open').forEach(m=>m.classList.remove('open'));
+});
+
+window.addEventListener('unhandledrejection', e=>{
+  console.error('[Promise]', e.reason);
+});
+
+// Escキーでモーダルを閉じる（PCアクセス時）
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape') closeAllModals();
+});
+
+// ボトムナビを直接タップしたときもモーダルを閉じる
+document.querySelector('.bnav')?.addEventListener('click', ()=>{
+  document.querySelectorAll('.mwrap.open').forEach(m=>m.classList.remove('open'));
+});
 </script>
 </body>
 </html>
