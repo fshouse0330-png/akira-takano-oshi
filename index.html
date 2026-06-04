@@ -710,7 +710,10 @@ textarea.form-ctrl { resize: vertical; min-height: 70px; }
 <div class="modal-wrap" id="collab-modal" onclick="closeModal(event)">
   <div class="modal-sheet">
     <div class="modal-handle"></div>
-    <div class="modal-title" id="collab-modal-title">🤝 コラボ・アンバサダーを登録</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+      <div class="modal-title" id="collab-modal-title" style="margin-bottom:0;">🤝 コラボ・アンバサダーを登録</div>
+      <button onclick="document.getElementById('collab-modal').classList.remove('open')" style="background:var(--bg);border:none;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;flex-shrink:0;">×</button>
+    </div>
 
     <label class="form-lbl">キャンペーン名 *</label>
     <input type="text" class="form-ctrl" id="c-name" placeholder="例: cocone×高野洸コラボ">
@@ -762,7 +765,10 @@ textarea.form-ctrl { resize: vertical; min-height: 70px; }
 <div class="modal-wrap" id="ticket-modal" onclick="closeModal(event)">
   <div class="modal-sheet">
     <div class="modal-handle"></div>
-    <div class="modal-title" id="modal-title">🎫 チケット応募を追加</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+      <div class="modal-title" id="modal-title" style="margin-bottom:0;">🎫 チケット応募を追加</div>
+      <button onclick="document.getElementById('ticket-modal').classList.remove('open')" style="background:var(--bg);border:none;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;flex-shrink:0;">×</button>
+    </div>
     <label class="form-lbl">イベント名 *</label>
     <input type="text" class="form-ctrl" id="t-name" placeholder="AKIRA TAKANO LIVE TOUR 2026">
     <div class="form-row2">
@@ -1169,7 +1175,10 @@ function showDayDetail(y,mo,day,evs) {
   const body  = document.getElementById('event-modal-body');
   const d = new Date(y,mo,day);
   let html = `<div class="modal-handle"></div>
-    <div class="modal-title">${y}年${mo+1}月${day}日 (${DOW[d.getDay()]})</div>`;
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+      <div class="modal-title" style="margin-bottom:0;">${y}年${mo+1}月${day}日 (${DOW[d.getDay()]})</div>
+      <button onclick="document.getElementById('event-modal').classList.remove('open')" style="background:var(--bg);border:none;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;flex-shrink:0;">×</button>
+    </div>`;
   evs.forEach(ev => {
     const col = CAT_COLOR[ev.category]||CAT_COLOR.OTHER;
     html += `<div style="border-left:4px solid ${col};padding:10px 12px;background:#fafafa;border-radius:10px;margin-bottom:8px;">
