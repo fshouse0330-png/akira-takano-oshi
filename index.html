@@ -1003,14 +1003,25 @@ async function syncDataJson(){
 
 function mergeEvents(newEvs){
   if(!Array.isArray(newEvs)||newEvs.length===0) return 0;
-  const manualEvents = events.filter(e=>e.source==='manual');
-  const existIds = new Set(events.map(e=>e.externalId||e.id).filter(Boolean));
-  const fresh = newEvs.filter(e=>{ const k=e.externalId||e.id; return k&&!existIds.has(k); });
-  // 手動イベントは保持し、取得イベントをマージ（全入れ替えではなく追加）
-  events = [...manualEvents, ...newEvs.filter(e=>e.source!=='manual'), ...fresh.filter(e=>e.source==='manual')];
-  // 重複除去
-  const seen=new Set(); events=events.filter(e=>{ const k=e.externalId||e.id; if(seen.has(k))return false; seen.add(k); return true; });
-  return fresh.length;
+  // 既存IDのマップ（urlなど情報補完にも使う）
+  const existMap = new Map(
+    events.map(e=>{ const k=e.externalId||e.id; return k?[k,e]:null; }).filter(Boolean)
+  );
+  let added = 0;
+  newEvs.forEach(e=>{
+    const k = e.externalId||e.id;
+    if(!k) return;
+    if(existMap.has(k)){
+      // 既存イベントにURLが未設定なら補完
+      const ex = existMap.get(k);
+      if(!ex.url && e.url) ex.url = e.url;
+    } else {
+      events.push(e);
+      existMap.set(k, e);
+      added++;
+    }
+  });
+  return added;
 }
 
 // parseHTML は上部で定義済み（sourceName引数付きバージョンを使用）
