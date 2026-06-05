@@ -467,7 +467,7 @@ textarea.fctrl{resize:vertical;min-height:70px}
     </div>
 
     <div style="text-align:center;padding:8px 0 4px;">
-      <button class="btn-t" onclick="switchTab('settings',document.getElementById('nav-settings'))">⚙️ カスタムリンクを追加</button>
+      <button class="btn-t" onclick="switchTab('settings')">⚙️ カスタムリンクを追加</button>
     </div>
   </div>
 
@@ -521,12 +521,12 @@ textarea.fctrl{resize:vertical;min-height:70px}
 
 <!-- ボトムナビ -->
 <div class="bnav">
-  <div class="ni active" onclick="switchTab('home',this)" id="nav-home"><div class="ni-icon">🏠</div><div>ホーム</div></div>
-  <div class="ni" onclick="switchTab('cal',this)" id="nav-cal"><div class="ni-icon">📅</div><div>カレンダー</div></div>
-  <div class="ni" onclick="switchTab('sch',this)" id="nav-sch"><div class="ni-icon">📋</div><div>スケジュール</div><div class="nbadge" id="nb-sch" style="display:none">0</div></div>
-  <div class="ni" onclick="switchTab('ticket',this)" id="nav-ticket"><div class="ni-icon">🎫</div><div>チケット</div><div class="nbadge" id="nb-ticket" style="display:none">0</div></div>
-  <div class="ni" onclick="switchTab('links',this)" id="nav-links"><div class="ni-icon">🔗</div><div>リンク集</div></div>
-  <div class="ni" onclick="switchTab('settings',this)" id="nav-settings"><div class="ni-icon">⚙️</div><div>設定</div></div>
+  <div class="ni active" onclick="switchTab('home')" id="nav-home"><div class="ni-icon">🏠</div><div>ホーム</div></div>
+  <div class="ni" onclick="switchTab('cal')" id="nav-cal"><div class="ni-icon">📅</div><div>カレンダー</div></div>
+  <div class="ni" onclick="switchTab('sch')" id="nav-sch"><div class="ni-icon">📋</div><div>スケジュール</div><div class="nbadge" id="nb-sch" style="display:none">0</div></div>
+  <div class="ni" onclick="switchTab('ticket')" id="nav-ticket"><div class="ni-icon">🎫</div><div>チケット</div><div class="nbadge" id="nb-ticket" style="display:none">0</div></div>
+  <div class="ni" onclick="switchTab('links')" id="nav-links"><div class="ni-icon">🔗</div><div>リンク集</div></div>
+  <div class="ni" onclick="switchTab('settings')" id="nav-settings"><div class="ni-icon">⚙️</div><div>設定</div></div>
 </div>
 
 <!-- チケット追加モーダル -->
@@ -1028,6 +1028,8 @@ function mergeEvents(newEvs){
 
 // ========== ホーム ==========
 function renderHome(){
+  // 必須要素が存在しない場合はスキップ（ページ未ロード時の安全策）
+  if(!document.getElementById('stats-row')) return;
   const today=todayStr();
   const upcoming=events.filter(e=>e.date&&e.date>=today).sort((a,b)=>a.date.localeCompare(b.date));
   const thisWeek=upcoming.filter(e=>{const d=daysTo(e.date);return d!==null&&d<=14&&d>=0});
@@ -1059,7 +1061,7 @@ function renderHome(){
       <div class="sec-title">⚠️ 要アクション — チケット締切間近</div>
       ${actions.map(t=>{
         const d=daysTo(t.deadline);
-        return`<div class="action-item" onclick="switchTab('ticket',document.getElementById('nav-ticket'))">
+        return`<div class="action-item" onclick="switchTab('ticket')">
           <div class="action-days">${d===0?'今日！':`あと${d}日`}</div>
           <div><div class="action-name">${t.name}</div><div class="action-sub">${(t.sites||[]).join(' / ')||'応募種別未設定'} • 締切: ${fmtDate(t.deadline)}</div></div>
           <div class="action-arrow">›</div>
@@ -1074,7 +1076,7 @@ function renderHome(){
     hwDiv.innerHTML=`<div class="card">
       <div class="sec-title">📅 直近2週間の予定</div>
       ${thisWeek.slice(0,8).map(ev=>renderTimelineItem(ev)).join('')}
-      ${thisWeek.length>8?`<div style="text-align:center;padding:8px 0;"><button class="btn-t" onclick="switchTab('sch',document.getElementById('nav-sch'))">すべて見る (${thisWeek.length}件)</button></div>`:''}
+      ${thisWeek.length>8?`<div style="text-align:center;padding:8px 0;"><button class="btn-t" onclick="switchTab('sch')">すべて見る (${thisWeek.length}件)</button></div>`:''}
     </div>`;
   } else hwDiv.innerHTML=`<div class="card"><div style="text-align:center;padding:20px;color:var(--sub);font-size:.88rem;">📭 直近2週間の予定はありません<br><br><button class="btn-t" onclick="syncData()">🔄 更新して情報を取得</button></div></div>`;
 
@@ -1410,10 +1412,11 @@ function renderEventDetailHTML(ev){
 // ========== スケジュール ==========
 function renderSch(){
   const list=document.getElementById('sch-list');
+  if(!list) return;
   let f=[...events].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
   if(schFilter!=='all')f=f.filter(e=>e.category===schFilter);
   const nb=document.getElementById('nb-sch');
-  nb.textContent=events.length; nb.style.display=events.length?'block':'none';
+  if(nb){nb.textContent=events.length; nb.style.display=events.length?'block':'none';}
   if(!f.length){list.innerHTML=`<div class="empty"><div class="icon">📋</div><p>「更新」ボタンを押して<br>スケジュールを取得してください</p></div>`;return;}
   list.innerHTML=f.map(ev=>{
     const col=CC[ev.category]||CC.OTHER;
@@ -1603,11 +1606,13 @@ function openTicketModalFromStrategy(name){
 
 function renderTickets(){
   const list=document.getElementById('ticket-list'),alerts=document.getElementById('ticket-alerts');
+  if(!list) return;
   let f=[...tickets].sort((a,b)=>(a.deadline||'9999').localeCompare(b.deadline||'9999'));
   if(ticketFilter!=='all')f=f.filter(t=>t.result===ticketFilter);
-  const nb=document.getElementById('nb-ticket');nb.textContent=tickets.length;nb.style.display=tickets.length?'block':'none';
+  const nb=document.getElementById('nb-ticket');
+  if(nb){nb.textContent=tickets.length;nb.style.display=tickets.length?'block':'none';}
   const soon=tickets.filter(t=>{const d=daysTo(t.deadline);return d!==null&&d>=0&&d<=7&&(t.result==='applied'||t.result==='pending-ticket')}).sort((a,b)=>(a.deadline||'').localeCompare(b.deadline||''));
-  alerts.innerHTML=soon.length?soon.map(t=>{const d=daysTo(t.deadline);return`<div class="alert-box">⏰<div style="flex:1"><strong>${t.name}</strong><br><span style="font-size:.72rem;color:var(--sub)">${(t.sites||[]).join(' / ')}</span></div><span class="alert-days">${d===0?'今日！':`あと${d}日`}</span></div>`}).join(''):'';
+  if(alerts)alerts.innerHTML=soon.length?soon.map(t=>{const d=daysTo(t.deadline);return`<div class="alert-box">⏰<div style="flex:1"><strong>${t.name}</strong><br><span style="font-size:.72rem;color:var(--sub)">${(t.sites||[]).join(' / ')}</span></div><span class="alert-days">${d===0?'今日！':`あと${d}日`}</span></div>`}).join(''):'';
   if(!f.length){list.innerHTML=`<div class="empty"><div class="icon">🎫</div><p>チケット応募を追加してください</p></div>`;return;}
   const rl={plan:'計画中 📋',applied:'応募済み','pending-ticket':'結果待ち',win:'当選 🎉',lose:'落選 😔'};
   list.innerHTML=f.map(t=>{
@@ -1729,15 +1734,22 @@ function addTicketFromEvent(eid){
   document.getElementById('event-modal').classList.remove('open');
   const ev=events.find(e=>e.id===eid);
   openTicketModal(ev?{name:ev.title,date:ev.date,venue:ev.venue}:null);
-  switchTab('ticket',document.getElementById('nav-ticket'));
+  switchTab('ticket');
 }
 function editTicket(id){
   const t=tickets.find(t=>t.id===id);if(!t)return;
   document.getElementById('modal-title').textContent='✏️ チケット情報を編集';
-  document.getElementById('t-id').value=t.id;
-  ['name','date','venue','deadline','result-date','price','seat','url','memo'].forEach(f=>{const el=document.getElementById('t-'+f);if(el)el.value=t[f.replace('-','')]||t[f]||'';});
-  document.getElementById('t-result-date').value=t.resultDate||'';
-  document.getElementById('t-result').value=t.result||'applied';
+  document.getElementById('t-id').value        = t.id;
+  document.getElementById('t-name').value      = t.name||'';
+  document.getElementById('t-date').value      = t.date||'';
+  document.getElementById('t-venue').value     = t.venue||'';
+  document.getElementById('t-deadline').value  = t.deadline||'';
+  document.getElementById('t-result-date').value = t.resultDate||'';  // resultDate（キャメルケース）
+  document.getElementById('t-result').value    = t.result||'applied';
+  document.getElementById('t-price').value     = t.price||'';
+  document.getElementById('t-seat').value      = t.seat||'';
+  document.getElementById('t-url').value       = t.url||'';
+  document.getElementById('t-memo').value      = t.memo||'';
   document.querySelectorAll('#t-sites .cpill').forEach(p=>p.classList.toggle('on',(t.sites||[]).includes(p.dataset.val)));
   document.getElementById('ticket-modal').classList.add('open');
 }
