@@ -415,6 +415,19 @@ function save(){
 
 // ===== データ移行 =====
 (function migrate(){
+  // 旧バグ版（at_ev / at_tk / at_co）で保存されたデータを正規キーへ移行
+  const wrongMap={at_ev:K.ev, at_tk:K.tk, at_co:K.co};
+  Object.entries(wrongMap).forEach(([wrong,correct])=>{
+    const wrongData=localStorage.getItem(wrong);
+    if(wrongData&&wrongData!=='[]'){
+      const correctData=localStorage.getItem(correct);
+      if(!correctData||correctData==='[]'){
+        localStorage.setItem(correct,wrongData);
+      }
+      localStorage.removeItem(wrong);
+    }
+  });
+
   const v=parseInt(localStorage.getItem(K.ver)||'1');
   if(v>=VER)return;
   if(v<2)localStorage.setItem(K.co,'[]');
@@ -423,6 +436,18 @@ function save(){
 })();
 
 let events=safeLoad(K.ev,[]),tickets=safeLoad(K.tk,[]),collabs=safeLoad(K.co,[]);
+
+// OTHERカテゴリの既存イベントを再分類
+(function fixCategories(){
+  let changed=false;
+  events.forEach(e=>{
+    if(e.category==='OTHER'){
+      const newCat=detectCat(e.title||'');
+      if(newCat!=='OTHER'){e.category=newCat;changed=true;}
+    }
+  });
+  if(changed){try{localStorage.setItem(K.ev,JSON.stringify(events));}catch{}}
+})();
 let calDate=new Date(),schFilter='all',ticketFilter='all',collabFilter='all';
 
 // ===== タブ切替 =====
@@ -438,6 +463,11 @@ function switchTab(name){
   }catch(e){console.error('[switchTab]',e);}
 }
 function goToSch(cat){switchTab('sch');schFilter=cat||'all';renderSch();}
+function goToLiveStage(){
+  switchTab('sch');schFilter='LIVESTAGE';
+  document.querySelectorAll('#sch-filters .fchip').forEach(c=>c.classList.remove('active'));
+  renderSch();
+}
 function goToTickets(f){switchTab('ticket');ticketFilter=f||'all';renderTickets();}
 function closeModal(e){if(e.target.classList.contains('mwrap'))e.target.classList.remove('open');}
 
@@ -576,7 +606,7 @@ function renderHome(){
 
   sr.innerHTML=`
     <div class="sbox" onclick="goToSch('all')"><div class="snum">${upcoming.length}</div><div class="slbl">今後の予定</div></div>
-    <div class="sbox" onclick="goToSch('LIVE')"><div class="snum" style="color:var(--live)">${liveStage.length}</div><div class="slbl">LIVE/STAGE</div></div>
+    <div class="sbox" onclick="goToLiveStage()"><div class="snum" style="color:var(--live)">${liveStage.length}</div><div class="slbl">LIVE/STAGE</div></div>
     <div class="sbox" onclick="goToTickets('win')"><div class="snum" style="color:var(--win)">${wonCount}</div><div class="slbl">当選チケット</div></div>`;
 
   const actions=tickets.filter(t=>{const d=daysTo(t.deadline);return d!==null&&d>=0&&d<=7&&(t.result==='applied'||t.result==='pending-ticket');}).sort((a,b)=>(a.deadline||'').localeCompare(b.deadline||''));
@@ -739,7 +769,8 @@ function changeMonth(d){calDate.setMonth(calDate.getMonth()+d);renderCal();}
 function renderSch(){
   const list=G('sch-list');if(!list)return;
   let f=[...events].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  if(schFilter!=='all')f=f.filter(e=>e.category===schFilter);
+  if(schFilter==='LIVESTAGE')f=f.filter(e=>e.category==='LIVE'||e.category==='STAGE');
+  else if(schFilter!=='all')f=f.filter(e=>e.category===schFilter);
   const nb=G('nb-sch');if(nb){nb.textContent=events.length;nb.style.display=events.length?'block':'none';}
   if(!f.length){list.innerHTML=`<div class="empty"><div class="icon">📋</div><p>「更新」ボタンでスケジュールを取得</p></div>`;return;}
   list.innerHTML=f.map(ev=>{
