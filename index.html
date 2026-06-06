@@ -151,6 +151,7 @@ textarea.fctrl{resize:vertical;min-height:70px}
   <div class="panel active" id="panel-home">
     <div class="stats-row" id="stats-row"></div>
     <div id="home-actions"></div>
+    <div id="home-tickets"></div>
     <div id="home-week"></div>
     <div id="home-alerts"></div>
   </div>
@@ -565,8 +566,8 @@ async function syncData(){
 
 // ===== ホーム =====
 function renderHome(){
-  const sr=G('stats-row'),ha=G('home-actions'),hw=G('home-week'),al=G('home-alerts');
-  if(!sr||!ha||!hw||!al)return;
+  const sr=G('stats-row'),ha=G('home-actions'),ht=G('home-tickets'),hw=G('home-week'),al=G('home-alerts');
+  if(!sr||!ha||!ht||!hw||!al)return;
   const td=today();
   const upcoming=events.filter(e=>e.date&&e.date>=td).sort((a,b)=>a.date.localeCompare(b.date));
   const thisWeek=upcoming.filter(e=>{const d=daysTo(e.date);return d!==null&&d>=0&&d<=14;});
@@ -585,6 +586,55 @@ function renderHome(){
       <div class="action-days">${d===0?'今日！':`あと${d}日`}</div>
       <div style="flex:1"><div style="font-weight:700;font-size:.85rem">${t.name||'—'}</div><div style="font-size:.72rem;opacity:.85">${(t.sites||[]).join(' / ')||'種別未設定'}</div></div>
       <div>›</div></div>`;}).join('')}
+  </div>`:'';
+
+  // チケット予定セクション
+  const td2=today();
+  const tkRows=[];
+  tickets.forEach(t=>{
+    // 申込み予定（planステータス）
+    if(t.result==='plan'){
+      const d=daysTo(t.deadline);
+      tkRows.push({priority:0,date:t.deadline||'9999',label:'📋 申込み予定',name:t.name,sub:(t.sites||[]).join(' / ')||'種別未設定',days:d,color:'#5c35d4',bg:'#f0f0ff',id:t.id,type:'ticket'});
+    }
+    // 応募締切（30日以内）
+    if((t.result==='applied'||t.result==='plan')){
+      const d=daysTo(t.deadline);
+      if(d!==null&&d>=0&&d<=30&&t.result==='applied'){
+        tkRows.push({priority:1,date:t.deadline,label:'⏰ 応募締切',name:t.name,sub:(t.sites||[]).join(' / ')||'—',days:d,color:d<=3?'#e74c3c':'#e67e22',bg:d<=3?'#fdecea':'#fff3e0',id:t.id,type:'ticket'});
+      }
+    }
+    // 当落発表（30日以内）
+    if(t.resultDate){
+      const d=daysTo(t.resultDate);
+      if(d!==null&&d>=0&&d<=30&&(t.result==='applied'||t.result==='pending-ticket')){
+        tkRows.push({priority:2,date:t.resultDate,label:'🔔 当落発表',name:t.name,sub:(t.sites||[]).join(' / ')||'—',days:d,color:'#8e44ad',bg:'#f3e8ff',id:t.id,type:'ticket'});
+      }
+    }
+    // 当選公演日（30日以内）
+    if(t.result==='win'&&t.date){
+      const d=daysTo(t.date);
+      if(d!==null&&d>=0&&d<=30){
+        tkRows.push({priority:3,date:t.date,label:'🎉 当選公演',name:t.name,sub:t.venue||'—',days:d,color:'#27ae60',bg:'#e8f8f0',id:t.id,type:'ticket'});
+      }
+    }
+  });
+  tkRows.sort((a,b)=>a.date.localeCompare(b.date));
+
+  ht.innerHTML=tkRows.length?`<div class="card">
+    <div class="sec-title">🎫 チケット予定</div>
+    ${tkRows.slice(0,6).map(r=>`<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--bdr);cursor:pointer" onclick="goToTickets('all')">
+      <div style="min-width:60px;text-align:center;background:${r.bg};border-radius:8px;padding:4px 0">
+        <div style="font-size:.95rem;font-weight:900;color:${r.color}">${r.days===0?'今日！':r.days===1?'明日':`${r.days}日後`}</div>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:.68rem;font-weight:700;color:${r.color};margin-bottom:1px">${r.label}</div>
+        <div style="font-size:.85rem;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name}</div>
+        <div style="font-size:.7rem;color:var(--sub)">${r.sub}</div>
+      </div>
+      <div style="font-size:.75rem;font-weight:700;color:${r.color};background:${r.bg};padding:3px 8px;border-radius:8px;white-space:nowrap">${fmt(r.date)}</div>
+    </div>`).join('')}
+    ${tkRows.length>6?`<div style="text-align:center;padding:8px 0"><button class="btn-t" onclick="goToTickets('all')">すべて見る（${tkRows.length}件）</button></div>`:''}
   </div>`:'';
 
   hw.innerHTML=thisWeek.length
