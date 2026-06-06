@@ -455,13 +455,13 @@ async function tryFetch(url,ms=10000){try{const r=await fetch(url,{cache:'no-sto
 function detectCat(t){
   const u=t.toUpperCase();
   if(/ライブ|LIVE|ツアー|TOUR|コンサート/.test(u))return'LIVE';
-  if(/舞台|ミュージカル|STAGE|刀ミュ|スタミュ/.test(u))return'STAGE';
+  if(/舞台|ミュージカル|STAGE|刀ミュ|スタミュ|キングダム/.test(u))return'STAGE';
   if(/TV|テレビ|放送|出演/.test(u))return'TV';
   if(/ラジオ|RADIO/.test(u))return'RADIO';
   if(/発売|リリース|シングル|アルバム/.test(u))return'RELEASE';
   if(/映画|CINEMA|上映/.test(u))return'CINEMA';
   if(/雑誌|MAGAZINE|掲載|表紙/.test(u))return'MAGAZINE';
-  if(/アンバサダー|コラボ|キャンペーン|CM|イベント|サイン|ファンミ/.test(u))return'EVENT';
+  if(/アンバサダー|コラボ|キャンペーン|CM|イベント|トークショー|サイン|ファンミ/.test(u))return'EVENT';
   return'OTHER';
 }
 
