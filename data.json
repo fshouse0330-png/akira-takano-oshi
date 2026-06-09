@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "id": "fvtixptl6v",
+      "date": "2026-06-09",
+      "category": "STAGE",
+      "title": "三浦宏規がアクシデントを告白「稽古場に行けなくなった時に…」高野洸のサポートに“お兄ちゃん”っぽさを感じた初演『キングダム』の舞台裏 【舞台『キングダムⅡ-継承-』 独自インタビュー】 - entax（エンタックス）",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBNOElRN2ZGUXFzaFVXNTZTdVBHc01oYXRYczNZaTFacmRNWUlORWxCUFVJZDQzY3ltcEJMZ1hfM25iX1hLWDk5TU9wTm5vWUc1cjItRWo4UXg?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-09_三浦宏規がアクシデントを告白「稽古場に行けなくなった時に…」",
+      "fetchedAt": "2026-06-09 19:45 JST"
+    },
+    {
+      "id": "ccgrutvrat",
+      "date": "2026-06-08",
+      "category": "OTHER",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: ＼最新情報解禁📢／  ジャパンロアキャスト ～ヴァインズ・アタック!最新情報発表～ 配信決定！  📅6月24日(水)20:00頃～ #ディズニーロルカナ 公",
+      "venue": "",
+      "url": "https://nitter.net/DisneyLOR_JP/status/2063923995746156970#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-06-08_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-06-09 19:45 JST"
+    },
+    {
+      "id": "8c02okshd6",
+      "date": "2026-06-08",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-08_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-06-09 19:45 JST"
+    },
+    {
       "id": "y1ezo1dehz",
       "date": "2026-06-06",
       "category": "STAGE",
@@ -959,6 +995,18 @@
       "source": "fetched",
       "externalId": "2026-03-10_【高野洸×三ツ目重工 SRIMIN対談】「アイデアをインプッ",
       "fetchedAt": "2026-06-05 00:46 JST"
+    },
+    {
+      "id": "m41vaogalg",
+      "date": "2026-03-07",
+      "category": "OTHER",
+      "title": "【高野洸×三ツ目重工 SRIMIN対談】「アイデアをインプットするために街を歩く」 - au Webポータル",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TMWJiRi1hbWREOTJEdjBPTUpUdHRnOC1ldWh5cm9WMWRtYkcxUzdnY1lfdUNkd2F1bnhRejNiTkthN2pnYXQzNVBJcjVVaURVMUVBNGNRVzMxSk5zeVplSEhuSEY0TnNMR1FXZVkwVnN1ajNTS2wxUG1Wdw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-03-07_【高野洸×三ツ目重工 SRIMIN対談】「アイデアをインプッ",
+      "fetchedAt": "2026-06-09 19:45 JST"
     },
     {
       "id": "6zoh12maeq",
@@ -2125,17 +2173,17 @@
       "fetchedAt": "2026-06-07 18:52 JST"
     }
   ],
-  "lastUpdated": "2026-06-08 22:55 JST",
+  "lastUpdated": "2026-06-09 19:45 JST",
   "source": "multi-source",
-  "totalCount": 177,
-  "newCount": 2,
+  "totalCount": 181,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 0,
+    "Twitter(Nitter)": 1,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
