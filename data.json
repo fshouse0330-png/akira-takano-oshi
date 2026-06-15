@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "fmdlqhmgo2",
+      "date": "2026-06-15",
+      "category": "OTHER",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: 📢本日解禁  #平井美葉(#BEYOOOOONDS)主演 #高野洸 共演オリジナルドラマ  ☀️#がんばってがんばらない☀️ 📅8/7㊎よる9時  ちょっと",
+      "venue": "",
+      "url": "https://nitter.net/nihoneiga/status/2066324923883429918#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-06-15_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-06-16 02:34 JST"
+    },
+    {
       "id": "cnk9rkq184",
       "date": "2026-06-13",
       "category": "STAGE",
@@ -2533,17 +2545,17 @@
       "fetchedAt": "2026-06-07 18:52 JST"
     }
   ],
-  "lastUpdated": "2026-06-14 19:33 JST",
+  "lastUpdated": "2026-06-16 02:34 JST",
   "source": "multi-source",
-  "totalCount": 211,
-  "newCount": 3,
+  "totalCount": 212,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 0,
+    "Twitter(Nitter)": 1,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 3,
+    "Google ニュース": 0,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
