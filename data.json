@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "qm1xeoxc4c",
+      "date": "2026-06-20",
+      "category": "TV",
+      "title": "平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本映画専門CHで独占放送 メイキング番組＆関連特集も - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xZ3VqaEtxX2dTRVFRMXVFamVWM0ZobkMyLTNMalA4Y0k2TkNSM01nTUxlZEtVVm9qTnFvZks3OVJpbElDN1J1YW52a19fYU16MzFrODBEZXhaZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-20_平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本",
+      "fetchedAt": "2026-06-20 17:35 JST"
+    },
+    {
       "id": "3kajmj81co",
       "date": "2026-06-19",
       "category": "TV",
@@ -11,6 +23,18 @@
       "source": "fetched",
       "externalId": "2026-06-19_平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本",
       "fetchedAt": "2026-06-19 21:37 JST"
+    },
+    {
+      "id": "j1ksbnswn3",
+      "date": "2026-06-19",
+      "category": "TV",
+      "title": "BEYOOOOONDS平井美葉、ドラマ初主演 高野洸と共演『がんばって、がんばらない』放送決定 - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxQQlFyTFF3c28yZXpBbTJwR2tScmJSaEVTbzUzQU92ZllLVElmdG13cHFKck1LTEp0aUFmaVlDLXhjTmRSbGdKcXVyb1RnaHRlbDluNWRCWDg2Qmc1ZHVma0FNakY0SlZIdXJUbXI5dUFNaExpT2JWLTlHMDJnb0pBWG9OWElJTWlOU2FJOEY5ZmdybW8zZ2tFSHhzdWQ0ZDFjYnNxN3E3bmZmUTBWS3ZEeU1NWnNfVHpWRUtTRDlyQnkycGFNREJIVml4Vi1rLUttSTJaSlBwLW52eERXbVNvNy1ndUNIX2lURDBGbU16ZVlVQkR1Wm11ZHFXVThKVDJYZjc4dmVCRWxCaTh3YlF0dW5Ub0RWN1dnb2dWZFZBY19HZmJCUkJzUFVNWk9ZU0xlNXREd0ZjNzZuaVVobGVCSWdUVHZfckZFQWwwdVZaRVhOWGFiYnZNc2FIbFNXZVhrZ0s0RlI3STJTZ3JkMTJaeWRfaVpicld1Nzg3OVd6OXkxOFk2YTR1TDZpczNzOUlQVmVVaHNxRXVIakk4a2VFd0k0TXVZdW5hVDZzV3l3V3JETFNDamtFUGoxZjdES0tkVnFR?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-19_BEYOOOOONDS平井美葉、ドラマ初主演 高野洸と共演『",
+      "fetchedAt": "2026-06-20 17:35 JST"
     },
     {
       "id": "4pfkhc1v95",
@@ -1427,6 +1451,18 @@
       "source": "fetched",
       "externalId": "2026-03-07_【高野洸×三ツ目重工 SRIMIN対談】「アイデアをインプッ",
       "fetchedAt": "2026-06-09 19:45 JST"
+    },
+    {
+      "id": "rllcx04xc7",
+      "date": "2026-03-07",
+      "category": "OTHER",
+      "title": "Aice ゲーム配信開始 #高野洸 #aice #slaythespire #slaythespire2 #スレスパ - YouTube",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBuQWZSaGd6VDRud1BZMC1JVmRQTWxpbkJPQU13cE50a2VQN1Vsdm1GTEJ0Z2VGNm5rRlR3am5ETXFncjBZQnJQWEdkOWJJSmV4TzV3UVlMbXZsTGVu?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-03-07_Aice ゲーム配信開始 #高野洸 #aice #slayt",
+      "fetchedAt": "2026-06-20 17:35 JST"
     },
     {
       "id": "6zoh12maeq",
@@ -2941,17 +2977,17 @@
       "fetchedAt": "2026-06-19 21:37 JST"
     }
   ],
-  "lastUpdated": "2026-06-19 21:37 JST",
+  "lastUpdated": "2026-06-20 17:35 JST",
   "source": "multi-source",
-  "totalCount": 245,
-  "newCount": 5,
+  "totalCount": 248,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 5,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
