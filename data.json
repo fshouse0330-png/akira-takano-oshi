@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "6rst7bkk43",
+      "date": "2026-06-22",
+      "category": "TV",
+      "title": "平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本映画専門CHで独占放送 メイキング番組＆関連特集も - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xZ3VqaEtxX2dTRVFRMXVFamVWM0ZobkMyLTNMalA4Y0k2TkNSM01nTUxlZEtVVm9qTnFvZks3OVJpbElDN1J1YW52a19fYU16MzFrODBEZXhaZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-22_平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本",
+      "fetchedAt": "2026-06-23 01:14 JST"
+    },
+    {
       "id": "a8xge1xjul",
       "date": "2026-06-21",
       "category": "TV",
@@ -1355,6 +1367,18 @@
       "source": "fetched",
       "externalId": "2026-03-30_舞台「キングダムⅡ-継承-」高野洸＆山口祐一郎バージョンのテ",
       "fetchedAt": "2026-06-11 21:33 JST"
+    },
+    {
+      "id": "5mej9605l0",
+      "date": "2026-03-30",
+      "category": "STAGE",
+      "title": "『ACTORS☆LEAGUE in Games』プロデューサー・高野洸が表紙を飾る「TVガイドStage Stars vol.32」発売！ 裏表紙にはミュージカル「忍たま乱太郎」六年生キャストが登場 | 株式会社東京ニュース通信社のプレスリリース - PR TIMES",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5RVUhlUUpybkdITlZOaUN5MTNIeUxfSDZrcUlqaEZNakRsdjJIanZyMDYxdVVRdXp1LWdndTRLZnYtX1lieW5DYmhUQjBNZnNOWEk4d3ZLV2hJLVNjRGwzZUs0NEJIVW10dHc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-03-30_『ACTORS☆LEAGUE in Games』プロデューサ",
+      "fetchedAt": "2026-06-23 01:14 JST"
     },
     {
       "id": "ltebf4wt7u",
@@ -2821,6 +2845,18 @@
       "fetchedAt": "2026-06-05 00:46 JST"
     },
     {
+      "id": "5p8prmnhj2",
+      "date": "2021-12-14",
+      "category": "STAGE",
+      "title": "舞台ヒプマイ 山田一郎役の高野洸による『Battle of Pride』BD・DVDアザージャケット仕様、紹介動画が公開 - 音楽業界総合情報サイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9BZ2tPVXk2R2dXdHdHams2UmF3THJTYUttMUpQQ3l3ZllPSFF2S1Z5WnM5UVJpa2lDTU1zRGprS21BalB1aHM4cTNydUJGa3VYcUE?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2021-12-14_舞台ヒプマイ 山田一郎役の高野洸による『Battle of",
+      "fetchedAt": "2026-06-23 01:14 JST"
+    },
+    {
       "id": "23lr47md6u",
       "date": "2021-11-17",
       "category": "OTHER",
@@ -3037,17 +3073,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-21 19:54 JST",
+  "lastUpdated": "2026-06-23 01:14 JST",
   "source": "multi-source",
-  "totalCount": 253,
-  "newCount": 5,
+  "totalCount": 256,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 5,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
