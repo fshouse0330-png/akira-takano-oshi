@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "n3humqlrtw",
+      "date": "2026-06-23",
+      "category": "OTHER",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: ／ オリジナルドラマ ☀️#がんばってがんばらない☀️ 本予告公開🎞️ ＼ ちょっと事情を抱えた若者たちが 共同生活のなかで 自分らしい生き方を見つける物語",
+      "venue": "",
+      "url": "https://nitter.net/nihoneiga/status/2069254652890407281#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-06-23_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-06-23 19:46 JST"
+    },
+    {
+      "id": "vgoifibefe",
+      "date": "2026-06-23",
+      "category": "CINEMA",
+      "title": "[Twitter @akira_t_staff] 特別上映イベントが開催されます✨ ぜひチェックしてください！ #がんばってがんばらない #高野洸",
+      "venue": "",
+      "url": "https://nitter.net/akira_t_staff/status/2069316284307939715#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-06-23_[Twitter @akira_t_staff] 特別上映イ",
+      "fetchedAt": "2026-06-23 19:46 JST"
+    },
+    {
       "id": "6rst7bkk43",
       "date": "2026-06-22",
       "category": "TV",
@@ -407,6 +431,18 @@
       "source": "fetched",
       "externalId": "2026-06-09_舞台「キングダムⅡ-継承-」高野洸＆山口祐一郎バージョンのテ",
       "fetchedAt": "2026-06-17 01:11 JST"
+    },
+    {
+      "id": "4ap7uihm8m",
+      "date": "2026-06-09",
+      "category": "OTHER",
+      "title": "（写真）近藤勇は高野洸、沖田総司は藤岡真威人に！ 『君とゆきて咲く』追加キャスト4名発表 - ドラマ - ニュース - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5CUTljc1hzQU1yVnJrdC1admh4bnBfX19EdHBYQ2hEekRmY1VWb1g1dDFkNG5Na1ZjVU44bFp6NGt2RlR2d2I5U0FFNHcyei1tX0hXM1NWXy1WZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-09_（写真）近藤勇は高野洸、沖田総司は藤岡真威人に！ 『君とゆき",
+      "fetchedAt": "2026-06-23 19:46 JST"
     },
     {
       "id": "ccgrutvrat",
@@ -2761,6 +2797,18 @@
       "fetchedAt": "2026-06-05 00:46 JST"
     },
     {
+      "id": "ahrm0k2xwi",
+      "date": "2022-12-21",
+      "category": "OTHER",
+      "title": "高野洸、CDデビュー5周年YEAR突入を記念したMU-CA「zOne」ビジュアルが公開 - 音楽業界総合情報サイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmaHlCVFVEWm92T3JHZUlQdXJDMmJxUXFyYVhSMnBVRFA3YmY3OHZkOVVkY1NZc005cXZhc3dlVWI3aGR0UTZBd20zNVFKTUNxLUE?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2022-12-21_高野洸、CDデビュー5周年YEAR突入を記念したMU-CA「",
+      "fetchedAt": "2026-06-23 19:46 JST"
+    },
+    {
       "id": "5rb1rbn17q",
       "date": "2022-11-16",
       "category": "STAGE",
@@ -2915,6 +2963,18 @@
       "source": "fetched",
       "externalId": "2021-05-10_高野洸、『高野洸 1st Live Tour “ENTER”",
       "fetchedAt": "2026-06-05 19:59 JST"
+    },
+    {
+      "id": "d6sieoewgx",
+      "date": "2021-05-09",
+      "category": "LIVE",
+      "title": "高野洸が5thシングル「Vacances」のリリースを発表　『高野洸 1st Live Tour “ENTER”』 埼玉公演にて - エンタメ特化型情報メディア スパイス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnRnE3cl8xZ3dUN2owamtYN2FmVWJmTmVTQUZHZFVhamllenpjdldJaFlfQ3lueWRNR2dCenFrZjl4dDlrTkpPeDZxY2E2YmvSAVRBVV95cUxNaFJiM25pSWxkZlFCV25GWFRhSWFXZi01RVlpZk4yazhTWWU2QllIaDZldldJeURNZVFyaFEtdWRUS0RTa003TjA4S21nQ0xWajM1NG0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2021-05-09_高野洸が5thシングル「Vacances」のリリースを発表",
+      "fetchedAt": "2026-06-23 19:46 JST"
     },
     {
       "id": "m15kz8fmsf",
@@ -3073,14 +3133,14 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-23 01:14 JST",
+  "lastUpdated": "2026-06-23 19:46 JST",
   "source": "multi-source",
-  "totalCount": 256,
-  "newCount": 3,
+  "totalCount": 261,
+  "newCount": 5,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 0,
+    "Twitter(Nitter)": 2,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
     "Google ニュース": 3,
