@@ -25,6 +25,18 @@
       "fetchedAt": "2026-06-23 19:46 JST"
     },
     {
+      "id": "v9jxhy2k1w",
+      "date": "2026-06-23",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-23_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-06-24 19:28 JST"
+    },
+    {
       "id": "6rst7bkk43",
       "date": "2026-06-22",
       "category": "TV",
@@ -3133,17 +3145,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-23 19:46 JST",
+  "lastUpdated": "2026-06-24 19:28 JST",
   "source": "multi-source",
-  "totalCount": 261,
-  "newCount": 5,
+  "totalCount": 262,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 2,
+    "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 3,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
