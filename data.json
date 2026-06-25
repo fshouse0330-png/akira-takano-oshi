@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "id": "74d1juridg",
+      "date": "2026-06-25",
+      "category": "EVENT",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: 【キャンペーン開催🎁】 #ディズニーロルカナ 「ジャパンロアキャスト ～ヴァインズ・アタック!最新情報発表～」 ゲスト #高野洸 さんの 直筆サイン入りカー",
+      "venue": "",
+      "url": "https://nitter.net/DisneyLOR_JP/status/2070054393391505782#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-06-25_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-06-25 18:59 JST"
+    },
+    {
+      "id": "rl1mmn7ywh",
+      "date": "2026-06-25",
+      "category": "TV",
+      "title": "平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本映画専門CHで独占放送 メイキング番組＆関連特集も - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xZ3VqaEtxX2dTRVFRMXVFamVWM0ZobkMyLTNMalA4Y0k2TkNSM01nTUxlZEtVVm9qTnFvZks3OVJpbElDN1J1YW52a19fYU16MzFrODBEZXhaZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-25_平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本",
+      "fetchedAt": "2026-06-25 18:59 JST"
+    },
+    {
+      "id": "d6phr09dux",
+      "date": "2026-06-24",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-24_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-06-25 18:59 JST"
+    },
+    {
       "id": "n3humqlrtw",
       "date": "2026-06-23",
       "category": "OTHER",
@@ -2797,6 +2833,18 @@
       "fetchedAt": "2026-06-07 18:52 JST"
     },
     {
+      "id": "7rkgvtyzqt",
+      "date": "2023-02-08",
+      "category": "OTHER",
+      "title": "荒牧慶彦・高野洸・阿部顕嵐がエスプリークとタイアップ、“推し下地”の魅力伝える - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9Rb3JteDM2NEtXQ2Nud1JmbWpla05pZ21KT3d1cjZDajBHblRBUWgyekxoVFJ6NkcwaWItUkExenU0NllqOGZvSU1Na2w?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-02-08_荒牧慶彦・高野洸・阿部顕嵐がエスプリークとタイアップ、“推し",
+      "fetchedAt": "2026-06-25 18:59 JST"
+    },
+    {
       "id": "jwisve6mef",
       "date": "2023-01-31",
       "category": "STAGE",
@@ -3061,6 +3109,18 @@
       "fetchedAt": "2026-06-05 00:46 JST"
     },
     {
+      "id": "g3c2ximae5",
+      "date": "2019-08-27",
+      "category": "OTHER",
+      "title": "阿久津仁愛：テニミュで注目の2.5次元イケメンが「タピるデート」 黒羽麻璃央、高野洸も - 毎日キレイ",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4wMVFVMHUyTk1xSWR0eFM1UHhpeTRFcTlvWDVsV3c5Y1NwNGJlTnJheWdLWXpYaGI1MlZfNGlOWU0xZlNueEhkdmt5QVY3eUxmR1dDUVAxVkFOb3I3NGpVSTg3a2Q5ZmdoWV9Bc0JHNA?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2019-08-27_阿久津仁愛：テニミュで注目の2.5次元イケメンが「タピるデー",
+      "fetchedAt": "2026-06-25 18:59 JST"
+    },
+    {
       "id": "qzl6zkfuvh",
       "date": "2018-12-31",
       "category": "OTHER",
@@ -3145,17 +3205,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-24 19:28 JST",
+  "lastUpdated": "2026-06-25 18:59 JST",
   "source": "multi-source",
-  "totalCount": 262,
-  "newCount": 1,
+  "totalCount": 267,
+  "newCount": 6,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 0,
+    "Twitter(Nitter)": 2,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
