@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "k11t61haw0",
+      "date": "2026-06-26",
+      "category": "STAGE",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: 三浦宏規×高野洸×山本千尋×山口祐一郎インタビュー🎙 魂を削る戦いが再び！舞台『キングダムⅡ-継承-』で描かれる新たな熱狂と絆⚔️ https://lp.p",
+      "venue": "",
+      "url": "https://nitter.net/PiaStage/status/2070341292471517196#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-06-26_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-06-26 19:29 JST"
+    },
+    {
+      "id": "owtq31flry",
+      "date": "2026-06-26",
+      "category": "STAGE",
+      "title": "【三浦宏規×高野洸×山本千尋×山口祐一郎インタビュー】魂を削る戦いが再び！舞台『キングダムⅡ-継承-』で描かれる新たな熱狂と絆 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBWd0hrbDdfZjNIZlV1YjRodThsX3NlVURTQzBtd21GTmhFamFXSUxwOVA3X3B2a2tYZFlrTW4xLW9xdU5tRmduQ21PYVh0NV8xaDg3Nl9remx3N0wxS2x3?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-26_【三浦宏規×高野洸×山本千尋×山口祐一郎インタビュー】魂を削",
+      "fetchedAt": "2026-06-26 19:29 JST"
+    },
+    {
       "id": "74d1juridg",
       "date": "2026-06-25",
       "category": "EVENT",
@@ -2989,6 +3013,18 @@
       "fetchedAt": "2026-06-12 20:55 JST"
     },
     {
+      "id": "b28qrrk9hp",
+      "date": "2021-08-30",
+      "category": "LIVE",
+      "title": "高野洸、記念すべき初のソロライヴツアー『高野洸 1st Live Tour “ENTER”』DVD & Blu-rayが 10/27に発売決定 - 音楽業界総合情報サイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTZ09OU00ySll1cGRLXy1hU1ZTTnY0R2RnaVBFYnVrbkpXVUEzUmxFNDBxYUtxMUs1cDN6NS01OUVXOGc1NkJqSDNDV2ZsSE1hTEE?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2021-08-30_高野洸、記念すべき初のソロライヴツアー『高野洸 1st Li",
+      "fetchedAt": "2026-06-26 19:29 JST"
+    },
+    {
       "id": "ftlm22x6q0",
       "date": "2021-08-14",
       "category": "LIVE",
@@ -3205,17 +3241,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-25 18:59 JST",
+  "lastUpdated": "2026-06-26 19:29 JST",
   "source": "multi-source",
-  "totalCount": 267,
-  "newCount": 6,
+  "totalCount": 270,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 2,
+    "Twitter(Nitter)": 1,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 4,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
