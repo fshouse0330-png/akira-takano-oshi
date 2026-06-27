@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "hkk2p75b7f",
+      "date": "2026-06-27",
+      "category": "TV",
+      "title": "平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本映画専門CHで独占放送 メイキング番組＆関連特集も - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE83MmNSUTk4c2h1Z09FNUdvZEQyWjcycWpoV3VYY3I5OTZObWpjNHpTbllTT21LMnNsZC1qTkRob0gwbEF2ZndqOU5YSUYwdF9DRlpqYXhncTVYdw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-27_平井美葉＆高野洸ら共演ドラマ「がんばって、がんばらない」日本",
+      "fetchedAt": "2026-06-27 17:11 JST"
+    },
+    {
+      "id": "povf1wbm5g",
+      "date": "2026-06-27",
+      "category": "STAGE",
+      "title": "信役の三浦宏規&高野洸、王騎役の山口祐一郎が続投!舞台「キングダムII-継承-」上演決定 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE96VVVxUmNIUkVheHJQNTNXak9Xa0daTTc5eVNNNS1mbm1JWVRuRXMzbzRjd0U3UFRWNHVNRHg3UjhkTmpoSk5fSEViTnpMa2FBc25qcm5BWHA5Z3V5Zy1ROVlHMHZFMnBnSTdqNEtzdG9SQQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-27_信役の三浦宏規&高野洸、王騎役の山口祐一郎が続投!舞台「キン",
+      "fetchedAt": "2026-06-27 17:11 JST"
+    },
+    {
       "id": "k11t61haw0",
       "date": "2026-06-26",
       "category": "STAGE",
@@ -1355,6 +1379,18 @@
       "source": "fetched",
       "externalId": "2026-04-06_【ニコニコ超会議 2026】高野洸・杉田智和・スタンミ・歌広",
       "fetchedAt": "2026-06-06 13:08 JST"
+    },
+    {
+      "id": "a66529xltj",
+      "date": "2026-04-06",
+      "category": "STAGE",
+      "title": "【ニコニコ超会議2026】「超・思考実験展」全6公演がニコ生で独占配信決定～高野洸・杉田智和・スタンミ・歌広場淳・ズズなど俳優・声優・ストリーマー・VTuber計18名が集結！～ - KADOKAWAグループ ポータルサイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSTktVERiWE9jbkhNNExNazhFTVhYbExYdjViRERNRFNrdV96Tlg4bkdZS0VfWWJRTGVGMmhsdWY2VENCMjFRdlBWQVdRZG5YcjVBS0prOVY4bWZNWTVGZGdGcnAzSXY3c1QxQk00X08xMFhwVTNzek9MTGdDaWhibmFYRnk?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-04-06_【ニコニコ超会議2026】「超・思考実験展」全6公演がニコ生",
+      "fetchedAt": "2026-06-27 17:11 JST"
     },
     {
       "id": "1xvjvyc9cs",
@@ -2893,6 +2929,18 @@
       "fetchedAt": "2026-06-23 19:46 JST"
     },
     {
+      "id": "4hqgkohbqu",
+      "date": "2022-12-14",
+      "category": "TV",
+      "title": "高野洸、映画『ゲネプロ★７』出演決定 ロミオを演じる、ダンスが得意な筋トレ俳優役に - 音楽業界総合情報サイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93bm5DdUJIMzg2SW9fekRrd1F2bjBXMFUycDVUMFg5VVc5T2d0cE4yd3JwLVE4UFpkNTQyZzAzTjRVaktQQ09oT29UeUpqUk9MQ3c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2022-12-14_高野洸、映画『ゲネプロ★７』出演決定 ロミオを演じる、ダンス",
+      "fetchedAt": "2026-06-27 17:11 JST"
+    },
+    {
       "id": "5rb1rbn17q",
       "date": "2022-11-16",
       "category": "STAGE",
@@ -3241,17 +3289,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-26 19:29 JST",
+  "lastUpdated": "2026-06-27 17:11 JST",
   "source": "multi-source",
-  "totalCount": 270,
-  "newCount": 3,
+  "totalCount": 274,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 1,
+    "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
