@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "u9udfngg14",
+      "date": "2026-06-30",
+      "category": "STAGE",
+      "title": "信役の三浦宏規&高野洸、王騎役の山口祐一郎が続投!舞台「キングダムII-継承-」上演決定 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBfQXNDTEtiRWQyd0g1SmRTNXJRZW9paDM2bDdUeW5CVXZqQ0VqVEh1b0FRQ1dtb0k3T2RfS1owcTNtLVVQMWpiZUtnT201bjdJOXd6RU5Ka3NFUkZfRW56YUxTeXBpSG1kRml1NzkwT3J0UjVrOXNRWg?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-30_信役の三浦宏規&高野洸、王騎役の山口祐一郎が続投!舞台「キン",
+      "fetchedAt": "2026-06-30 19:42 JST"
+    },
+    {
       "id": "xi6ags02i4",
       "date": "2026-06-29",
       "category": "STAGE",
@@ -11,6 +23,18 @@
       "source": "fetched",
       "externalId": "2026-06-29_三浦宏規と高野洸、互いを“戦友”と呼び全幅の信頼！ 舞台『キ",
       "fetchedAt": "2026-06-29 22:55 JST"
+    },
+    {
+      "id": "895lp4xy3h",
+      "date": "2026-06-29",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-06-29_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-06-30 19:42 JST"
     },
     {
       "id": "kjdvnbq62z",
@@ -3433,17 +3457,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-29 22:55 JST",
+  "lastUpdated": "2026-06-30 19:42 JST",
   "source": "multi-source",
-  "totalCount": 286,
-  "newCount": 6,
+  "totalCount": 288,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 1,
+    "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 5,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
