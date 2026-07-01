@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "e83l6auanc",
+      "date": "2026-07-01",
+      "category": "TV",
+      "title": "BEYOOOOONDS平井美葉、ドラマ初主演 高野洸と共演『がんばって、がんばらない』放送決定 - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdXJZVHA2c1IzRXRKdE1Uc0FuOG5SazRvLW5TUDBvUzV2eGY1bmx6RHkyMU9uNUJkVW9SNERDODlLNlJPdjhxelRxdTl0MDZlTzduRi1TZVVQNzVUaVlQcndteDk5LVJiaWZEaGRDTUJ4ZTMyWTNuNExXRE9MWk4wYWJzSGdxZHVy?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-01_BEYOOOOONDS平井美葉、ドラマ初主演 高野洸と共演『",
+      "fetchedAt": "2026-07-01 19:55 JST"
+    },
+    {
       "id": "u9udfngg14",
       "date": "2026-06-30",
       "category": "STAGE",
@@ -3457,17 +3469,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-06-30 19:42 JST",
+  "lastUpdated": "2026-07-01 19:55 JST",
   "source": "multi-source",
-  "totalCount": 288,
-  "newCount": 2,
+  "totalCount": 289,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
