@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "kwachd9ivb",
+      "date": "2026-07-04",
+      "category": "OTHER",
+      "title": "高野洸の関連画像 - 推し楽",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAwTXpkWE52SmtoQ3JZaXlncWt3clJtVnZmNFdiQnJ0bWt0a1JqRHVjaDlTLU80T09NOHFXNF9nN2NlOXE1UWhqYlJySDZCcUhDOHRSNUxTdk9tM3JtSTQ5SUJKek1lMEE?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-04_高野洸の関連画像 - 推し楽",
+      "fetchedAt": "2026-07-04 17:12 JST"
+    },
+    {
       "id": "myfx4lt0n1",
       "date": "2026-07-03",
       "category": "STAGE",
@@ -83,6 +95,30 @@
       "source": "fetched",
       "externalId": "2026-07-03_ミュージカル『ジョン＆ジェン』再演決定！ 太田基裕・高野洸×",
       "fetchedAt": "2026-07-03 18:45 JST"
+    },
+    {
+      "id": "0p5r8z6le8",
+      "date": "2026-07-03",
+      "category": "STAGE",
+      "title": "ミュージカル「ジョン＆ジェン」に太田基裕・高野洸・彩風咲奈・平野綾、4通りのペアで上演（コメントあり） - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBsS3hlQlkwY3dyRThsbl8xOURFU292S0JrYllndGtDNnZEeWxITlhnTEpfR2ZkdmtPU19FMWI1RXJYbENMQXREaS16TnM?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-03_ミュージカル「ジョン＆ジェン」に太田基裕・高野洸・彩風咲奈・",
+      "fetchedAt": "2026-07-04 17:12 JST"
+    },
+    {
+      "id": "zsbm1l437l",
+      "date": "2026-07-03",
+      "category": "STAGE",
+      "title": "（写真）ミュージカル『ジョン＆ジェン』再演決定！ 太田基裕・高野洸×彩風咲奈・平野綾がWキャストで姉弟、親子の関係性紡ぐ - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1zRkhUdGktcUVyQU45NXE4dFRzamdzc1pwYzFnT2F1UU9nYWR0aW5vNElFRnF0M21Ha29uMkhVY0FCZHYxV1c4RE4zaVN4ZjJsTzVLUHVjWUFJeXM0ekhoeWlDMGlDRjJEYWh1Q21fVEU?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-03_（写真）ミュージカル『ジョン＆ジェン』再演決定！ 太田基裕・",
+      "fetchedAt": "2026-07-04 17:12 JST"
     },
     {
       "id": "e83l6auanc",
@@ -3553,17 +3589,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-07-03 18:45 JST",
+  "lastUpdated": "2026-07-04 17:12 JST",
   "source": "multi-source",
-  "totalCount": 296,
-  "newCount": 9,
+  "totalCount": 299,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 3,
+    "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 6,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
