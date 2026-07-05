@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "pd0ei21u7w",
+      "date": "2026-07-06",
+      "category": "STAGE",
+      "title": "三浦宏規と高野洸、互いを“戦友”と呼び全幅の信頼！ 舞台『キングダムⅡ-継承-』製作発表会見 の画像・写真 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFByT0VXdVRSTGZIdEQzU2FZVmtmclpMU29sLWRhdjNYa3VLMjZnWXZDYzlEbUJNS0FvQVFDbnpkTnRqVjlHU2l6RTZLMnhjWlJYLXl5aXluWWZ1cTlrZk5CS0tleWtHbV9IckRYQm16ekRZcEhrVlZQMA?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-06_三浦宏規と高野洸、互いを“戦友”と呼び全幅の信頼！ 舞台『キ",
+      "fetchedAt": "2026-07-06 08:03 JST"
+    },
+    {
+      "id": "co4hzvgfg9",
+      "date": "2026-07-05",
+      "category": "STAGE",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: 昨晩の宏規とアキさん。 10日間高野洸さんが 1人の信で守り抜いた合戦場に 三浦宏規さんがおととい合流⚔️ キングダムの夏です☀️ #舞台キングダム2 東京",
+      "venue": "",
+      "url": "https://nitter.net/kingdom_stage/status/2073689057704710348#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-07-05_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-07-06 08:03 JST"
+    },
+    {
       "id": "kwachd9ivb",
       "date": "2026-07-04",
       "category": "OTHER",
@@ -131,6 +155,18 @@
       "source": "fetched",
       "externalId": "2026-07-03_（写真）ミュージカル『ジョン＆ジェン』再演決定！ 太田基裕・",
       "fetchedAt": "2026-07-04 17:12 JST"
+    },
+    {
+      "id": "8n6dlj5l5w",
+      "date": "2026-07-03",
+      "category": "STAGE",
+      "title": "太田基裕・高野洸、彩風咲奈・平野綾がWキャストで出演　ミュージカル『ジョン＆ジェン』の上演が決定 - エンタメ特化型情報メディア スパイス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBWYWp1Z3U1Mk85S1pfNUoxb3VaM1FSdFVtRXhaVUFqZFhiRjduZ3p4QmVkVkV4alJ4TDJ6dWltdVprc1VCT0lEalB2ZkVUaUXSAVRBVV95cUxQeE1Hb2tSeVNfeU9jMC1NSWZsbjF4SWdsQVp1MXNnbS15MnBHNGRZREVpbU8zaDV1Zk5BLUxqNmtMNDdlajJGNUh2eFFEX1NuNm5oNk0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-03_太田基裕・高野洸、彩風咲奈・平野綾がWキャストで出演　ミュー",
+      "fetchedAt": "2026-07-06 08:03 JST"
     },
     {
       "id": "e83l6auanc",
@@ -3601,17 +3637,17 @@
       "fetchedAt": "2026-06-21 19:54 JST"
     }
   ],
-  "lastUpdated": "2026-07-05 17:32 JST",
+  "lastUpdated": "2026-07-06 08:03 JST",
   "source": "multi-source",
-  "totalCount": 300,
-  "newCount": 1,
+  "totalCount": 303,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 0,
+    "Twitter(Nitter)": 1,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
