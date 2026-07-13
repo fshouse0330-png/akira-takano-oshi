@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "l2kyzdga7v",
+      "date": "2026-07-13",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-13_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-07-14 07:57 JST"
+    },
+    {
       "id": "aqw8skg8gf",
       "date": "2026-07-11",
       "category": "STAGE",
@@ -3385,6 +3397,18 @@
       "fetchedAt": "2026-06-10 20:48 JST"
     },
     {
+      "id": "tdl7hdophl",
+      "date": "2024-01-26",
+      "category": "OTHER",
+      "title": "『ヒプステ』“一郎”高野洸、新キャストへエール「超応援してます」 廣野凌大は「俺らのソウルを受け継いで」 - オリコンニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQU0FoTi0tckZTVm9YandlNm9XRmdQVF96SUJ6VUNJdmRjblNOLXdUaGp0YTh0VDFSZFVNQVBBRFY0dkplTUtJMklXNWQ2VnE0eVlYQlgtS21Sd21DNlN3eXFYUW5Xa3R3MlZqcjVKZ2ZIcHh5M0NRMHo0cncyNG9qVjJR?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-01-26_『ヒプステ』“一郎”高野洸、新キャストへエール「超応援してま",
+      "fetchedAt": "2026-07-14 07:57 JST"
+    },
+    {
       "id": "tipypf6t0w",
       "date": "2024-01-24",
       "category": "OTHER",
@@ -3937,6 +3961,18 @@
       "fetchedAt": "2026-06-17 21:56 JST"
     },
     {
+      "id": "f4io1rjurh",
+      "date": "2019-12-10",
+      "category": "OTHER",
+      "title": "高野洸＆眞嶋秀斗、ハート指示に照れ ファンへのクリスマスPは“魔法”「温まって！」 - オリコンニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBLc2VrWlNzWWo3LTZqNmNMWFhnMlpZWFkzR0tBdUlIXzR4T014eHh5V0NJaUwyamt5ZmlDNVRqOHRUU1dRX3l0ek1wcE9ONTQ0OVd4VEln?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2019-12-10_高野洸＆眞嶋秀斗、ハート指示に照れ ファンへのクリスマスPは",
+      "fetchedAt": "2026-07-14 07:57 JST"
+    },
+    {
       "id": "r1mk5ex83p",
       "date": "2019-09-27",
       "category": "OTHER",
@@ -4105,17 +4141,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-07-13 07:53 JST",
+  "lastUpdated": "2026-07-14 07:57 JST",
   "source": "multi-source",
-  "totalCount": 342,
-  "newCount": 6,
+  "totalCount": 345,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 6,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
