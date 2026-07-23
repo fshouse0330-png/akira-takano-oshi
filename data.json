@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "13mlr01n9r",
+      "date": "2026-07-23",
+      "category": "LIVE",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: 【Blu-ray 発売決定&予約受付開始!!】 2026年11月4日(水)発売 AKIRA TAKANO LIVE TOUR 2026 MODE ON 🔗h",
+      "venue": "",
+      "url": "https://nitter.net/akiratakanoInfo/status/2080216865054335287#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-07-23_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-07-24 07:58 JST"
+    },
+    {
+      "id": "jk8mlkah8t",
+      "date": "2026-07-23",
+      "category": "STAGE",
+      "title": "（写真）三浦宏規＆高野洸、舞台『キングダム』続編に意気込み “王騎”山口祐一郎のさすがの包容力をカンパニー絶賛！ - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0yaTVfeF9MSUVFUXRCQ2hyY05jTjRXb0ZIZXJ5Rlk0N01mWTh2VDlyN2gzLTZKeVlCTWpvY3JvQkc2Z3ByblJmd1NWS1VhWXlZWUtuM1BnMFFwT2hxNldEMGtDaw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-23_（写真）三浦宏規＆高野洸、舞台『キングダム』続編に意気込み",
+      "fetchedAt": "2026-07-24 07:58 JST"
+    },
+    {
       "id": "3nu49ul88o",
       "date": "2026-07-22",
       "category": "RELEASE",
@@ -61,6 +85,30 @@
       "fetchedAt": "2026-07-23 08:07 JST"
     },
     {
+      "id": "opcp7yadrp",
+      "date": "2026-07-22",
+      "category": "LIVE",
+      "title": "[Twitter @AKIRAT_official] お祝いコメントなどありがとうございます。29です。 19:00からインスタライブするので是非遊びに来てください☺️",
+      "venue": "",
+      "url": "https://nitter.net/AKIRAT_official/status/2079597216495554636#m",
+      "memo": "取得元: Twitter @AKIRAT_official (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-07-22_[Twitter @AKIRAT_official] お祝い",
+      "fetchedAt": "2026-07-24 07:58 JST"
+    },
+    {
+      "id": "2whjmkcatt",
+      "date": "2026-07-22",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-22_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-07-24 07:58 JST"
+    },
+    {
       "id": "nez89ielp5",
       "date": "2026-07-21",
       "category": "CINEMA",
@@ -95,6 +143,18 @@
       "source": "fetched",
       "externalId": "2026-07-21_三浦宏規＆高野洸、舞台『キングダム』続編に意気込み “王騎”",
       "fetchedAt": "2026-07-23 08:07 JST"
+    },
+    {
+      "id": "4qq11qts72",
+      "date": "2026-07-21",
+      "category": "LIVE",
+      "title": "[Twitter @AKIRAT_official] RT by @AKIRAT_official: 明日(7/22)19:00〜 高野洸のInstagramアカウントより インスタライブを実施します✨ ※時間は前後する可能性がございます。 ぜひ一緒にお",
+      "venue": "",
+      "url": "https://nitter.net/akira_t_staff/status/2079492060017750420#m",
+      "memo": "取得元: Twitter @AKIRAT_official (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-07-21_[Twitter @AKIRAT_official] RT",
+      "fetchedAt": "2026-07-24 07:58 JST"
     },
     {
       "id": "bv9t2v9ehm",
@@ -5137,17 +5197,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-07-23 08:07 JST",
+  "lastUpdated": "2026-07-24 07:58 JST",
   "source": "multi-source",
-  "totalCount": 428,
-  "newCount": 9,
+  "totalCount": 433,
+  "newCount": 5,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 3,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 6,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
