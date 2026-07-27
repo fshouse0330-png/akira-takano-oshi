@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "8sv5hxwt62",
+      "date": "2026-07-27",
+      "category": "RELEASE",
+      "title": "[Twitter @akira_t_staff] RT by @akira_t_staff: 発売中の #JUNON 9月号に #高野洸 さんが登場🌟 撮影の裏側を大公開📸 ぜひチェックしてねー☺️🫶 🛒ご購入はこちらから http://amzn.a",
+      "venue": "",
+      "url": "https://nitter.net/JUNON_jp/status/2081575300987543988#m",
+      "memo": "取得元: Twitter @akira_t_staff (Nitter)",
+      "source": "fetched",
+      "externalId": "2026-07-27_[Twitter @akira_t_staff] RT by",
+      "fetchedAt": "2026-07-28 08:04 JST"
+    },
+    {
       "id": "7zlsxc955m",
       "date": "2026-07-25",
       "category": "STAGE",
@@ -4981,6 +4993,18 @@
       "fetchedAt": "2026-06-17 21:56 JST"
     },
     {
+      "id": "qe6gm33eug",
+      "date": "2020-03-20",
+      "category": "OTHER",
+      "title": "高野洸主演プロジェクト『KING OF DANCE』キャラクタービジュアル公開 - オリコンニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE42emVjSXpEN2tsVTlpWVRSZ0Q3Y0JEZXQ3QVpnLTZqS1hCNVVwOUZwMXBwbkl2cFFNRTBfNHlGM1VYd2hKMmx0M3E2d2cxRW8?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2020-03-20_高野洸主演プロジェクト『KING OF DANCE』キャラク",
+      "fetchedAt": "2026-07-28 08:04 JST"
+    },
+    {
       "id": "rvto7iodrx",
       "date": "2020-02-19",
       "category": "STAGE",
@@ -5305,17 +5329,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-07-27 08:01 JST",
+  "lastUpdated": "2026-07-28 08:04 JST",
   "source": "multi-source",
-  "totalCount": 442,
-  "newCount": 0,
+  "totalCount": 444,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
-    "Twitter(Nitter)": 0,
+    "Twitter(Nitter)": 1,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 0,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
