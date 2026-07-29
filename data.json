@@ -5221,6 +5221,18 @@
       "fetchedAt": "2026-07-20 07:55 JST"
     },
     {
+      "id": "asb59onmdt",
+      "date": "2018-01-22",
+      "category": "RELEASE",
+      "title": "高野洸のアルバム売上TOP3作品 - oricon.co.jp",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9yX3lPdDg1MjdKazl3NkdLZUtvblBMLXYwVzg5LU1UdkluT2MwOERqZ1hZLUNvd2JjX2hJOGduY283TjFETXNHVExhWFBXay02SkhJSGx0eGdwS3Y4?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2018-01-22_高野洸のアルバム売上TOP3作品 - oricon.co.j",
+      "fetchedAt": "2026-07-30 08:00 JST"
+    },
+    {
       "id": "km4ol7uldj",
       "date": "2017-12-18",
       "category": "TV",
@@ -5341,6 +5353,18 @@
       "fetchedAt": "2026-07-23 08:07 JST"
     },
     {
+      "id": "jvhygqqh67",
+      "date": "2016-07-28",
+      "category": "STAGE",
+      "title": "画像・写真 | 4年ぶり舞台『BLEACH』開幕 高野洸「夏より熱い一護を」 1枚目 - oricon.co.jp",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BZEFyczliVnBxM29OZ0hGVXJCZkJQQW1MaG81MVNweThaVWtVZ0pJTU5YUjlhbG1MbWEwVTFWYjd6VFRBUlo5aldWQlVoZEIzUU5Dd0F2Zy1VUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2016-07-28_画像・写真 | 4年ぶり舞台『BLEACH』開幕 高野洸「夏",
+      "fetchedAt": "2026-07-30 08:00 JST"
+    },
+    {
       "id": "8pn68jaiex",
       "date": "2014-05-02",
       "category": "OTHER",
@@ -5353,9 +5377,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-07-29 08:02 JST",
+  "lastUpdated": "2026-07-30 08:00 JST",
   "source": "multi-source",
-  "totalCount": 446,
+  "totalCount": 448,
   "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
