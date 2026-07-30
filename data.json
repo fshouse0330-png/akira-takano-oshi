@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "phiuyxd1jt",
+      "date": "2026-07-30",
+      "category": "STAGE",
+      "title": "舞台『キングダム』3年ぶり続編 三浦宏規＆高野洸らメインキャスト集結 アクションに自信 - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOLTZCQXJabXk3am9BSEVaLTdDQl9MU1JqZFV1MEpMQmcxX3lzOXZLcEZCR2VJU1c4NUdzYVluUm1WZ2NJN29xTTY1bHRIaXFoUXk4RTVNM3pZMFJlZlBaSkRYT3lQY0Y3NngtUDRJMjJSS21naFg4bVZ0Z3hzQjhCaW1aUG5PeHlrNENj?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-30_舞台『キングダム』3年ぶり続編 三浦宏規＆高野洸らメインキャ",
+      "fetchedAt": "2026-07-31 08:10 JST"
+    },
+    {
       "id": "cm44ynyg0l",
       "date": "2026-07-28",
       "category": "STAGE",
@@ -659,6 +671,18 @@
       "source": "fetched",
       "externalId": "2026-07-14_舞台「キングダム」の続編が今夏開幕　ダブルキャストの三浦宏規",
       "fetchedAt": "2026-07-26 07:57 JST"
+    },
+    {
+      "id": "u9fyw2p8zi",
+      "date": "2026-07-14",
+      "category": "STAGE",
+      "title": "三浦宏規＆高野洸、ダブルキャストで舞台「キングダム２」主演「熱い夏を過ごせそうな予感」 - 日刊スポーツ",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWG9HYVRJSTQtZWFtUl82YlU0Y1VRcDdRTDlEbjUtNHV5TXV4TEFwLTEtZXlUeXprcmFwQWNZVkVjdzJrUFNkVE9rSlphaTFtbm9WT3c2OVVoZGhleE1FQUJTY1VDRGgxRkdyeEJoVnB0ZEZ6bXFvejBGS295TWZMVmRKTXY4SFJiVnR0TjY0dEs3RlRGSGc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-14_三浦宏規＆高野洸、ダブルキャストで舞台「キングダム２」主演「",
+      "fetchedAt": "2026-07-31 08:10 JST"
     },
     {
       "id": "l2kyzdga7v",
@@ -5329,6 +5353,18 @@
       "fetchedAt": "2026-06-19 21:37 JST"
     },
     {
+      "id": "bx7k4cwuys",
+      "date": "2017-01-30",
+      "category": "OTHER",
+      "title": "画像・写真 | 佐野勇斗が貴重な“キス顔”披露 西銘駿、小野寺晃良、高野洸ら人気10代俳優も 2枚目 - オリコンニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kRF8ydEF4UDNnLTVlcjFGV0ltblpfbkhkSFM3NjNJWUU2aXoxS1BRN1NjVlRuMzctSEdaODBYSUdnRFdQd3BfTS1sOXFjSW0zcVpWYkRHRkE3dw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2017-01-30_画像・写真 | 佐野勇斗が貴重な“キス顔”披露 西銘駿、小野",
+      "fetchedAt": "2026-07-31 08:10 JST"
+    },
+    {
       "id": "3x9s7c0671",
       "date": "2017-01-27",
       "category": "OTHER",
@@ -5377,17 +5413,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-07-30 08:00 JST",
+  "lastUpdated": "2026-07-31 08:10 JST",
   "source": "multi-source",
-  "totalCount": 448,
-  "newCount": 2,
+  "totalCount": 451,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
