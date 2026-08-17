@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "vjosbz305h",
+      "date": "2026-08-17",
+      "category": "STAGE",
+      "title": "高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプロデュースのゲームイベントからあふれ出る圧倒的パッション - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE91dXp4U2tRWmNqOFNrNXFEQllrSTFkdm9xcUtES3V5aTFYdGJ0M3V4eUJKR1JVdDMwRmM0ak1HQy16eUNqQ2pUajFnYkZJTE12WEFYSXZOd0NTUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-17_高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプ",
+      "fetchedAt": "2026-08-18 07:27 JST"
+    },
+    {
+      "id": "2tdw1jxm0d",
+      "date": "2026-08-17",
+      "category": "TV",
+      "title": "平井美葉＆高野洸「がんばることも、がんばらないことも自分で選べる権利」 “がんばりすぎてしまった”全ての人へ贈るメッセージ - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE15SV93Z3EtWkFMb2dPR2ZSZ1pkS2JXRUJ6ZTVqMkRwd2x1RDJKVHVaNFpQeGgwT3BQTWRHZzhuaDVUdVNFbElPX1hiZzA0QkV2cW5LdjE5aFQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-17_平井美葉＆高野洸「がんばることも、がんばらないことも自分で選",
+      "fetchedAt": "2026-08-18 07:27 JST"
+    },
+    {
       "id": "y7k7c7qbp7",
       "date": "2026-08-16",
       "category": "STAGE",
@@ -6877,17 +6901,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-08-17 07:23 JST",
+  "lastUpdated": "2026-08-18 07:27 JST",
   "source": "multi-source",
-  "totalCount": 573,
-  "newCount": 4,
+  "totalCount": 575,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 4,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
