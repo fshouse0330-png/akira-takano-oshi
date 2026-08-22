@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "liz10wqov0",
+      "date": "2026-08-22",
+      "category": "STAGE",
+      "title": "PARCO PRODUCE 2026 ミュージカル『ジョン＆ジェン』。太田基裕・高野洸／彩風咲奈・平野綾のWキャストで描く、家族の物語 - 演劇メディアAudience",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9GczNfY2ZnWUJQdlVXZnp3SmpncUZWM2NhQU82Q21aZ3lqcjRtVEJGamdldDNkZzNEemVXU1RzTnBPZzkzTm5HSklPOWJYR2NKZVFsLS0wU1hwOXdkX3c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-22_PARCO PRODUCE 2026 ミュージカル『ジョン＆",
+      "fetchedAt": "2026-08-23 07:24 JST"
+    },
+    {
+      "id": "62op0g6n92",
+      "date": "2026-08-22",
+      "category": "STAGE",
+      "title": "高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプロデュースのゲームイベントからあふれ出る圧倒的パッション - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43akVzSHZyZGdTWHM3NmY4cXZUSmlKUVdoMG1QMUtLRFRQeTQ2OW1hOXJJVDE5VFhGVHdoajZNNlBQYTczQjJwRTI0RWY0Qm1UY2ZYeWtDUTUtQQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-22_高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプ",
+      "fetchedAt": "2026-08-23 07:24 JST"
+    },
+    {
       "id": "fjsr11iqvk",
       "date": "2026-08-21",
       "category": "STAGE",
@@ -5557,6 +5581,18 @@
       "fetchedAt": "2026-06-06 13:08 JST"
     },
     {
+      "id": "lu46w5w6pc",
+      "date": "2025-01-30",
+      "category": "STAGE",
+      "title": "【動画】2.5次元舞台で活躍の高野洸さんも出場 愛知でeスポーツイベント「ASIA esports EXPO」開催 - 中日新聞Web",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1OTVQ0MEM4T0RfWmhMUktSUXNYRmNmNlNraHFXeEdaWThQVEgyN29pSUZSVnVGUjVBajg2Z1NTWV9TYjhYbTYteWdTcW5ndHhxX2ZsRA?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2025-01-30_【動画】2.5次元舞台で活躍の高野洸さんも出場 愛知でeスポ",
+      "fetchedAt": "2026-08-23 07:24 JST"
+    },
+    {
       "id": "ht61229g4s",
       "date": "2025-01-23",
       "category": "EVENT",
@@ -5699,6 +5735,18 @@
       "source": "fetched",
       "externalId": "2024-10-12_高野洸 シンガポールで調達したあるものに苦戦「香りが強すぎて",
       "fetchedAt": "2026-08-05 08:05 JST"
+    },
+    {
+      "id": "moslnx1gl6",
+      "date": "2024-10-11",
+      "category": "OTHER",
+      "title": "高野洸、3rd写真集はシンガポールで撮影！“ようかい体操第一”から約10年「目標は朝ドラに出ること」（3ページ目） - 週刊女性PRIME",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBIU2h2SDRpRnJnLXZqb2lJYllwV3hzeVp0TklHb3dYQmZJNzZqTEMyajk1NHlqcnV2TUhWOFl6UGRSOGhnaGlUbU9tQm94clBXVDNkelA0Tkc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-10-11_高野洸、3rd写真集はシンガポールで撮影！“ようかい体操第一",
+      "fetchedAt": "2026-08-23 07:24 JST"
     },
     {
       "id": "uz606bgu02",
@@ -7213,17 +7261,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-08-22 07:27 JST",
+  "lastUpdated": "2026-08-23 07:24 JST",
   "source": "multi-source",
-  "totalCount": 601,
-  "newCount": 6,
+  "totalCount": 605,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 6,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
