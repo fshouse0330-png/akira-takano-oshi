@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "hc3a5ra0y5",
+      "date": "2026-08-30",
+      "category": "TV",
+      "title": "大原優乃「一緒に過ごした時間が役にも循環」元Dream5高野洸とドラマ初共演『ホワイト・デイズ』FOD SHORTで配信 - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5vQlBMQm5VN1hBSC0yeGVhZUZyQUwtT3RjOXJtZnhzbjV4S01yQkdqUnBRZElRRzFBczh6cWlfeE1yb2dlTmtuVXk3Yjd4Szh3R2ljakVDbXRpUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-30_大原優乃「一緒に過ごした時間が役にも循環」元Dream5高野",
+      "fetchedAt": "2026-08-31 09:16 JST"
+    },
+    {
+      "id": "6uxsbic8xq",
+      "date": "2026-08-30",
+      "category": "STAGE",
+      "title": "高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプロデュースのゲームイベントからあふれ出る圧倒的パッション - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE91dXp4U2tRWmNqOFNrNXFEQllrSTFkdm9xcUtES3V5aTFYdGJ0M3V4eUJKR1JVdDMwRmM0ak1HQy16eUNqQ2pUajFnYkZJTE12WEFYSXZOd0NTUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-30_高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプ",
+      "fetchedAt": "2026-08-31 09:16 JST"
+    },
+    {
       "id": "7fhu7hzffi",
       "date": "2026-08-29",
       "category": "TV",
@@ -107,6 +131,18 @@
       "source": "fetched",
       "externalId": "2026-08-28_大原優乃「一緒に過ごした時間が役にも循環」元Dream5高野",
       "fetchedAt": "2026-08-30 08:57 JST"
+    },
+    {
+      "id": "wb8dgfhbuh",
+      "date": "2026-08-28",
+      "category": "OTHER",
+      "title": "AKIRA TAKANO（高野洸）の音楽遍歴を紐解く、約1万字のオフィシャルインタビュー公開！新ロゴも初公開 - USENの音楽情報サイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8xd2twRVpvVWlQVzRhMmplSW4yWTRwQkxJNHI1ZlBEa0NmRXRPczN1UWdkbk5wUEoybGROY2FUdHp6VmZJVXIycDlNcGNSQkFXbWp0WGozNW1jd0xyZUxIdE5QVENIUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-28_AKIRA TAKANO（高野洸）の音楽遍歴を紐解く、約1万",
+      "fetchedAt": "2026-08-31 09:16 JST"
     },
     {
       "id": "h1ggmrzdi1",
@@ -7273,6 +7309,18 @@
       "fetchedAt": "2026-07-23 08:07 JST"
     },
     {
+      "id": "ub87e9qzv4",
+      "date": "2020-09-11",
+      "category": "RELEASE",
+      "title": "高野洸が約半年ぶりとなる4thシングルを発売　自身初の作詞に挑戦 - エンタメ特化型情報メディア スパイス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5VaV92ZnROQTdKWkl1aS0yVEh1a1lRelFzZWtKUUEtN2NPQXJjbWlsMks0eEpTSEEtb3Iyd0NRWkVaTXRHOUJ5ODY5WThLSW_SAVRBVV95cUxNQUJhYVgzTno5WEtpUUNrLUJLaVJncnE2RGw0NkFLdG9NMF80ZFhpbVpockVHWFpJRGt4ZER6Qjl4aG1QaTRQX2hSWVBnZDZ2NzhNM1Y?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2020-09-11_高野洸が約半年ぶりとなる4thシングルを発売　自身初の作詞に",
+      "fetchedAt": "2026-08-31 09:16 JST"
+    },
+    {
       "id": "ag88tg0vvj",
       "date": "2020-03-20",
       "category": "STAGE",
@@ -7777,9 +7825,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-08-30 08:57 JST",
+  "lastUpdated": "2026-08-31 09:16 JST",
   "source": "multi-source",
-  "totalCount": 648,
+  "totalCount": 652,
   "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
