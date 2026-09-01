@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "jpvnil8s0s",
+      "date": "2026-09-01",
+      "category": "EVENT",
+      "title": "後藤真希、高野洸、佐藤三兄弟、「異色のコラボPOP UP開催」にファン歓喜！ | ニュース | エイベックス・ポータル - エイベックス・ポータル",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFAybXh0LWdzdVBmRGMycUx6QlZNejBfTzc2c0I5cWNIZTAzV0I5d2FjLXN4Q1NUYnFjZ2RCR0RUWkFpZjRYN1E?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-09-01_後藤真希、高野洸、佐藤三兄弟、「異色のコラボPOP UP開催",
+      "fetchedAt": "2026-09-02 08:52 JST"
+    },
+    {
       "id": "z4ar6jmf9f",
       "date": "2026-08-31",
       "category": "STAGE",
@@ -59,6 +71,18 @@
       "source": "fetched",
       "externalId": "2026-08-29_高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプ",
       "fetchedAt": "2026-08-29 12:33 JST"
+    },
+    {
+      "id": "mmr8ujy5bi",
+      "date": "2026-08-29",
+      "category": "RELEASE",
+      "title": "高野洸＆岡宮来夢がユニット結成 「天王寺ミオ」30周年記念曲リリース - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHZjVlU0tTcWt5MnpIOVNtZER3MmFqcGV4QU45eUhYMDhHanNndmlHV1AtN3I0TjhHX29rd3k2Q2FQUERoaFhZWU44WUFjMmc0bVdaLWpxeW9yMEpZRHZWcTJPNEk0Y3c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-29_高野洸＆岡宮来夢がユニット結成 「天王寺ミオ」30周年記念曲",
+      "fetchedAt": "2026-09-02 08:52 JST"
     },
     {
       "id": "4jmfekq3g0",
@@ -7849,9 +7873,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-01 10:04 JST",
+  "lastUpdated": "2026-09-02 08:52 JST",
   "source": "multi-source",
-  "totalCount": 654,
+  "totalCount": 656,
   "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
