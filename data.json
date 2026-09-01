@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "z4ar6jmf9f",
+      "date": "2026-08-31",
+      "category": "STAGE",
+      "title": "高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプロデュースのゲームイベントからあふれ出る圧倒的パッション - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE91dXp4U2tRWmNqOFNrNXFEQllrSTFkdm9xcUtES3V5aTFYdGJ0M3V4eUJKR1JVdDMwRmM0ak1HQy16eUNqQ2pUajFnYkZJTE12WEFYSXZOd0NTUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-08-31_高野洸の“表現の熱”に浮かされる ミュージカル出演作や自らプ",
+      "fetchedAt": "2026-09-01 10:04 JST"
+    },
+    {
       "id": "hc3a5ra0y5",
       "date": "2026-08-30",
       "category": "TV",
@@ -5965,6 +5977,18 @@
       "fetchedAt": "2026-08-13 07:43 JST"
     },
     {
+      "id": "6nnwx5bihe",
+      "date": "2025-01-13",
+      "category": "OTHER",
+      "title": "(4ページ目) 俳優・高野洸が明かす驚きのマニアぶり、『ドラゴンクエスト』シリーズにドハマり中で「もう３周くらいプレイしています」 - ふねぽ",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBaeW51RHRmNFhvd2hMS3pqalNmaHZ2dVBhUDg5T0RpOEpCR2lVb3VpZ2R3SlE5V1N1QjNGSms1NnFwRlh1NmFNVTdXX3BzMUc2ZE9ZSDllZHZkMWN0UWlYSDJ3QQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2025-01-13_(4ページ目) 俳優・高野洸が明かす驚きのマニアぶり、『ドラ",
+      "fetchedAt": "2026-09-01 10:04 JST"
+    },
+    {
       "id": "0pydf0krnx",
       "date": "2025-01-06",
       "category": "OTHER",
@@ -7825,17 +7849,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-08-31 09:16 JST",
+  "lastUpdated": "2026-09-01 10:04 JST",
   "source": "multi-source",
-  "totalCount": 652,
-  "newCount": 4,
+  "totalCount": 654,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 4,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
