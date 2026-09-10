@@ -5977,6 +5977,18 @@
       "fetchedAt": "2026-09-06 08:37 JST"
     },
     {
+      "id": "7f16mqetib",
+      "date": "2025-04-25",
+      "category": "CINEMA",
+      "title": "宮田俊哉、杢代和人、高野洸が映画「おでかけ子ザメ」で声優担当（写真17枚 / 動画あり / コメントあり） - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBpRHNZX0JhMmxDQ3Ztd1gxS1lGT2hsNk5XUFdyX0xkN3pZcUlMYThWMHhlZWEwSjlwZDNMWVdyTVRZLUNKVHd2U0R1enA?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2025-04-25_宮田俊哉、杢代和人、高野洸が映画「おでかけ子ザメ」で声優担当",
+      "fetchedAt": "2026-09-11 08:50 JST"
+    },
+    {
       "id": "ob4nx8xag6",
       "date": "2025-03-26",
       "category": "TV",
@@ -6409,6 +6421,18 @@
       "fetchedAt": "2026-09-10 08:54 JST"
     },
     {
+      "id": "1n952ae2of",
+      "date": "2024-10-12",
+      "category": "OTHER",
+      "title": "(画像7/14) 高野洸、シンガポール撮影でハプニング「まだ取れないです」【sin】 - モデルプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1VN1h4NVRIRzN1eWpTdlV3Z0tXTXQ4U2dmQ0JQamJ5YmUyVU4taS10V2tsZ214NDJzYVBjb0g4OTV0SktTN3hULXNZY24yQQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-10-12_(画像7/14) 高野洸、シンガポール撮影でハプニング「まだ",
+      "fetchedAt": "2026-09-11 08:50 JST"
+    },
+    {
       "id": "moslnx1gl6",
       "date": "2024-10-11",
       "category": "OTHER",
@@ -6431,6 +6455,18 @@
       "source": "fetched",
       "externalId": "2024-10-02_【高野洸】7枚目のシングル「zOne」で見せた新境地。秋には",
       "fetchedAt": "2026-08-25 07:29 JST"
+    },
+    {
+      "id": "2hya87eycp",
+      "date": "2024-09-30",
+      "category": "OTHER",
+      "title": "高野洸のフォトロール | 高野洸 撮影／齋藤周造 33枚目 - 週刊女性PRIME",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40Y3NwTllmVTV6VC1NOExqNDlNVkhFeGYxVUVKUEVTZDVSS0I2cmNfZ3ZtYTNoR0dPaW9MQVQ1dzBJSXBBV3NwZTlNLVUyZkRES3o3U0VYM24zMlg2ZEo4b1BacXZ2Q19lU2JkX0NrajlmVEMyM3c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-09-30_高野洸のフォトロール | 高野洸 撮影／齋藤周造 33枚目",
+      "fetchedAt": "2026-09-11 08:50 JST"
     },
     {
       "id": "9iyipaxk9h",
@@ -6503,6 +6539,18 @@
       "source": "fetched",
       "externalId": "2024-08-16_『妖怪学校の先生はじめました！』に高野洸、蒼井翔太出演　連続",
       "fetchedAt": "2026-07-12 07:52 JST"
+    },
+    {
+      "id": "usjgyr6j3m",
+      "date": "2024-08-16",
+      "category": "TV",
+      "title": "アニメ「妖はじ」10月8日より連続2クールで放送 高野洸＆蒼井翔太が出演（コメントあり） - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1wbUFpXzVnRkF6Uk1sVk96V3BQN1BqS0lNcFZCdk1Xek9wUGp2NGNxSzRGRGhobnloc3JhdlMzdDdEb3ZOU0YtWjFmeWQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-08-16_アニメ「妖はじ」10月8日より連続2クールで放送 高野洸＆蒼",
+      "fetchedAt": "2026-09-11 08:50 JST"
     },
     {
       "id": "g5v4d12f0j",
@@ -8425,17 +8473,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-10 08:54 JST",
+  "lastUpdated": "2026-09-11 08:50 JST",
   "source": "multi-source",
-  "totalCount": 702,
-  "newCount": 9,
+  "totalCount": 706,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 9,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
