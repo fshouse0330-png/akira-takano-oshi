@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "3iwui3zu2w",
+      "date": "2026-09-12",
+      "category": "STAGE",
+      "title": "舞台「キングダムⅡ-継承-」より、高野洸＆山口祐一郎バージョンのティザービジュアル。 - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1iREJ1RzJ1c2tCaUtMZWVFQXROM2pCYUhONTY2bGJGTS1Lekk2NWxBWjczX1BkMWJzU29VZlpVSXZyQXpJSmF3ZjlBN3h3RWVCX05tWHREY1hmZVA0Q3hvUEV3?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-09-12_舞台「キングダムⅡ-継承-」より、高野洸＆山口祐一郎バージョ",
+      "fetchedAt": "2026-09-13 08:51 JST"
+    },
+    {
       "id": "972w2iavi6",
       "date": "2026-09-06",
       "category": "TV",
@@ -95,6 +107,18 @@
       "source": "fetched",
       "externalId": "2026-09-02_後藤真希、高野洸、佐藤三兄弟、9月6日より異色のコラボPOP",
       "fetchedAt": "2026-09-05 08:48 JST"
+    },
+    {
+      "id": "rqrt9g05v0",
+      "date": "2026-09-02",
+      "category": "TV",
+      "title": "大原優乃「一緒に過ごした時間が役にも循環」元Dream5高野洸とドラマ初共演『ホワイト・デイズ』FOD SHORTで配信 - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5vQlBMQm5VN1hBSC0yeGVhZUZyQUwtT3RjOXJtZnhzbjV4S01yQkdqUnBRZElRRzFBczh6cWlfeE1yb2dlTmtuVXk3Yjd4Szh3R2ljakVDbXRpUQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-09-02_大原優乃「一緒に過ごした時間が役にも循環」元Dream5高野",
+      "fetchedAt": "2026-09-13 08:51 JST"
     },
     {
       "id": "jpvnil8s0s",
@@ -7381,6 +7405,18 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     },
     {
+      "id": "m97t8p6dwz",
+      "date": "2022-07-28",
+      "category": "LIVE",
+      "title": "ドラマ、舞台、アーティストとして幅広く活動する高野洸。 2ndLIVEツアー東京ガーデンシアターにて無事ファイナル公演を迎える。 - 日刊エンタメクリップ",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9oU1doVjJCc05FMDkzcVNtNW5WYmR2ZTBtcG5RWWJnV1BfR1N6SFZVZzVqbzVzT3Bna21Qc0FXWnhodDNDQW0wM2Vocw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2022-07-28_ドラマ、舞台、アーティストとして幅広く活動する高野洸。 2n",
+      "fetchedAt": "2026-09-13 08:51 JST"
+    },
+    {
       "id": "x9qc0f0xvn",
       "date": "2022-07-25",
       "category": "OTHER",
@@ -7907,6 +7943,18 @@
       "source": "fetched",
       "externalId": "2020-09-11_高野洸が約半年ぶりとなる4thシングルを発売　自身初の作詞に",
       "fetchedAt": "2026-08-31 09:16 JST"
+    },
+    {
+      "id": "3erwhrzu2g",
+      "date": "2020-04-10",
+      "category": "OTHER",
+      "title": "「新世界に行ってみたい」ダンス自慢の人気俳優達が挑む『KING OF DANCE』主演・高野洸インタビュー！ - anna-media.jp",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBjYVlra0NKU09sU0hBSWtXOHdUNXl6M2JwTmlfQkkzVHN6TWRBZjZHNmpMaXIwbHhyR0QxTHpneFF0REV0bkdud21lYzQwZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2020-04-10_「新世界に行ってみたい」ダンス自慢の人気俳優達が挑む『KIN",
+      "fetchedAt": "2026-09-13 08:51 JST"
     },
     {
       "id": "tkft4cs9bd",
@@ -8485,17 +8533,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-12 08:57 JST",
+  "lastUpdated": "2026-09-13 08:51 JST",
   "source": "multi-source",
-  "totalCount": 707,
-  "newCount": 1,
+  "totalCount": 711,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
