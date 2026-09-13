@@ -8509,6 +8509,18 @@
       "fetchedAt": "2026-09-09 08:55 JST"
     },
     {
+      "id": "uymb2tyvwk",
+      "date": "2015-05-14",
+      "category": "OTHER",
+      "title": "高野洸：プロフィール・最新ニュース -人物情報 - crank-in.net",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBvOGVxbUQ5TXpjVkFkdlJtLWhaM1JwQ25SSS1NaERrOWVyc19RM21tVWl1eUZCREV6NHFZTFFIX3ExUmF0bzM1V1RjQTZBSEE?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2015-05-14_高野洸：プロフィール・最新ニュース -人物情報 - cran",
+      "fetchedAt": "2026-09-14 08:56 JST"
+    },
+    {
       "id": "9wfl7n1kx2",
       "date": "2015-04-30",
       "category": "OTHER",
@@ -8533,17 +8545,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-13 08:51 JST",
+  "lastUpdated": "2026-09-14 08:56 JST",
   "source": "multi-source",
-  "totalCount": 711,
-  "newCount": 4,
+  "totalCount": 712,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 4,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
