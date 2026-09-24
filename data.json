@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "ehp98dwysd",
+      "date": "2026-09-23",
+      "category": "STAGE",
+      "title": "高野洸、本日3/30発売「TVガイドStage Stars」表紙に登場！ 生写真の購入特典も - 推し楽",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5DVkdsREJibXFmdU9tX1pCN2owM3RfX0xmdzRnc0E0TFk2TS1LM1RrcGF3bmtCTVJ0bTZGaGxUQXBkU09ZYndvb25rcnJOc0F2V0NKNkVXNG9WYWtsbWxhZ3N6dFFCRC15ZlJCUVpYOVljaTQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-09-23_高野洸、本日3/30発売「TVガイドStage Stars」",
+      "fetchedAt": "2026-09-24 09:17 JST"
+    },
+    {
       "id": "xezf4uuk77",
       "date": "2026-09-20",
       "category": "STAGE",
@@ -8941,9 +8953,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-23 09:07 JST",
+  "lastUpdated": "2026-09-24 09:17 JST",
   "source": "multi-source",
-  "totalCount": 745,
+  "totalCount": 746,
   "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
