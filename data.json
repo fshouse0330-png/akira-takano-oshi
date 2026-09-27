@@ -8689,6 +8689,18 @@
       "fetchedAt": "2026-07-15 07:58 JST"
     },
     {
+      "id": "oer4981n4z",
+      "date": "2018-12-18",
+      "category": "OTHER",
+      "title": "高野洸の画像・写真一覧 - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9uMTNxb0YxdDl4WURoSm43TURsUHpOc0E5Q0o4R1M0eFlodloyNlo3c3BUQkV4V25scm9vRDBsLVNRaVR5VUhUa05sQ0VlWnl2QUQzSHBjUUFHVzdX?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2018-12-18_高野洸の画像・写真一覧 - クランクイン！",
+      "fetchedAt": "2026-09-27 09:20 JST"
+    },
+    {
       "id": "j14mpk22dj",
       "date": "2018-09-11",
       "category": "EVENT",
@@ -9025,17 +9037,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-26 09:25 JST",
+  "lastUpdated": "2026-09-27 09:20 JST",
   "source": "multi-source",
-  "totalCount": 752,
-  "newCount": 4,
+  "totalCount": 753,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 4,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
