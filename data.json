@@ -6181,6 +6181,18 @@
       "fetchedAt": "2026-09-11 08:50 JST"
     },
     {
+      "id": "p1ers7hn7z",
+      "date": "2025-04-25",
+      "category": "CINEMA",
+      "title": "キスマイ宮田俊哉、高野洸、ゲンジブ杢代和人、『映画 おでかけ子ザメ とかいのおともだち』参戦！ 本予告第1弾解禁 - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5vV2FxbWxVQnBoanVWajJmODFkNkh0UDdRSG15VnNCRnF5a0pLTmZzWEFFeGNkcG40SlVOWEhhUFZCcXhieWxtdlZjSHM?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2025-04-25_キスマイ宮田俊哉、高野洸、ゲンジブ杢代和人、『映画 おでかけ",
+      "fetchedAt": "2026-09-28 09:23 JST"
+    },
+    {
       "id": "ob4nx8xag6",
       "date": "2025-03-26",
       "category": "TV",
@@ -7415,6 +7427,18 @@
       "source": "fetched",
       "externalId": "2023-07-06_高野洸【インタビュー中編】アーティストと役者、2つの顔 -",
       "fetchedAt": "2026-09-20 08:57 JST"
+    },
+    {
+      "id": "5qzjxky0h8",
+      "date": "2023-07-06",
+      "category": "OTHER",
+      "title": "高野洸の画像・写真一覧【全5枚】 - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1NV3k4OF9wdkxpREZjYk9oNXd3OTY0bHZqS1FCUUtpbTY5UVBfTTl3YWg4UVNqOXNwVzgyTVM4WDJXY1hmWGlSdXN0RlBBQnFGQ0Y0ZEVqZ2hySVpIYklka3p6SQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-07-06_高野洸の画像・写真一覧【全5枚】 - クランクイン！",
+      "fetchedAt": "2026-09-28 09:23 JST"
     },
     {
       "id": "dzamamengv",
@@ -9037,17 +9061,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-09-27 09:20 JST",
+  "lastUpdated": "2026-09-28 09:23 JST",
   "source": "multi-source",
-  "totalCount": 753,
-  "newCount": 1,
+  "totalCount": 755,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
