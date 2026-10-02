@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "zqaplong31",
+      "date": "2026-10-02",
+      "category": "OTHER",
+      "title": "大原優乃 「また会えたね、また会おうね」元「ドリ5」高野洸との再会ショット公開に「泣ける」「エモい」（スポニチアネックス） - Yahoo!ニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfT0hTeUhVMzN1YzZlNXZ6dUlfWkFwVFJqYTFBbjVyYW5jQkVQVDdiYTNkVnVpNFdYR3VwaHd2M0otN3BBU2h3LWh5TEYzeHZjMVV2azFoQjFkRGhxZlZYR1R4dDBJLTJobkgxa1M5b1RIRjJfNlZ6enFjZjlGMjg?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-02_大原優乃 「また会えたね、また会おうね」元「ドリ5」高野洸と",
+      "fetchedAt": "2026-10-02 10:24 JST"
+    },
+    {
       "id": "4lx2s7firb",
       "date": "2026-09-29",
       "category": "OTHER",
@@ -7693,6 +7705,18 @@
       "fetchedAt": "2026-07-13 07:53 JST"
     },
     {
+      "id": "otmbkxwwks",
+      "date": "2023-02-28",
+      "category": "STAGE",
+      "title": "三浦宏規＆高野洸 舞台「KINGDOM キングダム」帝劇千穐楽に胸なでおろす - Edge Line",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBFUnd4elJLdkFORWx2VDlOQ0FHcXdHazBYMHN6NzA5bFZXSHE0dFd5QVlfR1hWSzc1Z1JMNGZaRDhHaGFHcDdvYTFkRlBieklxenFxMG5KUGY0bUdzVE5iOQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-02-28_三浦宏規＆高野洸 舞台「KINGDOM キングダム」帝劇千穐",
+      "fetchedAt": "2026-10-02 10:24 JST"
+    },
+    {
       "id": "fjp1sy0lwk",
       "date": "2023-02-15",
       "category": "OTHER",
@@ -8725,6 +8749,18 @@
       "fetchedAt": "2026-08-22 07:27 JST"
     },
     {
+      "id": "hc5c32c4ik",
+      "date": "2019-12-05",
+      "category": "STAGE",
+      "title": "高野洸 『天才てれびくん』舞台化で“てれび戦士”の敵を演じる「とにかく楽しみ」（3ページ目） - 週刊女性PRIME",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE95Yl9yLThhUDkzTkkwb21peURRT2NlTlpWNXJnT1Z5QlltTndSbUlTUlpiemtUc2paeGNZeXdIVHBtZF80WUp2d2E5cG1FbER1NFBsSFRlT3g?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2019-12-05_高野洸 『天才てれびくん』舞台化で“てれび戦士”の敵を演じる",
+      "fetchedAt": "2026-10-02 10:24 JST"
+    },
+    {
       "id": "ksqxe2vyog",
       "date": "2019-11-18",
       "category": "STAGE",
@@ -9253,17 +9289,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-01 10:08 JST",
+  "lastUpdated": "2026-10-02 10:24 JST",
   "source": "multi-source",
-  "totalCount": 771,
-  "newCount": 6,
+  "totalCount": 774,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 6,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
