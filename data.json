@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "8167p491lh",
+      "date": "2026-10-08",
+      "category": "LIVE",
+      "title": "三浦宏規＆高野洸主演の舞台「キングダムII -継承-」、大千穐楽を含む2公演のライブ配信決定 “紫夏編”の先の物語を描く - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4wT2dDdE1PeXZUdGw1aXNYQ1hJTURxbTBwSGZNVGZTN0steE96RVpGdXVkWVRWaDZheFRNVURGamxCSTFrTVd2LVVtTXgwRF9Jd09yNVIxby0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-08_三浦宏規＆高野洸主演の舞台「キングダムII -継承-」、大千",
+      "fetchedAt": "2026-10-09 10:49 JST"
+    },
+    {
+      "id": "9k42l6ew5z",
+      "date": "2026-10-08",
+      "category": "STAGE",
+      "title": "【博多座】舞台「キングダムⅡ-継承-」主演の三浦宏規さんと高野洸さんが福岡県警のニセ電話詐欺防止広報大使に - ファンファン福岡",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1haHRkVl90aGxmSmZoMXhEQ2RUMlV4d2tFZHU5YktuMjdlamdRaGZUUGpReUFGTjdfNzdGb0dR?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-08_【博多座】舞台「キングダムⅡ-継承-」主演の三浦宏規さんと高",
+      "fetchedAt": "2026-10-09 10:49 JST"
+    },
+    {
       "id": "7fnmtw8ayi",
       "date": "2026-10-05",
       "category": "LIVE",
@@ -8161,6 +8185,18 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     },
     {
+      "id": "vq7ecr8wxv",
+      "date": "2022-07-22",
+      "category": "OTHER",
+      "title": "みんなが選ぶ！高野洸さんが演じる人気キャラランキングTOP10【2022年版】 - にじめん",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBDZ3J0SzNnMmZIQ3dYTEZHLTBKOFI2bXZyUE1MMHR1ZDVEYlVyd1ZEWElfQ19NU085bkJjV2E2YUdaNWZYVEVCcVRhaEdGNFpiZ281NEYzZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2022-07-22_みんなが選ぶ！高野洸さんが演じる人気キャラランキングTOP1",
+      "fetchedAt": "2026-10-09 10:49 JST"
+    },
+    {
       "id": "50asfptdrj",
       "date": "2022-07-19",
       "category": "OTHER",
@@ -9469,17 +9505,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-08 10:36 JST",
+  "lastUpdated": "2026-10-09 10:49 JST",
   "source": "multi-source",
-  "totalCount": 789,
-  "newCount": 1,
+  "totalCount": 792,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
