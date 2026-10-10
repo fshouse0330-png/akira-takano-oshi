@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "75iz1yl33v",
+      "date": "2026-10-09",
+      "category": "LIVE",
+      "title": "三浦宏規＆高野洸主演の舞台「キングダムII -継承-」、大千穐楽を含む2公演のライブ配信決定 “紫夏編”の先の物語を描く - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4wT2dDdE1PeXZUdGw1aXNYQ1hJTURxbTBwSGZNVGZTN0steE96RVpGdXVkWVRWaDZheFRNVURGamxCSTFrTVd2LVVtTXgwRF9Jd09yNVIxby0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-09_三浦宏規＆高野洸主演の舞台「キングダムII -継承-」、大千",
+      "fetchedAt": "2026-10-10 10:33 JST"
+    },
+    {
       "id": "8167p491lh",
       "date": "2026-10-08",
       "category": "LIVE",
@@ -131,6 +143,18 @@
       "source": "fetched",
       "externalId": "2026-09-29_舞台「キングダムII-継承-」より、高野洸出演回の様子。 -",
       "fetchedAt": "2026-09-30 10:08 JST"
+    },
+    {
+      "id": "zpxw6dymwk",
+      "date": "2026-09-28",
+      "category": "OTHER",
+      "title": "AKIRA TAKANO(高野洸)さんと、 阿部顕嵐さんの話を盗み聞き・・・ - YouTube",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5vZmMwQkpVT2tORGwtek9OdG95TGhZaHhEMDljd3VCaUE2b1BBTEdZMXB0Y09yalUxenBzTmU1cG55dmJZQkwzdGN1dHRJdUVSZmZUbjZZMkZPdkFl?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-09-28_AKIRA TAKANO(高野洸)さんと、 阿部顕嵐さんの話",
+      "fetchedAt": "2026-10-10 10:33 JST"
     },
     {
       "id": "t8jrevzwp3",
@@ -9505,17 +9529,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-09 10:49 JST",
+  "lastUpdated": "2026-10-10 10:33 JST",
   "source": "multi-source",
-  "totalCount": 792,
-  "newCount": 3,
+  "totalCount": 794,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 3,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
