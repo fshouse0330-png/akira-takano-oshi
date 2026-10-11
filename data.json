@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "hzlg29racr",
+      "date": "2026-10-10",
+      "category": "STAGE",
+      "title": "（写真）三浦宏規＆高野洸、舞台『キングダムII』信役Wキャストで確かな絆 開幕直前“総決起集会”開催！ - クランクイン！",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aT3VkakNxUFFPazZxcHMwMnJzZnUyM2R6NkQtczRQYjdHZUQ1ZjBsVWhQSkRhQUlkbnc3dlViTlhON0hXSFpTTDZZRkRhdWpGRWFrRHN6bGJDVE5YYVpES2tR?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-10_（写真）三浦宏規＆高野洸、舞台『キングダムII』信役Wキャス",
+      "fetchedAt": "2026-10-11 09:44 JST"
+    },
+    {
       "id": "75iz1yl33v",
       "date": "2026-10-09",
       "category": "LIVE",
@@ -9529,17 +9541,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-10 10:33 JST",
+  "lastUpdated": "2026-10-11 09:44 JST",
   "source": "multi-source",
-  "totalCount": 794,
-  "newCount": 2,
+  "totalCount": 795,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
