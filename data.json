@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "8iy6xvzz8o",
+      "date": "2026-10-12",
+      "category": "LIVE",
+      "title": "三浦宏規＆高野洸主演の舞台「キングダムII -継承-」、大千穐楽を含む2公演のライブ配信決定 “紫夏編”の先の物語を描く - WEBザテレビジョン",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4wT2dDdE1PeXZUdGw1aXNYQ1hJTURxbTBwSGZNVGZTN0steE96RVpGdXVkWVRWaDZheFRNVURGamxCSTFrTVd2LVVtTXgwRF9Jd09yNVIxby0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-12_三浦宏規＆高野洸主演の舞台「キングダムII -継承-」、大千",
+      "fetchedAt": "2026-10-12 10:04 JST"
+    },
+    {
       "id": "hzlg29racr",
       "date": "2026-10-10",
       "category": "STAGE",
@@ -9541,9 +9553,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-11 09:44 JST",
+  "lastUpdated": "2026-10-12 10:04 JST",
   "source": "multi-source",
-  "totalCount": 795,
+  "totalCount": 796,
   "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
