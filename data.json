@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "kqu9w171rl",
+      "date": "2026-10-13",
+      "category": "STAGE",
+      "title": "舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く続編、信は三浦宏規＆高野洸が続投 - ファッションプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54VTNaZmRNOUVESnU2X2hIdGhJUkNCNHNNYllUY2xIRFhCQk8wTVVrTnNodWNpRWhWcVBQajJIM0c0blJybkNiWlRyQ3l1V2VSLVJZ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-13_舞台『キングダムII -継承-』大将軍・王騎の戦いと死を描く",
+      "fetchedAt": "2026-10-14 09:57 JST"
+    },
+    {
       "id": "8iy6xvzz8o",
       "date": "2026-10-12",
       "category": "LIVE",
@@ -8281,6 +8293,18 @@
       "fetchedAt": "2026-09-13 08:51 JST"
     },
     {
+      "id": "l7h59tp6c2",
+      "date": "2022-07-28",
+      "category": "LIVE",
+      "title": "高野洸、2ndライブツアーファイナルとなる東京ガーデンシアター公演が終了 - 音楽業界総合情報サイト",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9yeGVpUWdOUWVyTGpGYUhpRFpGWmY4RXFtWXdYZDZ4UDVJZXBJbjNJZWtaVk4ta0tiZ0hjUHFwV2dBbnJ5X0tqRzZyZmozVkN6bHc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2022-07-28_高野洸、2ndライブツアーファイナルとなる東京ガーデンシアタ",
+      "fetchedAt": "2026-10-14 09:57 JST"
+    },
+    {
       "id": "x9qc0f0xvn",
       "date": "2022-07-25",
       "category": "OTHER",
@@ -8555,6 +8579,18 @@
       "source": "fetched",
       "externalId": "2021-12-14_舞台ヒプマイ 山田一郎役の高野洸による『Battle of",
       "fetchedAt": "2026-06-23 01:14 JST"
+    },
+    {
+      "id": "4lxmgsghsm",
+      "date": "2021-12-14",
+      "category": "STAGE",
+      "title": "舞台ヒプマイ　山田一郎役の高野洸による『Battle of Pride』BD・DVDアザージャケット仕様、紹介動画が公開 - エンタメ特化型情報メディア スパイス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5yamFZejdXeGJLaHAzX0NmUzM5YmN6eVdSekktWm91b1lwbndKc29EcXJmY3Z1MGVjZTBRb0I0YmdqdmJjVFJtcS1MT1FXV2PSAVRBVV95cUxNVTc4OHlid3FGY1VUM1BkbTNuNXZsay1oWXNWMXdOcGdmeEh3eXZaNTQzaXZhU1lweGgtdUl4MkR6U1RDY2FvRkdaakJ3ckhVWGFBSFM?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2021-12-14_舞台ヒプマイ　山田一郎役の高野洸による『Battle of",
+      "fetchedAt": "2026-10-14 09:57 JST"
     },
     {
       "id": "lbb0jtme6e",
@@ -9613,17 +9649,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-13 11:54 JST",
+  "lastUpdated": "2026-10-14 09:57 JST",
   "source": "multi-source",
-  "totalCount": 801,
-  "newCount": 5,
+  "totalCount": 804,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 5,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
