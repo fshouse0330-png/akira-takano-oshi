@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "np6jsnp51y",
+      "date": "2026-10-17",
+      "category": "OTHER",
+      "title": "P.O.I.の歌詞 | 高野洸 - オリコンニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBtX0dKSE14ZWhZaFNQSFRBZEs2R2xoRmVBME9FWGdnNFludk02UElFVkpCRTlDamdHQVhBTC14b0JvRExYdGFrbkRRYmxNMEs5NFhsdGdYbmdnRUdwbFltaA?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-17_P.O.I.の歌詞 | 高野洸 - オリコンニュース",
+      "fetchedAt": "2026-10-17 09:12 JST"
+    },
+    {
       "id": "tgkuspijzf",
       "date": "2026-10-15",
       "category": "CINEMA",
@@ -23,6 +35,18 @@
       "source": "fetched",
       "externalId": "2026-10-14_【博多座】舞台「キングダムⅡ-継承-」主演の三浦宏規さん＆高",
       "fetchedAt": "2026-10-15 09:19 JST"
+    },
+    {
+      "id": "g94avj5feh",
+      "date": "2026-10-14",
+      "category": "STAGE",
+      "title": "舞台「キングダムII-継承-」より、高野洸＆山口祐一郎バージョンのティザービジュアル。 - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9tWWZZNU0zdmFNd1VoSFZfbl9QWklHZlBnQloyRllwcmF0OTFDb1JSM09rTWFVT3pkcXNhTXBKZ3U1NkdkMWdpQTl2c3FmWGdmdzZuRGN6TjltY0Vaa1JseTdn?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-14_舞台「キングダムII-継承-」より、高野洸＆山口祐一郎バージ",
+      "fetchedAt": "2026-10-17 09:12 JST"
     },
     {
       "id": "kqu9w171rl",
@@ -59,6 +83,18 @@
       "source": "fetched",
       "externalId": "2026-10-12_三浦宏規＆高野洸、舞台『キングダムII』信役Wキャストで確か",
       "fetchedAt": "2026-10-13 11:54 JST"
+    },
+    {
+      "id": "mkhnf1syvk",
+      "date": "2026-10-11",
+      "category": "RELEASE",
+      "title": "高野洸＆岡宮来夢がユニット結成 「天王寺ミオ」30周年記念曲リリース - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHZjVlU0tTcWt5MnpIOVNtZER3MmFqcGV4QU45eUhYMDhHanNndmlHV1AtN3I0TjhHX29rd3k2Q2FQUERoaFhZWU44WUFjMmc0bVdaLWpxeW9yMEpZRHZWcTJPNEk0Y3c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-11_高野洸＆岡宮来夢がユニット結成 「天王寺ミオ」30周年記念曲",
+      "fetchedAt": "2026-10-17 09:12 JST"
     },
     {
       "id": "hzlg29racr",
@@ -9241,6 +9277,18 @@
       "fetchedAt": "2026-10-02 10:24 JST"
     },
     {
+      "id": "nxabj5t71g",
+      "date": "2019-12-05",
+      "category": "OTHER",
+      "title": "高野洸の画像・写真一覧 - 週刊女性PRIME",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBRSkpfOTdGWXd1MHlkNGZ3RGpHTHBGRnVrQ1ZsX0xudmpFTHhlSS1hdWl1Y3JEMUVpS3I0MzZ4ampaMzhIb05NalhkbDN4aVNMbjFuTElMZ0dVZF9GN19yWjM1bU1tdWplUHU3RlNwU0doZw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2019-12-05_高野洸の画像・写真一覧 - 週刊女性PRIME",
+      "fetchedAt": "2026-10-17 09:12 JST"
+    },
+    {
       "id": "ksqxe2vyog",
       "date": "2019-11-18",
       "category": "STAGE",
@@ -9793,17 +9841,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-16 09:08 JST",
+  "lastUpdated": "2026-10-17 09:12 JST",
   "source": "multi-source",
-  "totalCount": 816,
-  "newCount": 5,
+  "totalCount": 820,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 5,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
