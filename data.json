@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "5cmjy9jq23",
+      "date": "2026-10-23",
+      "category": "OTHER",
+      "title": "【ビルボード】赤根智子『戦争犯罪と闘う』が文化書籍チャート2度目の首位 高野洸のコンプリートブックが初登場4位 - Yahoo!ニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5abnAwUFE4X2VCUGVfeThZcG9XWkwxQ2xZbGVUU2tEdmkxV3Y1a2t0aHYwckRiR3pFUzN6MjY0WVFBaWNSczdPOVkxaTRybTFoMkxPd2hEZDRzRjFDRzkxbDgtNzhQRFdNUmtuekVlSHB2VVJzVEx5bzB6Z0lYLW8?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-23_【ビルボード】赤根智子『戦争犯罪と闘う』が文化書籍チャート2",
+      "fetchedAt": "2026-10-24 09:22 JST"
+    },
+    {
       "id": "np6jsnp51y",
       "date": "2026-10-17",
       "category": "OTHER",
@@ -6901,6 +6913,18 @@
       "fetchedAt": "2026-06-19 21:37 JST"
     },
     {
+      "id": "bs16fpgwxm",
+      "date": "2024-12-12",
+      "category": "LIVE",
+      "title": "高野洸、ソロデビュー５周年記念ツアーが開幕「グレードアップしていけたら」 - スポーツ報知",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9xbUNpb2tPd0JWdW9ZNzNyUFdhOFlsa1hOaDZmYjJmdjZLZ094bW1Xem9tU0ZzakVOckl2VEtROWVwYjZ1b194Y2hJLXNQWHBhaVFoMm1OU2dDUkVydHpmZUd3?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-12-12_高野洸、ソロデビュー５周年記念ツアーが開幕「グレードアップし",
+      "fetchedAt": "2026-10-24 09:22 JST"
+    },
+    {
       "id": "j43xczk7sl",
       "date": "2024-12-04",
       "category": "OTHER",
@@ -9901,17 +9925,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-23 09:26 JST",
+  "lastUpdated": "2026-10-24 09:22 JST",
   "source": "multi-source",
-  "totalCount": 825,
-  "newCount": 1,
+  "totalCount": 827,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
