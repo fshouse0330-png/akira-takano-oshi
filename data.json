@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "bsdasgxmyn",
+      "date": "2026-10-25",
+      "category": "OTHER",
+      "title": "大原優乃、元Dream5高野洸との恋愛シーンに「一瞬セリフが入ってこなかった」（エンタメNEXT） - Yahoo!ニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAzWF9fdjFsZjlVMU80cnhDVDRhbE1KSzcwS3ZxV2huRzAzekhzU3BMVVBuMzdNY3Y2ZzBINDJoNjJ6cGI2NFhzdExvUks4TEx2SHpDVXdWbjVKNnpGd2ctaXFIR1o5VG44X1FVWjZnaTV1cnZMcUF2Z1dHalB5ams?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-25_大原優乃、元Dream5高野洸との恋愛シーンに「一瞬セリフが",
+      "fetchedAt": "2026-10-25 09:05 JST"
+    },
+    {
+      "id": "6spzcnjjg8",
+      "date": "2026-10-24",
+      "category": "OTHER",
+      "title": "大原優乃、元Dream5高野洸との恋愛シーンに「一瞬セリフが入ってこなかった」 - モデルプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9uaVdTMGlZcmUxbW1rTVhzejFPM205VnBKZTZWNmg2VFQ2SlkyaVV1RU14cWkyVnYwUFlUa3QwOGJsQQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-24_大原優乃、元Dream5高野洸との恋愛シーンに「一瞬セリフが",
+      "fetchedAt": "2026-10-25 09:05 JST"
+    },
+    {
       "id": "5cmjy9jq23",
       "date": "2026-10-23",
       "category": "OTHER",
@@ -9925,9 +9949,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-24 09:22 JST",
+  "lastUpdated": "2026-10-25 09:05 JST",
   "source": "multi-source",
-  "totalCount": 827,
+  "totalCount": 829,
   "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
