@@ -313,6 +313,18 @@
       "fetchedAt": "2026-10-10 10:33 JST"
     },
     {
+      "id": "91ujwheyc8",
+      "date": "2026-09-28",
+      "category": "EVENT",
+      "title": "【推し楽】高野洸のチェキが当たる♩Xフォロー＆リポストキャンペーン（2025/7/18 10:00-2025/8/1 23:59） - 推し楽",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ySmVlZGxncV9QNzBrTnJsR3ZfeDJ5S0xUbVVBNU5GclNENEQ2OWE4SUk3ekdmSDBuRDdhR3lVQWRwSFFEZmVrNUF0VWJjZy14Z3ZVU2VkSEFpcEtKbXNEYm1LTDFHWWluaWM3OW1ac1VEVEk?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-09-28_【推し楽】高野洸のチェキが当たる♩Xフォロー＆リポストキャン",
+      "fetchedAt": "2026-10-26 08:56 JST"
+    },
+    {
       "id": "t8jrevzwp3",
       "date": "2026-09-24",
       "category": "STAGE",
@@ -7261,6 +7273,18 @@
       "fetchedAt": "2026-09-11 08:50 JST"
     },
     {
+      "id": "dw0a4w09hy",
+      "date": "2024-07-29",
+      "category": "TV",
+      "title": "木村慧人×西垣匠×高野洸が「TVガイドdan vol.52」の表紙を飾る！ 裏表紙には八木勇征が登場 - PR TIMES",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9Vbm1nNUpjYXZKam5yV1VGOFJxSlNKd00wNGFMNkZ1UG1xWGVrTWxmdnIydHI5U0xEenVMd0ZBdEZDd0oxZ09Bc0ZnaXNXeUhRc1N6Wlpnd3ZZXzVzbG05NktOVWtHX1ZQamc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-07-29_木村慧人×西垣匠×高野洸が「TVガイドdan vol.52」",
+      "fetchedAt": "2026-10-26 08:56 JST"
+    },
+    {
       "id": "gdof2v1cu7",
       "date": "2024-07-11",
       "category": "TV",
@@ -8243,6 +8267,18 @@
       "source": "fetched",
       "externalId": "2023-02-08_三浦宏規・高野洸らが汗を流して“伝説”の幕開ける、舞台「キン",
       "fetchedAt": "2026-10-13 11:54 JST"
+    },
+    {
+      "id": "i0rkqg7is8",
+      "date": "2023-02-08",
+      "category": "STAGE",
+      "title": "三浦宏規＆高野洸がＷキャストの舞台「キングダム」 原作・原泰久氏が大絶賛「圧巻でした」 - スポーツ報知",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5rRmJPd1g1NTZ3c3owWTlfd0pEcW01R2xCcS1YLWc1Zm9XVk03dDZXZWEtX2lyX1pyeHBTNHhHMEdVbXB5UTJ2YzhZb0tOMW51VXhDSnJDUUx5QUJfdFVPX01B?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-02-08_三浦宏規＆高野洸がＷキャストの舞台「キングダム」 原作・原泰",
+      "fetchedAt": "2026-10-26 08:56 JST"
     },
     {
       "id": "asjbav8v9b",
@@ -9949,17 +9985,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-25 09:05 JST",
+  "lastUpdated": "2026-10-26 08:56 JST",
   "source": "multi-source",
-  "totalCount": 829,
-  "newCount": 2,
+  "totalCount": 832,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
