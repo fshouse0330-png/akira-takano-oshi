@@ -7981,6 +7981,18 @@
       "fetchedAt": "2026-07-17 07:59 JST"
     },
     {
+      "id": "ub9sbsuufl",
+      "date": "2023-09-26",
+      "category": "OTHER",
+      "title": "高野洸 - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5GRmRqRXQ3RmZ6eXBHN2NtMjFyUjh6RWlOclJ3dGtzUXk1UEU5NjFCSHgtVmVvZ29RWl9RaFROWFJRQ0ZCVGVJMU9uSHJxNXk2OHMzekdPalFPek5iMkhlZVV3?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-09-26_高野洸 - ナタリー",
+      "fetchedAt": "2026-10-28 10:01 JST"
+    },
+    {
       "id": "on1icnbpnd",
       "date": "2023-09-12",
       "category": "STAGE",
@@ -8135,6 +8147,18 @@
       "source": "fetched",
       "externalId": "2023-05-11_サントリー ビアボール応援団 高橋健介＆高野洸の大阪サシ飲み",
       "fetchedAt": "2026-07-08 08:05 JST"
+    },
+    {
+      "id": "w44agfcyyn",
+      "date": "2023-04-29",
+      "category": "OTHER",
+      "title": "高野洸さん「地元福岡に届くような活躍を」 クリエイティブの原点は「家族対決」 - 西日本新聞me",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBDbktlMHZqSzE3dlo5cU5McGxoZV8wNzlmVTIzUlRCU3Bud2Q3c2d6ZFRfdnoyN25veFhjNzc4NGZsdW02anZCN1dYT09aWlJ5OHNNck9B?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-04-29_高野洸さん「地元福岡に届くような活躍を」 クリエイティブの原",
+      "fetchedAt": "2026-10-28 10:01 JST"
     },
     {
       "id": "iv0oe8ycmb",
@@ -9109,6 +9133,18 @@
       "fetchedAt": "2026-08-25 07:29 JST"
     },
     {
+      "id": "sjns7h8bea",
+      "date": "2021-04-07",
+      "category": "RELEASE",
+      "title": "今大注目の俳優・高野洸「デビュー時の苦悩と、常に前向きでいるための“ある思考”」－待望の1stアルバムリリース！－ - with class",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHa1RaSnhsZ2E0TUllakxuc20teTNSb0RSdlNrN282UFA0MG1Kbk5SZDFOb1JGazh5c2Rnb1VjNlNWLXFHUmNVNkNWRzZqNWMydzVDZUIxUkhkT0NMMlMwbkVzUnNnVVBYak1PTWgyWjk?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2021-04-07_今大注目の俳優・高野洸「デビュー時の苦悩と、常に前向きでいる",
+      "fetchedAt": "2026-10-28 10:01 JST"
+    },
+    {
       "id": "hndwfeodt3",
       "date": "2021-03-24",
       "category": "OTHER",
@@ -9299,6 +9335,18 @@
       "source": "fetched",
       "externalId": "2020-04-18_高野洸のフォトロール | 高野洸 撮影／伊藤和幸 7枚目 -",
       "fetchedAt": "2026-10-23 09:26 JST"
+    },
+    {
+      "id": "eyvx4zwf9y",
+      "date": "2020-04-18",
+      "category": "OTHER",
+      "title": "高野洸のフォトロール | 高野洸 撮影／伊藤和幸 8枚目 - 週刊女性PRIME",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1mWHJ6NXRrY1BncHl0dndfYllTWVgxNEo2eDFkZGZXRGVEU2V5cW9SS29WeUVKcmRhWGxsQ1hYZGg4Y2c5d01qaHpLb1p2c1ZWUlktN1FoY0JSakxMckxQVkF1OUd2WlVFZDVyb3A4ZTdFcnU0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2020-04-18_高野洸のフォトロール | 高野洸 撮影／伊藤和幸 8枚目 -",
+      "fetchedAt": "2026-10-28 10:01 JST"
     },
     {
       "id": "3erwhrzu2g",
@@ -10021,17 +10069,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-27 10:16 JST",
+  "lastUpdated": "2026-10-28 10:01 JST",
   "source": "multi-source",
-  "totalCount": 835,
-  "newCount": 3,
+  "totalCount": 839,
+  "newCount": 4,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 3,
+    "Google ニュース": 4,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
