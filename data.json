@@ -6661,6 +6661,18 @@
       "fetchedAt": "2026-09-28 09:23 JST"
     },
     {
+      "id": "w5qwc5ct4o",
+      "date": "2025-04-25",
+      "category": "CINEMA",
+      "title": "宮田俊哉・高野洸・杢代和人、映画「おでかけ子ザメ」声優に決定 本予告第1弾も解禁 - モデルプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBQNS0zVndDUkNXV2NXNWtVNURGUHlIOTFyRnlpd1FWMDh5VE9JRWYwdVdpb0FKTzY2b3ZMVXR6TXJLX1NZYWpHazhiMnR4Z9IBSkFVX3lxTE5RWTFvbjhYRTFhM3JFd3JIVGV6akVEQ3FhNUJ3dG1yV0Vlb0ZjNnhMMFZpQzh5NlZwd1BtNmU2Ny1qdEsxN0NFUE5n?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2025-04-25_宮田俊哉・高野洸・杢代和人、映画「おでかけ子ザメ」声優に決定",
+      "fetchedAt": "2026-10-31 10:26 JST"
+    },
+    {
       "id": "ob4nx8xag6",
       "date": "2025-03-26",
       "category": "TV",
@@ -8279,6 +8291,18 @@
       "source": "fetched",
       "externalId": "2023-02-28_三浦宏規＆高野洸 舞台「KINGDOM キングダム」帝劇千穐",
       "fetchedAt": "2026-10-02 10:24 JST"
+    },
+    {
+      "id": "4h52jxf57c",
+      "date": "2023-02-28",
+      "category": "STAGE",
+      "title": "舞台「キングダム」帝劇千穐楽 高野洸＆三浦宏規「1ヵ月続けてきた僕たちはすごい！」 - めざましmedia",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5qbmtDbXUyeDdQSUhNMk1lZzU2cWhFMXA1akVtSUN0bU5pS3VrVjJ0amVIV29pdU90ZnJwX0JEWlcwemJENTZwTGR5eGc3UVV3VVE?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-02-28_舞台「キングダム」帝劇千穐楽 高野洸＆三浦宏規「1ヵ月続けて",
+      "fetchedAt": "2026-10-31 10:26 JST"
     },
     {
       "id": "j9pz4k014w",
@@ -10153,9 +10177,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-10-30 10:41 JST",
+  "lastUpdated": "2026-10-31 10:26 JST",
   "source": "multi-source",
-  "totalCount": 846,
+  "totalCount": 848,
   "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
