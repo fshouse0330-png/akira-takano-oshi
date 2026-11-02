@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "zoar0u3wkp",
+      "date": "2026-10-31",
+      "category": "STAGE",
+      "title": "舞台『キングダム』開幕宣言「キングダムー！」 “信”三浦宏規＆高野洸「とても幸せ」 - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4xaFFLNzR0TUZmZmk5OFhVZ192bW04SGJUWThfLTFoRWFhVWpZWTYtMlEtU2NwQi1idWNaa0VzTnZucUxXd3lzLXRsSnNEaE8zRDB2czlsSFVtVUpyVmc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-31_舞台『キングダム』開幕宣言「キングダムー！」 “信”三浦宏規",
+      "fetchedAt": "2026-11-02 10:20 JST"
+    },
+    {
+      "id": "cd8gk4hpn4",
+      "date": "2026-10-30",
+      "category": "RELEASE",
+      "title": "高野洸＆岡宮来夢がユニット結成 「天王寺ミオ」30周年記念曲リリース - 山陽新聞",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHZjVlU0tTcWt5MnpIOVNtZER3MmFqcGV4QU45eUhYMDhHanNndmlHV1AtN3I0TjhHX29rd3k2Q2FQUERoaFhZWU44WUFjMmc0bVdaLWpxeW9yMEpZRHZWcTJPNEk0Y3c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-10-30_高野洸＆岡宮来夢がユニット結成 「天王寺ミオ」30周年記念曲",
+      "fetchedAt": "2026-11-02 10:20 JST"
+    },
+    {
       "id": "2rmbfqy2y3",
       "date": "2026-10-28",
       "category": "STAGE",
@@ -10189,17 +10213,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-01 09:47 JST",
+  "lastUpdated": "2026-11-02 10:20 JST",
   "source": "multi-source",
-  "totalCount": 849,
-  "newCount": 1,
+  "totalCount": 851,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
