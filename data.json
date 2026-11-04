@@ -8281,6 +8281,18 @@
       "fetchedAt": "2026-10-30 10:41 JST"
     },
     {
+      "id": "n6jlejtgwo",
+      "date": "2023-04-06",
+      "category": "LIVE",
+      "title": "舞台「キングダム」ライブ配信決定に三浦宏規・高野洸「カメラアングルにも注目」 - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBQUnEyTVNPSEprOERxYTc5WEdEYkF5eWdURVJzdDlELXRUSE03MVQtbGJJblhSLTBXOVFoVWR1OVBLUjRHVlFBUDNhUFg?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-04-06_舞台「キングダム」ライブ配信決定に三浦宏規・高野洸「カメラア",
+      "fetchedAt": "2026-11-04 10:59 JST"
+    },
+    {
       "id": "iv0oe8ycmb",
       "date": "2023-03-25",
       "category": "STAGE",
@@ -10213,17 +10225,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-03 12:21 JST",
+  "lastUpdated": "2026-11-04 10:59 JST",
   "source": "multi-source",
-  "totalCount": 851,
-  "newCount": 0,
+  "totalCount": 852,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 0,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
