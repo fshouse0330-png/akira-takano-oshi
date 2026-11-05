@@ -7117,6 +7117,18 @@
       "fetchedAt": "2026-07-25 08:03 JST"
     },
     {
+      "id": "exjydh07jd",
+      "date": "2024-11-02",
+      "category": "STAGE",
+      "title": "三浦宏規「オチとしては最高じゃない？」 『キングダム』で高野洸とW主演 - anan",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0tWE14cUU5V3VJUHBhZnNPVTdpdThUeE5zYjlabHBVMl9ZQkJLS2N4c0JjQjJaUVVzRG03Q0tQYThCZkF0MlFKNkVwajBVSHNRbXdzaHl2Zlg3Q3NfaXc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-11-02_三浦宏規「オチとしては最高じゃない？」 『キングダム』で高野",
+      "fetchedAt": "2026-11-05 11:01 JST"
+    },
+    {
       "id": "7w75jjdg7d",
       "date": "2024-10-21",
       "category": "OTHER",
@@ -10225,9 +10237,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-04 10:59 JST",
+  "lastUpdated": "2026-11-05 11:01 JST",
   "source": "multi-source",
-  "totalCount": 852,
+  "totalCount": 853,
   "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
