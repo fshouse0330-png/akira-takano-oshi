@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "f6ab9uukhi",
+      "date": "2026-11-07",
+      "category": "STAGE",
+      "title": "舞台『千と千尋の神隠し』全プリンシパルキャスト発表 織山尚大、高野洸、安達祐実ら初参加（リアルサウンド） - Yahoo!ニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9waTZ5OXVEOC1JWVhuMkx6MHkxSTI3U040d2w5RVNxTE1YS3pDa3JSTjd2OU8zTkE5VjNZVVM4NVdIdkExVVItMzZnVHhFSG1NR1diTXMwTW9INlJwM3Z6V1Z3VEY5OWNKT3BHeW5ndVhrbEpaNDRDazVKa21KU00?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-07_舞台『千と千尋の神隠し』全プリンシパルキャスト発表 織山尚大",
+      "fetchedAt": "2026-11-07 10:42 JST"
+    },
+    {
+      "id": "d1q490hs0h",
+      "date": "2026-11-07",
+      "category": "STAGE",
+      "title": "織山尚大、高野洸、新原泰佑、高村月、堺小春、保坂知寿ら舞台『千と千尋の神隠し』初出演！その簡易経歴も掲載 - Edge Line",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0el9NdkJUTTVnZkFGV1Vab19kTU51eU5oVDF6LXRRc3dlVzVXNV9ORngyRFlHdFNUZ1FrQWNBWXo3aHpDeWJFM1Z6ZXhoalE0U1FZOUhMeWtsOVBlaTc1UQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-07_織山尚大、高野洸、新原泰佑、高村月、堺小春、保坂知寿ら舞台『",
+      "fetchedAt": "2026-11-07 10:42 JST"
+    },
+    {
       "id": "zoar0u3wkp",
       "date": "2026-10-31",
       "category": "STAGE",
@@ -3167,6 +3191,18 @@
       "source": "fetched",
       "externalId": "2026-07-11_信役の三浦宏規&高野洸、王騎役の山口祐一郎が続投!舞台「キン",
       "fetchedAt": "2026-10-01 10:08 JST"
+    },
+    {
+      "id": "2j0ifg66zi",
+      "date": "2026-07-11",
+      "category": "OTHER",
+      "title": "左から）山本千尋、三浦宏規、高野洸、山口祐一郎 （撮影：近藤誠司） 9/9 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE81Ri1lRGo5dDJvRGpWaE5FNFF1LTAtdXhUbjZWcUtUUERBMHdyUFRia1JDcUVxZi1jaUNKUUNoakpkTTk4M1ZOSTU2YlV3cGRHS0Y3eVJ1THo0TmV1c0pxYUx6NzRhcDcySUx2eEZVOWxMckZ0b2RGSw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-11_左から）山本千尋、三浦宏規、高野洸、山口祐一郎 （撮影：近藤",
+      "fetchedAt": "2026-11-07 10:42 JST"
     },
     {
       "id": "nly0o3eorq",
@@ -10249,17 +10285,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-06 11:03 JST",
+  "lastUpdated": "2026-11-07 10:42 JST",
   "source": "multi-source",
-  "totalCount": 854,
-  "newCount": 1,
+  "totalCount": 857,
+  "newCount": 5,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 1,
+    "Google ニュース": 5,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
