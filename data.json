@@ -3205,6 +3205,18 @@
       "fetchedAt": "2026-11-07 10:42 JST"
     },
     {
+      "id": "d7v9tq7kbo",
+      "date": "2026-07-11",
+      "category": "STAGE",
+      "title": "舞台『キングダムⅡ』博多座でまもなく開幕。三浦宏規＆高野洸が語る王騎将軍との名シーン - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE81Ri1lRGo5dDJvRGpWaE5FNFF1LTAtdXhUbjZWcUtUUERBMHdyUFRia1JDcUVxZi1jaUNKUUNoakpkTTk4M1ZOSTU2YlV3cGRHS0Y3eVJ1THo0TmV1c0pxYUx6NzRhcDcySUx2eEZVOWxMckZ0b2RGSw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-07-11_舞台『キングダムⅡ』博多座でまもなく開幕。三浦宏規＆高野洸が",
+      "fetchedAt": "2026-11-08 10:11 JST"
+    },
+    {
       "id": "nly0o3eorq",
       "date": "2026-07-08",
       "category": "CINEMA",
@@ -10285,17 +10297,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-07 10:42 JST",
+  "lastUpdated": "2026-11-08 10:11 JST",
   "source": "multi-source",
-  "totalCount": 857,
-  "newCount": 5,
+  "totalCount": 858,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 5,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
