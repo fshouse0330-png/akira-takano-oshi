@@ -9697,6 +9697,18 @@
       "fetchedAt": "2026-07-15 07:58 JST"
     },
     {
+      "id": "cq4f61s7kf",
+      "date": "2020-01-23",
+      "category": "OTHER",
+      "title": "高野洸 - ナタリー",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9raGlFUXVaUk00clZIcnhENlBkZHVfTVEyS0NNLWYwZE9NSmt6SnMtZHZUSE96ZF9UeGlaRXJfUlRvLUhQTWYyTkplR3g0VWtRSGQ0dHhoUDU1cGphQ3dSaktn?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2020-01-23_高野洸 - ナタリー",
+      "fetchedAt": "2026-11-12 11:44 JST"
+    },
+    {
       "id": "wsspe523ph",
       "date": "2019-12-25",
       "category": "OTHER",
@@ -10333,9 +10345,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-11 10:44 JST",
+  "lastUpdated": "2026-11-12 11:44 JST",
   "source": "multi-source",
-  "totalCount": 861,
+  "totalCount": 862,
   "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
