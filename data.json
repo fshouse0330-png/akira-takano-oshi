@@ -7333,6 +7333,18 @@
       "fetchedAt": "2026-10-30 10:41 JST"
     },
     {
+      "id": "twn578azuk",
+      "date": "2024-10-03",
+      "category": "OTHER",
+      "title": "AKIRA TAKANO(高野洸) - エイベックス・ポータル",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HYU5zcldzRE1iV1QwekFkRFk0UkhrWjRzbnZYcldJZVdRRnRLQzZhY0tkTXBJN2R5b0VJSUpZWWtzdlNPc0xETkEwYXhfMkdqY1hCdHRR?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2024-10-03_AKIRA TAKANO(高野洸) - エイベックス・ポータ",
+      "fetchedAt": "2026-11-13 11:27 JST"
+    },
+    {
       "id": "s0k60lsanl",
       "date": "2024-10-02",
       "category": "LIVE",
@@ -10345,9 +10357,9 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-12 11:44 JST",
+  "lastUpdated": "2026-11-13 11:27 JST",
   "source": "multi-source",
-  "totalCount": 862,
+  "totalCount": 863,
   "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
