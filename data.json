@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "m2e3jbngv4",
+      "date": "2026-11-17",
+      "category": "STAGE",
+      "title": "太田基裕＆高野洸がWキャスト！ 家族愛に包まれるハートフルなミュージカル『ジョン＆ジェン』 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1FVWMydWVzbWZxY3V6Ty1RU2hZbE5jUkpHam5TcGtGOFRPX2I3MWpLY3NLbThqeDVVcC1xSl9QQzJrY1hzVE5mSlhRb3ZCRGllUi1tczVMcVhqRWc5Skc0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-17_太田基裕＆高野洸がWキャスト！ 家族愛に包まれるハートフルな",
+      "fetchedAt": "2026-11-17 13:21 JST"
+    },
+    {
       "id": "f6ab9uukhi",
       "date": "2026-11-07",
       "category": "STAGE",
@@ -10429,17 +10441,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-16 10:38 JST",
+  "lastUpdated": "2026-11-17 13:21 JST",
   "source": "multi-source",
-  "totalCount": 869,
-  "newCount": 3,
+  "totalCount": 870,
+  "newCount": 1,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 3,
+    "Google ニュース": 1,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
