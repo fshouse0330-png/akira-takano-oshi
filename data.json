@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "id": "uf5g8kwpuj",
+      "date": "2026-11-20",
+      "category": "OTHER",
+      "title": "高野洸「洗い過ぎず、ケアし過ぎないのが美肌の秘訣」｜ #両Aメン Side : Natural - anan",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ycFlhdXc3aTJYSVNiWXZJaFBzeFlZeFhNUkd1UGVlNDl4MUJRTGN4VWZNNkNpVy1PelAzTTh2bDd1NEthQ2xyNHUwaGRXaGVMWXlnVnRR?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-20_高野洸「洗い過ぎず、ケアし過ぎないのが美肌の秘訣」｜ #両A",
+      "fetchedAt": "2026-11-21 12:00 JST"
+    },
+    {
+      "id": "wbbcikjv9h",
+      "date": "2026-11-20",
+      "category": "RADIO",
+      "title": "【TOKAI RADIO】高野洸・廣野凌大・福澤侑・寺山武志らが本気のゲーム対決 「Rdy? Vol.3」12/27(日)開催 - アットプレス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBIZUxEdmpzRDVJU2dqYTlXd19vMkRJVXo4aC1yY2YwTXJrZFVieHA0ZEY3aGlMX0xJcFlnQjVFV1dXbDl1Rks0TmQwanA3NWs?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-20_【TOKAI RADIO】高野洸・廣野凌大・福澤侑・寺山武志",
+      "fetchedAt": "2026-11-21 12:00 JST"
+    },
+    {
       "id": "m2e3jbngv4",
       "date": "2026-11-17",
       "category": "STAGE",
@@ -10453,17 +10477,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-20 11:52 JST",
+  "lastUpdated": "2026-11-21 12:00 JST",
   "source": "multi-source",
-  "totalCount": 871,
-  "newCount": 0,
+  "totalCount": 873,
+  "newCount": 3,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 0,
+    "Google ニュース": 3,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
