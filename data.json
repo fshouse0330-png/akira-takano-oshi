@@ -25,6 +25,18 @@
       "fetchedAt": "2026-11-21 12:00 JST"
     },
     {
+      "id": "1b1lcp1mz3",
+      "date": "2026-11-19",
+      "category": "STAGE",
+      "title": "太田基裕＆高野洸がWキャスト！ 家族愛に包まれるハートフルなミュージカル『ジョン＆ジェン』 の画像・写真 - ぴあエンタメ情報",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5CVVJTOVNhdXN2Nk9HSEtYSGVCUGZRRnpGdFZFUTBPTmREWmZRWDJMaW1xRzkzSkhaUjVJbG1qdEtUaVc0OFhmYml5aUo1U3lTZXl2NGdySkhJNmtPM2VfWHNWM3BxblV3RFFDRi04dFZvcXNNUkhjNw?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-19_太田基裕＆高野洸がWキャスト！ 家族愛に包まれるハートフルな",
+      "fetchedAt": "2026-11-23 11:22 JST"
+    },
+    {
       "id": "m2e3jbngv4",
       "date": "2026-11-17",
       "category": "STAGE",
@@ -47,6 +59,18 @@
       "source": "fetched",
       "externalId": "2026-11-17_「家族の美しさ、儚さ、そしてあたたかさを届けられたら」～PA",
       "fetchedAt": "2026-11-18 12:24 JST"
+    },
+    {
+      "id": "x9cpw3c40j",
+      "date": "2026-11-09",
+      "category": "OTHER",
+      "title": "高野洸の関連画像 - 推し楽",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5aWEpqTFdsNkRpZUp4UUdCUkNpb1d0dDVJeGh6QkdvbHUwUnRkOHh6WGNFa25fc3lzWEx4SVpIcTNUWEtNZi1kLVlCS2hpWkxrOUNfa1A1VWlKY2RDcldMN1NrUDdmN0FI?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-09_高野洸の関連画像 - 推し楽",
+      "fetchedAt": "2026-11-23 11:22 JST"
     },
     {
       "id": "f6ab9uukhi",
@@ -10477,17 +10501,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-22 10:57 JST",
+  "lastUpdated": "2026-11-23 11:22 JST",
   "source": "multi-source",
-  "totalCount": 873,
-  "newCount": 0,
+  "totalCount": 875,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 0,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
