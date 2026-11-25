@@ -1,6 +1,42 @@
 {
   "events": [
     {
+      "id": "65ntddhxy9",
+      "date": "2026-11-24",
+      "category": "STAGE",
+      "title": "太田基裕＆高野洸、彩風咲奈＆平野綾が出演　 “４通りの物語”のあたたかな片鱗に触れて～ミュージカル『ジョン＆ジェン』稽古場レポート - エンタメ特化型情報メディア スパイス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBUYnJQVktERWVZVVh2blJhQmVDZEduUmY0OFozWDREUTk2akRtYzlTNVJpWVB2UXg5YlUyNUtzSVcxS2JhLUJPSnU3bkowQk3SAVRBVV95cUxPVkJDZ2pDS0dMaXZPeDdvNVlqVWE4V1V6YklSMHJEUGphRmpoYzZpaGpDd0xyazdzSXVwYnFrV0Y3QW5Nc1l3cFVFMG90Z3VfeDBiY0c?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-24_太田基裕＆高野洸、彩風咲奈＆平野綾が出演　 “４通りの物語”",
+      "fetchedAt": "2026-11-25 13:48 JST"
+    },
+    {
+      "id": "uplloe2lv5",
+      "date": "2026-11-24",
+      "category": "OTHER",
+      "title": "「ジョン＆ジェン」太田基裕＆平野綾が掛け合い、高野洸＆彩風咲奈が歌声重ねる稽古場映像（ステージナタリー） - Yahoo!ニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LalRVVlRkcDJ3dW5RTEJONXRQV3JkVFhqMTBvaFJEeG1SUWs5bGpQNXFYQzNXRWY5S3l6S2FibUxfWDBWLVZJVTJvU1FfbG9qcWVlWjBKdGF2VWt2MWhhbUp5NjRaRXdCQnBrNUNUY1V0dWhCX0RqVXUwU1Z4VGs?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-24_「ジョン＆ジェン」太田基裕＆平野綾が掛け合い、高野洸＆彩風咲",
+      "fetchedAt": "2026-11-25 13:48 JST"
+    },
+    {
+      "id": "fu1yjqe1nz",
+      "date": "2026-11-24",
+      "category": "STAGE",
+      "title": "「【画像】太田基裕＆高野洸、彩風咲奈＆平野綾が出演 “４通りの物語”のあたたかな片鱗に触れて～ミュージカル『ジョン＆ジェン』稽古場レポート」の画像3/24 | SPICE - エンタメ特化型情報メディア スパイス - エンタメ特化型情報メディア スパイス",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ydFB0MGlCcmdPQTJvc0hQQjQ2eGVaVEZFckkwUUhrYmoxM0NCRVNwNWlGZGVBcmNhbG9QNHFwMFpNSzZRSzlPdUdYc1p0Tl9EZGt4WmRSeEd5NngwSGxCMEdvRQ?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-24_「【画像】太田基裕＆高野洸、彩風咲奈＆平野綾が出演 “４通り",
+      "fetchedAt": "2026-11-25 13:48 JST"
+    },
+    {
       "id": "uf5g8kwpuj",
       "date": "2026-11-20",
       "category": "OTHER",
@@ -10501,17 +10537,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-24 14:46 JST",
+  "lastUpdated": "2026-11-25 13:48 JST",
   "source": "multi-source",
-  "totalCount": 875,
-  "newCount": 0,
+  "totalCount": 878,
+  "newCount": 5,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 0,
+    "Google ニュース": 5,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
