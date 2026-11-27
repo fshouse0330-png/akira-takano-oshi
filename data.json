@@ -109,6 +109,18 @@
       "fetchedAt": "2026-11-18 12:24 JST"
     },
     {
+      "id": "yx0l2rhm3f",
+      "date": "2026-11-17",
+      "category": "OTHER",
+      "title": "【高野洸】今も変わらず応援してくれる父親が一番のお手本です - FAST",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBhNnNndHRzY0NWOC1ZbHRTSHU4enptQ0lweGFMOFhrS0xwVEV2VklwZno4bFVaWng1djFRbGdnQTdncmhoTU5weHNSSTUwUnc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-17_【高野洸】今も変わらず応援してくれる父親が一番のお手本です",
+      "fetchedAt": "2026-11-27 12:58 JST"
+    },
+    {
       "id": "x9cpw3c40j",
       "date": "2026-11-09",
       "category": "OTHER",
@@ -8365,6 +8377,18 @@
       "fetchedAt": "2026-09-16 09:02 JST"
     },
     {
+      "id": "swccgkg1wp",
+      "date": "2023-08-29",
+      "category": "OTHER",
+      "title": "高野洸&阿部顕嵐『ヒプステ』-Battle of Pride 2023-に向けての心境 そして植木豪からみた2人は「戦友」 - ABEMA TIMES",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9TWHNBalhQaWQtOWl0ckdFOEZLNkFUQzNhQ3hpeFZpQ1c0OHowWFNMOW1Ea0tFMVZBcXVUTFJnd2pkQS1pS0NXS3R2Z3ZBdkh5Yi1GNg?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2023-08-29_高野洸&阿部顕嵐『ヒプステ』-Battle of Pride",
+      "fetchedAt": "2026-11-27 12:58 JST"
+    },
+    {
       "id": "3ony7raa43",
       "date": "2023-08-10",
       "category": "TV",
@@ -10549,17 +10573,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-26 13:00 JST",
+  "lastUpdated": "2026-11-27 12:58 JST",
   "source": "multi-source",
-  "totalCount": 879,
-  "newCount": 3,
+  "totalCount": 881,
+  "newCount": 2,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 3,
+    "Google ニュース": 2,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
