@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": "xatscr7xjo",
+      "date": "2026-11-28",
+      "category": "STAGE",
+      "title": "太田基裕＆高野洸、舞台上に登場するのは2人だけ Wキャストで臨む濃密ミュージカルで互いから刺激（クランクイン！） - Yahoo!ニュース",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBhV1V1ZFhjaXVsbkxuTXpxXzdGQWdNbC1DRWNiNUtoeEJBUWFQTXpaYmF0S1hOcGNRYW5EdWd1dlFtRmhyUU10R01MYXFpZDNlanVwUzZ4dDFLbUQ2N3dadlJsdWt5d1RzbllYeFpQQWlyWVNNS2tRb3pGTEdCMjA?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-28_太田基裕＆高野洸、舞台上に登場するのは2人だけ Wキャストで",
+      "fetchedAt": "2026-11-28 12:46 JST"
+    },
+    {
       "id": "ah9m7dz290",
       "date": "2026-11-25",
       "category": "OTHER",
@@ -47,6 +59,18 @@
       "source": "fetched",
       "externalId": "2026-11-24_「【画像】太田基裕＆高野洸、彩風咲奈＆平野綾が出演 “４通り",
       "fetchedAt": "2026-11-25 13:48 JST"
+    },
+    {
+      "id": "j9u3ge2v1u",
+      "date": "2026-11-24",
+      "category": "OTHER",
+      "title": "高野洸「洗い過ぎず、ケアし過ぎないのが美肌の秘訣」｜ #両Aメン Side : Natural - TRILL",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1TdXRPT3hEb1Z4LWdiVFJmYlFjNWs3U0daWmFpRk56cWxQNzJuRmltTTRFdGJMQWQyUURDVnR2c3FaWWVnQTdSZTl3WXBfdU0?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-24_高野洸「洗い過ぎず、ケアし過ぎないのが美肌の秘訣」｜ #両A",
+      "fetchedAt": "2026-11-28 12:46 JST"
     },
     {
       "id": "uf5g8kwpuj",
@@ -119,6 +143,18 @@
       "source": "fetched",
       "externalId": "2026-11-17_【高野洸】今も変わらず応援してくれる父親が一番のお手本です",
       "fetchedAt": "2026-11-27 12:58 JST"
+    },
+    {
+      "id": "sruhp572en",
+      "date": "2026-11-17",
+      "category": "STAGE",
+      "title": "【高野洸】ミュージカル『ジョン＆ジェン』歌の深みと親子の愛をしっかり演じきりたい - FAST",
+      "venue": "",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5MV0NncFpRa1RqRnNQM1NZOF9lTjkyU2pJbFROS0tQS2JaRHNrWUFCUGVZbll1aFhYWGpzRTV5RDBOb0JfakU2QVVNaE9LMXc?oc=5",
+      "memo": "取得元: Google ニュース",
+      "source": "fetched",
+      "externalId": "2026-11-17_【高野洸】ミュージカル『ジョン＆ジェン』歌の深みと親子の愛を",
+      "fetchedAt": "2026-11-28 12:46 JST"
     },
     {
       "id": "x9cpw3c40j",
@@ -10573,17 +10609,17 @@
       "fetchedAt": "2026-07-12 07:52 JST"
     }
   ],
-  "lastUpdated": "2026-11-27 12:58 JST",
+  "lastUpdated": "2026-11-28 12:46 JST",
   "source": "multi-source",
-  "totalCount": 881,
-  "newCount": 2,
+  "totalCount": 884,
+  "newCount": 6,
   "sourceCounts": {
     "公式サイト": 0,
     "Twitter(RSSHub)": 0,
     "Twitter(Nitter)": 0,
     "音楽ナタリー": 0,
     "ステージナタリー": 0,
-    "Google ニュース": 2,
+    "Google ニュース": 6,
     "PR TIMES": 0,
     "e+": 0,
     "ぴあ": 0,
